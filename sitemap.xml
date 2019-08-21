@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>https://misjamikkers.github.io/post/dea-example-students/</loc>
+      <lastmod>2019-08-21T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://misjamikkers.github.io/tutorial/example/</loc>
       <lastmod>2018-09-09T00:00:00+02:00</lastmod>
     </url>
@@ -155,6 +163,15 @@
     
     <url>
     
+      <loc>https://misjamikkers.github.io/categories/r/</loc>
+      <lastmod>2019-08-21T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://misjamikkers.github.io/slides/</loc>
       <priority>0</priority>
     </url>
@@ -172,6 +189,15 @@
     
       <loc>https://misjamikkers.github.io/tags/</loc>
       <lastmod>2016-04-27T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://misjamikkers.github.io/tags/benchmarking-dea/</loc>
+      <lastmod>2019-08-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
