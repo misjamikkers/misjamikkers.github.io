@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://misjamikkers.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Academic</title>
-      <link>https://misjamikkers.github.io/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>https://misjamikkers.github.io/tags/academic/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Deep Learning</title>
@@ -36,33 +27,6 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>https://misjamikkers.github.io/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>https://misjamikkers.github.io/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://misjamikkers.github.io/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>plot</title>
-      <link>https://misjamikkers.github.io/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://misjamikkers.github.io/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>regression</title>
-      <link>https://misjamikkers.github.io/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://misjamikkers.github.io/tags/regression/</guid>
       <description></description>
     </item>
     

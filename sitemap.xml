@@ -68,24 +68,8 @@
     
     <url>
     
-      <loc>https://misjamikkers.github.io/post/getting-started/</loc>
-      <lastmod>2018-01-13T00:00:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://misjamikkers.github.io/publication/person-re-id/</loc>
       <lastmod>2015-09-01T00:00:00+02:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://misjamikkers.github.io/post/2015-07-23-r-rmarkdown/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     </url>
     
   
@@ -111,15 +95,6 @@
     
       <loc>https://misjamikkers.github.io/publication_types/2/</loc>
       <lastmod>2015-09-01T00:00:00+02:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://misjamikkers.github.io/tags/academic/</loc>
-      <lastmod>2018-01-13T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -180,24 +155,6 @@
     
     <url>
     
-      <loc>https://misjamikkers.github.io/categories/r/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://misjamikkers.github.io/tags/r-markdown/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://misjamikkers.github.io/slides/</loc>
       <priority>0</priority>
     </url>
@@ -214,25 +171,7 @@
     <url>
     
       <loc>https://misjamikkers.github.io/tags/</loc>
-      <lastmod>2018-01-13T00:00:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://misjamikkers.github.io/tags/plot/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://misjamikkers.github.io/tags/regression/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+      <lastmod>2016-04-27T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
     
