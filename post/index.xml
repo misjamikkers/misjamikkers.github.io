@@ -34,16 +34,5 @@ You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
-    <item>
-      <title>Causal inference example</title>
-      <link>https://misjamikkers.github.io/post/grf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://misjamikkers.github.io/post/grf/</guid>
-      <description>IntroductionIn this example we explore “generalized random forests” (grf) to estimate treatment effects in the setting of a randomized experiment.
-Generalized Random Forests (grf) is a package based on a paper by Susan Athey, Julie Tibshirani, Stefan Wager. grf provides methods to estimate treatment effects.
-The algorithm is comparable to “normal” random forests, in the sense that it estimates an outcome based on the average estimation in many regression trees.</description>
-    </item>
-    
   </channel>
 </rss>
