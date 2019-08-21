@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misja Mikkers on Misja Mikkers</title>
+    <link>/</link>
+    <description>Recent content in Misja Mikkers on Misja Mikkers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Example Page</title>
+      <link>/tutorial/example/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate>
+      
+      <guid>/tutorial/example/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>/talk/example/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>/talk/example/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s &lt;em&gt;Slides&lt;/em&gt; feature and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>External Project</title>
+      <link>/project/external-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>/project/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internal Project</title>
+      <link>/project/internal-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>/project/internal-project/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Academic: the website designer for Hugo</title>
+      <link>/post/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>/post/getting-started/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Academic&lt;/strong&gt; makes it easy to create a beautiful website for free using Markdown. Customize anything on your site with widgets, themes, and language packs.&lt;/p&gt;
+
+&lt;p&gt;Follow our easy &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/&#34; target=&#34;_blank&#34;&gt;step by step guide&lt;/a&gt; to learn how to build your own free website with Academic. &lt;a href=&#34;https://themes.gohugo.io/theme/academic/&#34; target=&#34;_blank&#34;&gt;Check out the personal demo&lt;/a&gt; or the &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;business demo&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;View the documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://discuss.gohugo.io/&#34; target=&#34;_blank&#34;&gt;Ask a question&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34;&gt;Request a feature or report a bug&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updating? View the &lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support development of Academic:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34;&gt;Donate a coffee&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34;&gt;Become a backer on Patreon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34;&gt;Decorate your laptop or journal with an Academic sticker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34;&gt;Wear the T-shirt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Key features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Easily manage various content including homepage, blog posts, publications, talks, and projects&lt;/li&gt;
+&lt;li&gt;Extensible via &lt;strong&gt;color themes&lt;/strong&gt; and &lt;strong&gt;widgets/plugins&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Write in &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt; for easy formatting and code highlighting, with &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; for mathematical expressions&lt;/li&gt;
+&lt;li&gt;Social/academic network linking, &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;, and &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; comments&lt;/li&gt;
+&lt;li&gt;Responsive and mobile friendly&lt;/li&gt;
+&lt;li&gt;Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;Multilingual and easy to customize&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;color-themes&#34;&gt;Color Themes&lt;/h2&gt;
+
+&lt;p&gt;Academic is available in different color themes and font themes.&lt;/p&gt;
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-1950s.png&#34; data-caption=&#34;1950s&#34;&gt;
+  &lt;img src=&#34;/post/getting-started/gallery/theme-1950s.png&#34; alt=&#34;&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-apogee.png&#34; data-caption=&#34;Apogee&#34;&gt;
+  &lt;img src=&#34;/post/getting-started/gallery/theme-apogee.png&#34; alt=&#34;&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-coffee-playfair.png&#34; data-caption=&#34;Coffee theme with Playfair font&#34;&gt;
+  &lt;img src=&#34;/post/getting-started/gallery/theme-coffee-playfair.png&#34; alt=&#34;&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-cupcake.png&#34; data-caption=&#34;Cupcake&#34;&gt;
+  &lt;img src=&#34;/post/getting-started/gallery/theme-cupcake.png&#34; alt=&#34;&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-dark.png&#34; data-caption=&#34;Dark&#34;&gt;
+  &lt;img src=&#34;/post/getting-started/gallery/theme-dark.png&#34; alt=&#34;&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-default.png&#34; data-caption=&#34;Default&#34;&gt;
+  &lt;img src=&#34;/post/getting-started/gallery/theme-default.png&#34; alt=&#34;&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-forest.png&#34; data-caption=&#34;Forest&#34;&gt;
+  &lt;img src=&#34;/post/getting-started/gallery/theme-forest.png&#34; alt=&#34;&#34;&gt;
+  &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-ocean.png&#34; data-caption=&#34;Ocean&#34;&gt;
+  &lt;img src=&#34;/post/getting-started/gallery/theme-ocean.png&#34; alt=&#34;&#34;&gt;
+  &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;
+
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+
+&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;one-click install using your web browser (recommended)&lt;/li&gt;
+&lt;li&gt;install on your computer using Git with the Command Prompt/Terminal app&lt;/li&gt;
+&lt;li&gt;install on your computer by downloading the ZIP files&lt;/li&gt;
+&lt;li&gt;install on your computer with RStudio&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;quick-install-using-your-web-browser&#34;&gt;Quick install using your web browser&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart&#34; target=&#34;_blank&#34;&gt;Install Academic with Netlify&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Netlify will provide you with a customizable URL to access your new site&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;On GitHub, go to your newly created &lt;code&gt;academic-kickstart&lt;/code&gt; repository and edit &lt;code&gt;config.toml&lt;/code&gt; to personalize your site. Shortly after saving the file, your site will automatically update&lt;/li&gt;
+&lt;li&gt;Read the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Quick Start Guide&lt;/a&gt; to learn how to add Markdown content. For inspiration, refer to the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite&#34; target=&#34;_blank&#34;&gt;Markdown content&lt;/a&gt; which powers the &lt;a href=&#34;https://themes.gohugo.io/theme/academic/&#34; target=&#34;_blank&#34;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;install-with-git&#34;&gt;Install with Git&lt;/h3&gt;
+
+&lt;p&gt;Prerequisites:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/downloads&#34; target=&#34;_blank&#34;&gt;Download and install Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/getting-started/installing/#quick-install&#34; target=&#34;_blank&#34;&gt;Download and install Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34; target=&#34;_blank&#34;&gt;Fork&lt;/a&gt; the &lt;em&gt;Academic Kickstart&lt;/em&gt; repository and clone your fork with Git:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Note that if you forked Academic Kickstart, the above command should be edited to clone your fork, i.e. replace &lt;code&gt;sourcethemes&lt;/code&gt; with your GitHub username.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Initialize the theme:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd My_Website
+git submodule update --init --recursive
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;install-with-zip&#34;&gt;Install with ZIP&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart/archive/master.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt; and extract &lt;em&gt;Academic Kickstart&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/archive/master.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt; and extract the &lt;em&gt;Academic theme&lt;/em&gt; to the &lt;code&gt;themes/academic/&lt;/code&gt; folder from the above step&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;install-with-rstudio&#34;&gt;Install with RStudio&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34;&gt;View the guide to installing Academic with RStudio&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If you installed on your computer, view your new website by running the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now visit &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;localhost:1313&lt;/a&gt; and your new Academic powered website will appear. Otherwise, if using Netlify, they will provide you with your URL.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Read the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Quick Start Guide&lt;/a&gt; to learn how to add Markdown content, customize your site, and deploy it. For inspiration, refer to the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite&#34; target=&#34;_blank&#34;&gt;Markdown content&lt;/a&gt; which powers the &lt;a href=&#34;https://themes.gohugo.io/theme/academic/&#34; target=&#34;_blank&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build your site by running the &lt;code&gt;hugo&lt;/code&gt; command. Then &lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/&#34; target=&#34;_blank&#34;&gt;host it for free using Github Pages&lt;/a&gt; or Netlify (refer to the first installation method). Alternatively, copy the generated &lt;code&gt;public/&lt;/code&gt; directory (by FTP, Rsync, etc.) to your production web server (such as a university&amp;rsquo;s hosting service).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
+
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on &lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt; to help keep track of updates and check out the &lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34;&gt;release notes&lt;/a&gt; prior to updating your site.&lt;/p&gt;
+
+&lt;p&gt;Before updating the framework, it is recommended to make a backup of your entire website directory (or at least your &lt;code&gt;themes/academic&lt;/code&gt; directory) and record your current version number.&lt;/p&gt;
+
+&lt;p&gt;By default, Academic is installed as a Git submodule which can be updated by running the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule update --remote --merge
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34;&gt;Check out the update guide&lt;/a&gt; for full instructions and alternative methods.&lt;/p&gt;
+
+&lt;h2 id=&#34;feedback-contributing&#34;&gt;Feedback &amp;amp; Contributing&lt;/h2&gt;
+
+&lt;p&gt;Please use the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34;&gt;issue tracker&lt;/a&gt; to let me know about any bugs or feature requests, or alternatively make a pull request.&lt;/p&gt;
+
+&lt;p&gt;For support, head over to the &lt;a href=&#34;http://discuss.gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo discussion forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Person Re-Identification System For Mobile Devices</title>
+      <link>/publication/person-re-id/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0200</pubDate>
+      
+      <guid>/publication/person-re-id/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mobile visual clothing search</title>
+      <link>/publication/clothing-search/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0200</pubDate>
+      
+      <guid>/publication/clothing-search/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Causal inference example</title>
+      <link>/post/grf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/grf/</guid>
+      <description>
+
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In this example we explore “generalized random forests” (grf) to estimate treatment effects in the setting of a randomized experiment.&lt;/p&gt;
+&lt;p&gt;Generalized Random Forests (grf) is a package based on a paper by &lt;a href=&#34;https://arxiv.org/abs/1610.01271&#34;&gt;Susan Athey, Julie Tibshirani, Stefan Wager&lt;/a&gt;. grf provides methods to estimate treatment effects.&lt;/p&gt;
+&lt;p&gt;The algorithm is comparable to “normal” random forests, in the sense that it estimates an outcome based on the average estimation in many regression trees. There are a few differences with a normal random forest:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In a normal random forest the splitting in the regression trees is based on minimizing the “Root Mean Square Error” (RSME), while in grf splitting is based on maximum heterogeneity of the treatment effect.&lt;/li&gt;
+&lt;li&gt;In addition to a normal random forest, grf uses a subsample of the data in to construct the trees, while the other part of the data is used to estimate the treatment effect based on the constructed trees.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/grf-labs/grf/blob/master/REFERENCE.md&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The attractive part of grf is that it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;provides estimates of the individual treatment effect&lt;/li&gt;
+&lt;li&gt;with confidence intervals&lt;/li&gt;
+&lt;li&gt;estimates average treatment effects (ate)&lt;/li&gt;
+&lt;li&gt;estimates conditional treatment effects (cate)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this notebook we will run a grf on simulated data and test how well grf performs.&lt;/p&gt;
+&lt;p&gt;Please note that we have assumed in the data that treatment assignment was random.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Packages&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(ranger)
+library(caret)
+library(grf)
+library(cowplot)
+library(PerformanceAnalytics)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data&lt;/h1&gt;
+&lt;p&gt;First we construct a list with 10000 persons and make a data frame of it.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ID &amp;lt;- 1:10000&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df &amp;lt;- as.data.frame(ID)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We will add the following variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;age&lt;/li&gt;
+&lt;li&gt;having a chronic disease (0,1)&lt;/li&gt;
+&lt;li&gt;SES (1,2,3)&lt;/li&gt;
+&lt;li&gt;Treatment (0,1)&lt;/li&gt;
+&lt;li&gt;Noise&lt;/li&gt;
+&lt;li&gt;Treatment_effect (as a function and age)&lt;/li&gt;
+&lt;li&gt;HC as a function of age, chronic, SES and treatment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(123)
+df &amp;lt;- df %&amp;gt;%
+  mutate(age= round(abs(rnorm(10000,45, 50)),0)) %&amp;gt;%
+  mutate(Chronic = rbinom(10000, 1, 0.05)) %&amp;gt;%
+  mutate(SES = sample(c(1,2,3), size = 10000, replace = T)) %&amp;gt;%
+  mutate(Treatment = sample(c(0,1), size= 10000, replace = T)) %&amp;gt;%
+  mutate(Noise = rnorm(10000, 0, 1000)) %&amp;gt;%
+  mutate(Treatment_effect = -600  - age^2 - age * SES*100 - Chronic*1000 ) %&amp;gt;%
+  mutate(HC = 10000 + age^2 + 3000* Chronic + 4 * SES + Treatment_effect * Treatment + Noise )
+
+summary(df)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        ID             age            Chronic           SES       
+##  Min.   :    1   Min.   :  0.00   Min.   :0.000   Min.   :1.000  
+##  1st Qu.: 2501   1st Qu.: 24.00   1st Qu.:0.000   1st Qu.:1.000  
+##  Median : 5000   Median : 48.00   Median :0.000   Median :2.000  
+##  Mean   : 5000   Mean   : 54.98   Mean   :0.049   Mean   :1.977  
+##  3rd Qu.: 7500   3rd Qu.: 80.00   3rd Qu.:0.000   3rd Qu.:3.000  
+##  Max.   :10000   Max.   :237.00   Max.   :1.000   Max.   :3.000  
+##    Treatment          Noise           Treatment_effect        HC        
+##  Min.   :0.0000   Min.   :-3497.287   Min.   :-123261   Min.   :-56008  
+##  1st Qu.:0.0000   1st Qu.: -668.315   1st Qu.: -22621   1st Qu.:  1131  
+##  Median :0.0000   Median :   -6.979   Median : -11956   Median :  9116  
+##  Mean   :0.4997   Mean   :    0.643   Mean   : -16008   Mean   :  6644  
+##  3rd Qu.:1.0000   3rd Qu.:  686.919   3rd Qu.:  -5325   3rd Qu.: 12764  
+##  Max.   :1.0000   Max.   : 3982.778   Max.   :   -600   Max.   : 63060&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We do not want negative ages, therefore we made age an absolute value. We did not change very old people (e.g. age&amp;gt;120), because we want some extreme values in our dataset. We constructed a noise variable, but will not use it (in this stage).&lt;/p&gt;
+&lt;p&gt;The analist only has the following dataset&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_analist &amp;lt;- df %&amp;gt;%
+  select(ID, age, Chronic, SES, Treatment, HC)
+
+head(df_analist)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   ID age Chronic SES Treatment        HC
+## 1  1  17       1   1         0 12497.792
+## 2  2  33       0   3         1 -1623.111
+## 3  3 123       0   1         0 25713.101
+## 4  4  49       0   2         0 12927.043
+## 5  5  51       0   1         0 12812.685
+## 6  6 131       0   2         0 26685.593&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;suppressWarnings(chart.Correlation(df_analist))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;AS we can see in our data health care cost is very skewed with a long tail.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analysis-with-generalized-random-forests&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Analysis with generalized random forests&lt;/h1&gt;
+&lt;div id=&#34;plan-of-action&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Plan of action&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;We will split the data in a train and test set&lt;/li&gt;
+&lt;li&gt;We will run a grf analysis to estimate the individual treatment effect&lt;/li&gt;
+&lt;li&gt;We will compare the estimated individual treatment effect versus the real treatment effect&lt;/li&gt;
+&lt;li&gt;We will try to identify the most important variables that drive the estimation of the individual treatment effect by:
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;the variable importance by the grf package&lt;/li&gt;
+&lt;li&gt;a linear regression of the predictors on the estimated treatment effect&lt;/li&gt;
+&lt;li&gt;a normal random forest of the estimated treatment effect on the predictors&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;We will compare the estimated average treatment effect with the real average treatment effect&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;split-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Split the data&lt;/h2&gt;
+&lt;p&gt;Train Test&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(123)
+trainIndex &amp;lt;- createDataPartition(df$HC, p = .5,
+                                  list = FALSE,
+                                  times = 1)
+dfTrain &amp;lt;- df[ trainIndex,]
+dfTest  &amp;lt;- df[-trainIndex,]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We will then construct a dataframe with the co_variates &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;X_train &amp;lt;- dfTrain %&amp;gt;%
+  select(age, Chronic, SES)
+
+X_test1 &amp;lt;- dfTest %&amp;gt;%
+  select(age, Chronic, SES)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Change train en test data frames in matrices&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; co-variates &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; Outcome &lt;span class=&#34;math inline&#34;&gt;\(W\)&lt;/span&gt; Treatment&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;X &amp;lt;- as.matrix(X_train)
+Y &amp;lt;- as.matrix(dfTrain$HC)
+W &amp;lt;- as.matrix(dfTrain$Treatment)
+
+X_test &amp;lt;- as.matrix(X_test1)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimate-heterogenous-treatment-effects&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Estimate heterogenous treatment effects&lt;/h2&gt;
+&lt;p&gt;Run a causal forest (without tuning)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(123)
+cf &amp;lt;- causal_forest(X,Y,W, num.trees = 5000)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pred &amp;lt;- predict(cf, X_test, estimate.variance = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Add predictions and confidence intervals to the test set&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dfTest &amp;lt;- dfTest %&amp;gt;%
+  mutate(Predictions_cf = as.vector(pred$predictions)) %&amp;gt;%
+  mutate(Variance = as.vector(pred$variance.estimates))%&amp;gt;%
+  mutate(Lci = Predictions_cf - 1.96* sqrt(Variance)) %&amp;gt;%
+  mutate(Uci = Predictions_cf + 1.96* sqrt(Variance))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;compare-estimated-individual-treatment-effects-to-the-real-individual-treatment-effects&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Compare estimated individual treatment effects to the real individual treatment effects&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=dfTest, aes(x=Treatment_effect, y=Predictions_cf)) + geom_point(color=&amp;quot;blue&amp;quot;)  + theme_classic() +geom_linerange(aes(ymin=Lci, ymax=Uci))+ geom_abline(slope = 1 , intercept = 0, col=&amp;quot;green&amp;quot;) + xlim(-120000,0) + ylim(-120000,0)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Causal forest seems to predict fairly well&lt;/p&gt;
+&lt;p&gt;The correlation between the prediction and the actual treatment effect is 99%.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_CC &amp;lt;- dfTest %&amp;gt;%
+  select(Predictions_cf, Treatment_effect)
+
+suppressWarnings(chart.Correlation(df_CC))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The prediction seems to go wrong at extreme values, but for the majority of the observations, the prediction loss (the actual treatment effect minus the predicted treatment effect) is fairly close to zero. There are a few predictions extremely wrong.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dfTest &amp;lt;- dfTest %&amp;gt;%
+  mutate(Prediction_loss = Treatment_effect - Predictions_cf)
+
+ggplot(data= dfTest, aes(Prediction_loss)) + geom_histogram(aes(y=..density..), bins=1000, fill= &amp;quot;blue&amp;quot;, alpha= .7) +
+    geom_density(alpha=.5, fill=&amp;quot;red&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;heterogenous-treatment-effect&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Heterogenous treatment effect&lt;/h2&gt;
+&lt;p&gt;We know that the “real” treatment effects are hetergenous (dependent on age and a little bit on SES and Age). We can see if the predictions are right wrt to this effect:&lt;/p&gt;
+&lt;div id=&#34;variable-importance-from-the-package-grf&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Variable Importance from the package grf&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;VarImpplot &amp;lt;- data.frame(Name = colnames(cf$X.orig), Value = variable_importance(cf))
+
+ggplot(VarImpplot, aes(x= reorder(Name, Value), y=Value)) + geom_point(col = &amp;quot;blue&amp;quot;, size =3)+ coord_flip()  + geom_linerange(aes(ymin=0, ymax= Value)) + ylim(0,1) + ylab(&amp;quot;variable importance&amp;quot;)+ xlab(&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Linear regression&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;reg1 &amp;lt;- lm(Predictions_cf ~ age + Chronic + SES, data= dfTest)
+summary(reg1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Predictions_cf ~ age + Chronic + SES, data = dfTest)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -11483.8  -1483.9    796.2   1957.2  17282.4 
+## 
+## Coefficients:
+##              Estimate Std. Error  t value Pr(&amp;gt;|t|)    
+## (Intercept)  8944.677    117.845   75.902   &amp;lt;2e-16 ***
+## age          -295.798      1.011 -292.541   &amp;lt;2e-16 ***
+## Chronic        59.220    177.123    0.334    0.738    
+## SES         -4357.655     48.318  -90.187   &amp;lt;2e-16 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 2764 on 4996 degrees of freedom
+## Multiple R-squared:  0.9491, Adjusted R-squared:  0.9491 
+## F-statistic: 3.108e+04 on 3 and 4996 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-forest&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Random Forest&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(123)
+
+rf_trainIndex &amp;lt;- createDataPartition(dfTest$ID, p = .8,
+                                  list = FALSE,
+                                  times = 1)
+rfTrain &amp;lt;- dfTest[ rf_trainIndex,]
+rfTest  &amp;lt;- dfTest[-rf_trainIndex,]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(123)
+rfcontrol &amp;lt;- trainControl( method = &amp;quot;cv&amp;quot;,
+                           number = 10
+                           )
+
+
+rf &amp;lt;- train(Predictions_cf ~ age + Chronic + SES, 
+                data = rfTrain, 
+                method = &amp;quot;ranger&amp;quot;,
+                importance = &amp;quot;permutation&amp;quot;,
+                trControl = rfcontrol)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## note: only 2 unique complexity parameters in default grid. Truncating the grid to 2 .&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(varImp(rf))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;average-treatment-effect&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Average Treatment Effect&lt;/h2&gt;
+&lt;p&gt;grf presents the possibility to calculate the average treatment effect,&lt;/p&gt;
+&lt;p&gt;There are different options to calculate the average treatment effect. target.sample= “overlap” is preferred over target.sample = “all” when&lt;/p&gt;
+&lt;p&gt;In this case we have randomized treatment, therefore I think it is ok to choose option “all”&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;average_treatment_effect(cf, target.sample = &amp;quot;overlap&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    estimate     std.err 
+## -15956.8012    206.2091&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;average_treatment_effect(cf, target.sample = &amp;quot;all&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##     estimate      std.err 
+## -15999.52057     52.71449&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(df$Treatment_effect)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] -16008.12&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The estimated average treatment effect is fairly close to the “real” average treatment-effect.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;heterogenous-treatment-effect-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Heterogenous treatment effect&lt;/h2&gt;
+&lt;p&gt;We know that the “real” treatment effects are hetergenous (i.e. a linear function of age with formule -600 + 20* age). We can see if the predictions are right wrt to this effect:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(variable_importance(cf))         &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We could also make plot:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_pa &amp;lt;- dfTest %&amp;gt;%
+  select(Predictions_cf, age, Chronic, SES)
+
+suppressWarnings(chart.Correlation(df_pa))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;With this plot, we are able to say something about the heterogenous treatment effects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>/slides/example-slides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/slides/example-slides/</guid>
+      <description>
+
+&lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Code block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+
+&lt;p&gt;Block math:&lt;/p&gt;
+
+&lt;p&gt;$$
+f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+  One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+  &lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+  Three
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/aside&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/img/boards.jpg&#34;
+  &gt;
+
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
