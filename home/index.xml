@@ -2,86 +2,86 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Misja Mikkers</title>
-    <link>/home/</link>
+    <link>https://misjamikkers.github.io/home/</link>
     <description>Recent content in Homes on Misja Mikkers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://misjamikkers.github.io/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/home/hero_carousel/</link>
+      <link>https://misjamikkers.github.io/home/hero_carousel/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0200</pubDate>
       
-      <guid>/home/hero_carousel/</guid>
+      <guid>https://misjamikkers.github.io/home/hero_carousel/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/home/about/</link>
+      <link>https://misjamikkers.github.io/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/home/about/</guid>
+      <guid>https://misjamikkers.github.io/home/about/</guid>
       <description>Biography As chief economist and manager of the Economic and Medical Bureau of the Dutch Healthcare Authority, I&amp;rsquo;m responsible for economic research on health care reforms, data science, data analysis and public health advice. I combine this role with an appointment as endowed professor at Tilburg University.</description>
     </item>
     
     <item>
       <title>Experience</title>
-      <link>/home/experience/</link>
+      <link>https://misjamikkers.github.io/home/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/experience/</guid>
+      <guid>https://misjamikkers.github.io/home/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>/home/posts/</link>
+      <link>https://misjamikkers.github.io/home/posts/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>https://misjamikkers.github.io/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>/home/teaching/</link>
+      <link>https://misjamikkers.github.io/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/home/teaching/</guid>
+      <guid>https://misjamikkers.github.io/home/teaching/</guid>
       <description>I am a teaching instructor for the following courses at Tilburg University:
  Programming for economists Competition Policy  </description>
     </item>
     
     <item>
       <title>Tags</title>
-      <link>/home/tags/</link>
+      <link>https://misjamikkers.github.io/home/tags/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>/home/tags/</guid>
+      <guid>https://misjamikkers.github.io/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>/home/contact/</link>
+      <link>https://misjamikkers.github.io/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/home/contact/</guid>
+      <guid>https://misjamikkers.github.io/home/contact/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/home/about/</link>
+      <link>https://misjamikkers.github.io/home/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/about/</guid>
+      <guid>https://misjamikkers.github.io/home/about/</guid>
       <description>code{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.title {font-size: 38px;}h2 {font-size: 30px;}h3 {font-size: 24px;}h4 {font-size: 18px;}h5 {font-size: 16px;}h6 {font-size: 12px;}.</description>
     </item>
     

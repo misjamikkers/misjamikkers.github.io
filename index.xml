@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Misja Mikkers on Misja Mikkers</title>
-    <link>/</link>
+    <link>https://misjamikkers.github.io/</link>
     <description>Recent content in Misja Mikkers on Misja Mikkers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Example Page</title>
-      <link>/tutorial/example/</link>
+      <link>https://misjamikkers.github.io/tutorial/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate>
       
-      <guid>/tutorial/example/</guid>
+      <guid>https://misjamikkers.github.io/tutorial/example/</guid>
       <description>
 
 &lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
@@ -32,10 +32,10 @@
     
     <item>
       <title>Example Talk</title>
-      <link>/talk/example/</link>
+      <link>https://misjamikkers.github.io/talk/example/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0100</pubDate>
       
-      <guid>/talk/example/</guid>
+      <guid>https://misjamikkers.github.io/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;p&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/p&gt;
 
@@ -56,19 +56,19 @@
     
     <item>
       <title>External Project</title>
-      <link>/project/external-project/</link>
+      <link>https://misjamikkers.github.io/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/project/external-project/</guid>
+      <guid>https://misjamikkers.github.io/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>/project/internal-project/</link>
+      <link>https://misjamikkers.github.io/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/project/internal-project/</guid>
+      <guid>https://misjamikkers.github.io/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -83,10 +83,10 @@
     
     <item>
       <title>Academic: the website designer for Hugo</title>
-      <link>/post/getting-started/</link>
+      <link>https://misjamikkers.github.io/post/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/post/getting-started/</guid>
+      <guid>https://misjamikkers.github.io/post/getting-started/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Academic&lt;/strong&gt; makes it easy to create a beautiful website for free using Markdown. Customize anything on your site with widgets, themes, and language packs.&lt;/p&gt;
@@ -156,8 +156,8 @@
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-1950s.png&#34; data-caption=&#34;1950s&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-1950s.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-1950s.png&#34; data-caption=&#34;1950s&#34;&gt;
+  &lt;img src=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-1950s.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -182,8 +182,8 @@
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-apogee.png&#34; data-caption=&#34;Apogee&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-apogee.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-apogee.png&#34; data-caption=&#34;Apogee&#34;&gt;
+  &lt;img src=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-apogee.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -208,8 +208,8 @@
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-coffee-playfair.png&#34; data-caption=&#34;Coffee theme with Playfair font&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-coffee-playfair.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-coffee-playfair.png&#34; data-caption=&#34;Coffee theme with Playfair font&#34;&gt;
+  &lt;img src=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-coffee-playfair.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -234,8 +234,8 @@
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-cupcake.png&#34; data-caption=&#34;Cupcake&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-cupcake.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-cupcake.png&#34; data-caption=&#34;Cupcake&#34;&gt;
+  &lt;img src=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-cupcake.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -260,8 +260,8 @@
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-dark.png&#34; data-caption=&#34;Dark&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-dark.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-dark.png&#34; data-caption=&#34;Dark&#34;&gt;
+  &lt;img src=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-dark.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -286,8 +286,8 @@
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-default.png&#34; data-caption=&#34;Default&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-default.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-default.png&#34; data-caption=&#34;Default&#34;&gt;
+  &lt;img src=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-default.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -312,8 +312,8 @@
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-forest.png&#34; data-caption=&#34;Forest&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-forest.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-forest.png&#34; data-caption=&#34;Forest&#34;&gt;
+  &lt;img src=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-forest.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -338,8 +338,8 @@
       
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;/post/getting-started/gallery/theme-ocean.png&#34; data-caption=&#34;Ocean&#34;&gt;
-  &lt;img src=&#34;/post/getting-started/gallery/theme-ocean.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-ocean.png&#34; data-caption=&#34;Ocean&#34;&gt;
+  &lt;img src=&#34;https://misjamikkers.github.io/post/getting-started/gallery/theme-ocean.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
 
@@ -455,20 +455,20 @@ git submodule update --init --recursive
     
     <item>
       <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>/publication/person-re-id/</link>
+      <link>https://misjamikkers.github.io/publication/person-re-id/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0200</pubDate>
       
-      <guid>/publication/person-re-id/</guid>
+      <guid>https://misjamikkers.github.io/publication/person-re-id/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://misjamikkers.github.io/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://misjamikkers.github.io/post/2015-07-23-r-rmarkdown/</guid>
       <description>
 
 
@@ -505,7 +505,7 @@ pie(
   init.angle = -50, border = NA
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://misjamikkers.github.io/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
@@ -516,20 +516,20 @@ Figure 1: A fancy pie chart.
     
     <item>
       <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search/</link>
+      <link>https://misjamikkers.github.io/publication/clothing-search/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0200</pubDate>
       
-      <guid>/publication/clothing-search/</guid>
+      <guid>https://misjamikkers.github.io/publication/clothing-search/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Causal inference example</title>
-      <link>/post/grf/</link>
+      <link>https://misjamikkers.github.io/post/grf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/post/grf/</guid>
+      <guid>https://misjamikkers.github.io/post/grf/</guid>
       <description>
 
 
@@ -616,7 +616,7 @@ head(df_analist)&lt;/code&gt;&lt;/pre&gt;
 ## 5  5  51       0   1         0 12812.685
 ## 6  6 131       0   2         0 26685.593&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;suppressWarnings(chart.Correlation(df_analist))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/grf_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;AS we can see in our data health care cost is very skewed with a long tail.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;analysis-with-generalized-random-forests&#34; class=&#34;section level1&#34;&gt;
@@ -675,21 +675,21 @@ cf &amp;lt;- causal_forest(X,Y,W, num.trees = 5000)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;compare-estimated-individual-treatment-effects-to-the-real-individual-treatment-effects&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Compare estimated individual treatment effects to the real individual treatment effects&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=dfTest, aes(x=Treatment_effect, y=Predictions_cf)) + geom_point(color=&amp;quot;blue&amp;quot;)  + theme_classic() +geom_linerange(aes(ymin=Lci, ymax=Uci))+ geom_abline(slope = 1 , intercept = 0, col=&amp;quot;green&amp;quot;) + xlim(-120000,0) + ylim(-120000,0)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/grf_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Causal forest seems to predict fairly well&lt;/p&gt;
 &lt;p&gt;The correlation between the prediction and the actual treatment effect is 99%.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_CC &amp;lt;- dfTest %&amp;gt;%
   select(Predictions_cf, Treatment_effect)
 
 suppressWarnings(chart.Correlation(df_CC))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/grf_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The prediction seems to go wrong at extreme values, but for the majority of the observations, the prediction loss (the actual treatment effect minus the predicted treatment effect) is fairly close to zero. There are a few predictions extremely wrong.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dfTest &amp;lt;- dfTest %&amp;gt;%
   mutate(Prediction_loss = Treatment_effect - Predictions_cf)
 
 ggplot(data= dfTest, aes(Prediction_loss)) + geom_histogram(aes(y=..density..), bins=1000, fill= &amp;quot;blue&amp;quot;, alpha= .7) +
     geom_density(alpha=.5, fill=&amp;quot;red&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/grf_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;heterogenous-treatment-effect&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Heterogenous treatment effect&lt;/h2&gt;
@@ -699,7 +699,7 @@ ggplot(data= dfTest, aes(Prediction_loss)) + geom_histogram(aes(y=..density..), 
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;VarImpplot &amp;lt;- data.frame(Name = colnames(cf$X.orig), Value = variable_importance(cf))
 
 ggplot(VarImpplot, aes(x= reorder(Name, Value), y=Value)) + geom_point(col = &amp;quot;blue&amp;quot;, size =3)+ coord_flip()  + geom_linerange(aes(ymin=0, ymax= Value)) + ylim(0,1) + ylab(&amp;quot;variable importance&amp;quot;)+ xlab(&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/grf_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;linear-regression&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Linear regression&lt;/h3&gt;
@@ -748,7 +748,7 @@ rf &amp;lt;- train(Predictions_cf ~ age + Chronic + SES,
                 trControl = rfcontrol)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## note: only 2 unique complexity parameters in default grid. Truncating the grid to 2 .&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(varImp(rf))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/grf_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;average-treatment-effect&#34; class=&#34;section level2&#34;&gt;
@@ -770,13 +770,13 @@ rf &amp;lt;- train(Predictions_cf ~ age + Chronic + SES,
 &lt;h2&gt;Heterogenous treatment effect&lt;/h2&gt;
 &lt;p&gt;We know that the “real” treatment effects are hetergenous (i.e. a linear function of age with formule -600 + 20* age). We can see if the predictions are right wrt to this effect:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(variable_importance(cf))         &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/grf_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We could also make plot:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_pa &amp;lt;- dfTest %&amp;gt;%
   select(Predictions_cf, age, Chronic, SES)
 
 suppressWarnings(chart.Correlation(df_pa))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/grf_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/grf_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;With this plot, we are able to say something about the heterogenous treatment effects.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -785,10 +785,10 @@ suppressWarnings(chart.Correlation(df_pa))&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Slides</title>
-      <link>/slides/example-slides/</link>
+      <link>https://misjamikkers.github.io/slides/example-slides/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/slides/example-slides/</guid>
+      <guid>https://misjamikkers.github.io/slides/example-slides/</guid>
       <description>
 
 &lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
