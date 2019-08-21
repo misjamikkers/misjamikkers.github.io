@@ -320,7 +320,6 @@ kable(d_peers_CRS)&lt;/code&gt;&lt;/pre&gt;
   theme_minimal()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/DEA_example_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can now conclude that the model performs reasonbly well.&lt;/p&gt;
-&lt;p&gt;DEA is a “conservative estimation”, in other words: it will put DMU’s in the best light.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;model-2-vrs&#34; class=&#34;section level1&#34;&gt;
@@ -539,7 +538,7 @@ kable(d_peers_VRS)&lt;/code&gt;&lt;/pre&gt;
   ylab(&amp;quot;Efficiency scores model 3&amp;quot;) +
   theme_minimal()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/DEA_example_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;As we see, firm in general improved (a bit). Especially large or small firms will be efficient be default.&lt;/p&gt;
+&lt;p&gt;As we see, in general firms improved (a bit). Especially large or small firms will be efficient be default.&lt;/p&gt;
 &lt;p&gt;Please note:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;VRS is always beneficial to the DMU’s&lt;/li&gt;
