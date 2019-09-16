@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Misja Mikkers</title>
-    <link>https://misjamikkers.github.io/post/</link>
-    <description>Recent content in Posts on Misja Mikkers</description>
+    <title>causaliteit machine learning dags on Misja Mikkers</title>
+    <link>https://misjamikkers.github.io/tags/causaliteit-machine-learning-dags/</link>
+    <description>Recent content in causaliteit machine learning dags on Misja Mikkers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://misjamikkers.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://misjamikkers.github.io/tags/causaliteit-machine-learning-dags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>https://misjamikkers.github.io/post/causaliteit-en-machine-learning/</guid>
       <description>Door Misja Mikkers &amp;amp; Gertjan VerhoevenInleidingHet doel van dit blog is om een toegankelijke inleiding te geven over causaliteit en data analyse.
 Het voorspellen van fenomenen met behulp machine learning is de afgelopen jaren een groot succes gebleken. Grote hoeveelheden data en toegenomen computerkracht hebben geleid tot veel ontwikkelingen en toepassingen op het gebied van voorspellen. Voorbeelden zijn het real time voorspellen van credit card fraude, het systeem van aanbevelingen bij bedrijven als Spotify, Bol, Netflix etc.</description>
-    </item>
-    
-    <item>
-      <title>A benchmarking example in R</title>
-      <link>https://misjamikkers.github.io/post/dea-example-students/</link>
-      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://misjamikkers.github.io/post/dea-example-students/</guid>
-      <description>IntroductionIn this post we will give you an example of a DEA benchmark performed in R. We will do this with simulated data.
-In this case study we consider 100 courts. Courts handle ‘disputes’, which result in cases or settlements. Hence, settlements and cases are (perfect) substitutes. On the input side, courts incur costs. We consider several DEA models for benchmarking courts. The aim of this example is to learn how to apply DEA and to demonstrate that DEA is capable to reveal inefficiency.</description>
     </item>
     
   </channel>

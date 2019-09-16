@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>https://misjamikkers.github.io/post/causaliteit-en-machine-learning/</loc>
+      <lastmod>2019-09-16T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://misjamikkers.github.io/post/dea-example-students/</loc>
       <lastmod>2019-08-21T00:00:00+00:00</lastmod>
     </url>
@@ -164,7 +172,7 @@
     <url>
     
       <loc>https://misjamikkers.github.io/categories/r/</loc>
-      <lastmod>2019-08-21T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -198,6 +206,15 @@
     
       <loc>https://misjamikkers.github.io/tags/benchmarking-dea/</loc>
       <lastmod>2019-08-21T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://misjamikkers.github.io/tags/causaliteit-machine-learning-dags/</loc>
+      <lastmod>2019-09-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

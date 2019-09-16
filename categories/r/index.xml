@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 21 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://misjamikkers.github.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Causaliteit en Machine Learning</title>
+      <link>https://misjamikkers.github.io/post/causaliteit-en-machine-learning/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://misjamikkers.github.io/post/causaliteit-en-machine-learning/</guid>
+      <description>Door Misja Mikkers &amp;amp; Gertjan VerhoevenInleidingHet doel van dit blog is om een toegankelijke inleiding te geven over causaliteit en data analyse.
+Het voorspellen van fenomenen met behulp machine learning is de afgelopen jaren een groot succes gebleken. Grote hoeveelheden data en toegenomen computerkracht hebben geleid tot veel ontwikkelingen en toepassingen op het gebied van voorspellen. Voorbeelden zijn het real time voorspellen van credit card fraude, het systeem van aanbevelingen bij bedrijven als Spotify, Bol, Netflix etc.</description>
+    </item>
     
     <item>
       <title>A benchmarking example in R</title>
