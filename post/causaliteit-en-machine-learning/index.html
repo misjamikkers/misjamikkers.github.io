@@ -334,7 +334,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    15 min read
+    16 min read
   </span>
   
 
@@ -432,17 +432,16 @@
 </div>
 <div id="inleiding" class="section level1">
 <h1>Inleiding</h1>
-<p>Het doel van dit blog is om een toegankelijke inleiding te geven over causaliteit en data analyse.</p>
-<p>Het voorspellen van fenomenen met behulp machine learning is de afgelopen jaren een groot succes gebleken. Grote hoeveelheden data en toegenomen computerkracht hebben geleid tot veel ontwikkelingen en toepassingen op het gebied van voorspellen. Voorbeelden zijn het real time voorspellen van credit card fraude, het systeem van aanbevelingen bij bedrijven als Spotify, Bol, Netflix etc. Deze modellen hebben gemeen dat ze zich richten op het voorspellen van fenomenen, maar niet gericht zijn op causaliteit. Als de wereld verandert, dan vermindert de voorspellende waarde van het model en wordt het model opnieuw “getraind”.</p>
-<!--https://www.forbes.com/sites/bernardmarr/2016/09/30/what-are-the-top-10-use-cases-for-machine-learning-and-ai/#2318fab294c9 -->
-<p><a href="https://www.medischcontact.nl/nieuws/laatste-nieuws/artikel/google-voorspelt-griep.htm">Medisch Contact</a> schrijft bijvoorbeeld dat Google een griepgolf kan voorspellen op basis van zoektermen. Maar dat is geen causaliteit. Het is namelijk niet zo dat het zoekgedrag van mensen griep veroorzaakt. Dus als het zoekgedrag van mensen verandert als gevolg van deze berichtgeving, dan verandert het aantal griepgevallen niet.</p>
-<p>De verwarring komt doordat het woord voorspellen zowel in passieve, niet-causale zin gebruikt wordt, b.v. als iemand ziek is en thuiszorg krijgt, voorspel ik een hoge kans dat deze persoon ouder dan 65 is. Maar het kan ook in actieve, causale zin gebruikt worden: b.v. ik voorspel dat als ik de prijs van dit product verlaag met 5%, dat ik er dan 10% meer van verkoop. Dit is een “causale” voorspelling, oorzaak en gevolg.</p>
+<p>We willen in dit blog een toegankelijke inleiding geven over causaliteit en data analyse.</p>
+<p>Het voorspellen van fenomenen met behulp machine learning is de afgelopen jaren een groot succes gebleken. Grote hoeveelheden data en toegenomen computerkracht hebben geleid tot veel ontwikkelingen en toepassingen op het gebied van voorspellen. Voorbeelden zijn het real time voorspellen van creditcard fraude, beeldherkenning en het systeem van aanbevelingen bij bedrijven als Spotify, Bol, Netflix etc. Op deze <a href="https://www.forbes.com/sites/bernardmarr/2016/09/30/what-are-the-top-10-use-cases-for-machine-learning-and-ai/#2318fab294c9">website</a> worden meer voorbeelden gegeven.</p>
+<p>Deze voorbeelden hebben gemeen dat ze zich richten op het voorspellen van fenomenen, maar niet gericht zijn op causaliteit. Als de wereld verandert, dan vermindert de voorspellende waarde van het model en wordt het model opnieuw “getraind”. <a href="https://www.medischcontact.nl/nieuws/laatste-nieuws/artikel/google-voorspelt-griep.htm">Medisch Contact</a> schrijft bijvoorbeeld dat Google een griepgolf kan voorspellen op basis van zoektermen. Maar dat is geen causaliteit. Het is namelijk niet zo dat het zoekgedrag van mensen griep veroorzaakt. Dus als het zoekgedrag van mensen verandert als gevolg van deze berichtgeving, dan verandert het aantal griepgevallen niet.Voor Google is dat op zich geen probleem: ze kunnen het model aanpassen (“opnieuw trainen”) aan het nieuwe zoekgedrag.</p>
+<p>De verwarring komt doordat het woord voorspellen in passieve, niet-causale zin gebruikt kan worden, b.v. als iemand ziek is en thuiszorg krijgt, voorspel ik een hoge kans dat deze persoon ouder dan 65 is. Maar het kan ook in actieve, causale zin gebruikt worden: b.v. ik voorspel dat als ik de prijs van dit product verlaag met 5%, dat ik er dan 10% meer van verkoop. Dit is een “causale” voorspelling, oorzaak en gevolg.</p>
 <p>Wij zullen in dit blog betogen dat het bij machine learning cruciaal is om onderscheid te maken tussen passief voorspellen en het voorspellen van oorzaak-gevolg effecten. En wat het betekent voor analyses om de switch te maken van voorspellen naar begrijpen en hoe de voorspelkracht van allerlei algoritmes gecombineerd kan worden met de notie van causaliteit.</p>
 </div>
 <div id="cum-hoc-ergo-propter-hoc" class="section level1">
 <h1>Cum hoc ergo propter hoc</h1>
 <!-- correlatie is geen causatie / wat is causatie-->
-<p>Het feit dat 2 verschijnselen samen optreden, cum hoc ergo propter hoc (“met dit, dus vanwege dit”“) betekent niet dat er een oorzakelijk verband is tussen 2 fenomenen. Bij causaliteit gaat het om oorzaak en gevolg. Als een bepaald fenomeen de oorzaak is van een ander fenomeen, dan kunnen we ons ook <strong>counter factuals</strong> voorstellen. Dus wanneer het volgen van een opleiding leidt tot meer inkomen, dan kunnen we ook voor een gegeven persoon vragen wat zijn inkomen geweest <em>zou zijn</em> wanneer hij een andere opleiding gevolgd zou hebben.</p>
+<p>Het feit dat 2 verschijnselen samen optreden, cum hoc ergo propter hoc (“met dit, dus vanwege dit”) betekent niet dat er een oorzakelijk verband is tussen 2 fenomenen. Bij causaliteit gaat het om oorzaak en gevolg. Als een bepaald fenomeen de oorzaak is van een ander fenomeen, dan kunnen we ons ook <strong>counter factuals</strong> voorstellen. Dus wanneer het volgen van een opleiding leidt tot meer inkomen, dan kunnen we ook voor een gegeven persoon vragen wat zijn inkomen geweest <em>zou zijn</em> wanneer hij een andere opleiding gevolgd zou hebben.</p>
 <p>Of in andere woorden, een causaal effect kan aangeduid worden als het verschil tussen de uitkomst wanneer een bepaalde interventie is toegepast, en de uitkomst wanneer de interventie <strong>niet</strong> zou worden toegepast.</p>
 <p>Helaas zien de data die we krijgen er vaak als volgt uit:</p>
 <table>
@@ -499,12 +498,12 @@
 <p>Waarbij de uitkomst is weergegeven als <span class="math inline">\(Y\)</span> en <span class="math inline">\(I\)</span> staat voor het wel (<span class="math inline">\(I=1\)</span>) of niet (<span class="math inline">\(I=0\)</span>) doen van een interventie. <span class="math inline">\(Y0\)</span> is de uitkomst wanneer er geen interventie is gedaan en <span class="math inline">\(Y1\)</span> is de uitkomst wanneer er wel een interventie is gedaan. De <span class="math inline">\(X\)</span>-en staan voor voorspellende kenmerken.</p>
 <p>Het probleem is dat we altijd maar 1 van de potentiele uitkomsten kennen. De ontbrekende uitkomst is in de tabel weergegeven als “NA” .</p>
 <p>Met machine learning kunnen we ontbrekende waarden vaak goed voorspellen. Daarmee kunnen we machine learning dus gebruiken voor het schatten van causale effecten. (Om het netjes te doen zouden we overigens alle waarden voor <span class="math inline">\(Y\)</span> bij <span class="math inline">\(I = 0\)</span> en <span class="math inline">\(I = 1\)</span> moeten voorspellen, niet alleen de ontbrekende waarden.)</p>
-<p>In dit blog willen we laten zien, dat je dat niet zo maar kunt doen. Om echt causale conclusies te kunnen trekken, moet je goed nadenken over welke variabelen je wel en niet kunt gebruiken om <span class="math inline">\(Y\)</span> gegeven de interventie <span class="math inline">\(I\)</span> te kunnen voorspellen. Met andere woorden: om een <strong>causale</strong> voorspelling te doen over een interventie in de wereld.</p>
+<p>In dit blog willen we laten zien, dat je dat niet zo maar kunt doen. Om echt causale conclusies te kunnen trekken, moet je goed nadenken over welke variabelen je wel en niet kunt gebruiken om <span class="math inline">\(Y\)</span> gegeven de interventie <span class="math inline">\(I\)</span> te kunnen voorspellen. Met andere woorden: om een <strong>causale</strong> voorspelling te doen over een interventie in de wereld, kun je niet zomaar machine learning gebruiken om de ontbrekende uitkomsten te voorspellen.</p>
 </div>
 <div id="voorspellen-versus-begrijpen" class="section level1">
 <h1>Voorspellen versus begrijpen</h1>
 <p>Bij het voorspellen van fenomenen gaat het om het vinden van patronen (“correlaties”) in de data.</p>
-<p>Het beschrijven en voorspellen van fenomenen kan op grond van de data alleen. Echter, om fenomenen te kunnen <strong>verklaren</strong> (begrijpen) is een causaal model nodig. In een causaal model wordt de kennis over oorzaken en gevolgen expliciet vastgelegd. Het causale model staat dus buiten de data en geeft weer wat de veronderstellingen zijn van de onderzoeker.</p>
+<p>Het beschrijven en voorspellen van fenomenen kan op grond van de data alleen. Op basis van data kunnen we alleen correlaties ontdekken. Maar, om fenomenen te kunnen <strong>verklaren</strong> (begrijpen) is een causaal model nodig. In een causaal model wordt de kennis over oorzaken en gevolgen expliciet vastgelegd. Het causale model staat dus buiten de data en geeft weer wat de veronderstellingen zijn van de onderzoeker.</p>
 <p>Gegeven een causaal model kunnen vragen beantwoord worden als:</p>
 <ul>
 <li>Wat zijn de oorzaken van een bepaald fenomeen?</li>
@@ -516,15 +515,13 @@
 <li>een medische ingreep doen</li>
 <li>meer informatie verschaffen aan mensen</li>
 </ul>
-<p>Om het probleem van het voorspellen op basis van correlaties te illustreren, hebben we een fictieve dataset gemaakt met gegevens CITO-scores van hun kinderen en het aantal boeken dat hun ouders bezit.</p>
+<p>Om het probleem van het voorspellen op basis van correlaties te illustreren, hebben we een fictieve dataset gemaakt met gegevens over het aantal boeken dat ouders bezit en de CITO-scores van hun kinderen.</p>
 <p>Uit figuur 1 blijkt dat er een correlatie is tussen het aantal boeken dat ouders bezit en de CITO-scores van hun kinderen.</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>Als deze correlatie een een causaal effect zou zijn, dan zou het helpen om boeken aan ouders van schoolgaande kinderen te geven. In dit geval is het aannemelijker dat er een andere variabele is, die zowel leidt tot meer boeken als tot hogere CITO-scores bij kinderen: het IQ van de ouders.</p>
-<p>Zodra we rekening houden met (“controleren voor”) het IQ van de ouders, dan verdwijnt het effect. Dat betekent dat wanneer we informatie hebben over de CITO-scores van kinderen en het IQ van hun ouders, de data over het aantal boeken geen waarde toegevoegt aan onze analyse. In onderstaande plot hebben we het IQ van de ouders in 10 even grote groepen ingedeeld. Dan zien we dat binnen die groepen het aantal boeken de CITO-scores niet meer verklaren (vlakke lijn).</p>
+<p>Zodra we rekening houden met (“controleren voor”) het IQ van de ouders, dan verdwijnt het effect. Rekening houden met of controleren voor betekent in dit geval de variabele <em>IQ van de ouders</em> aan de analyse wordt toegevoegd. Wanneer we informatie hebben over de CITO-scores van kinderen en het IQ van hun ouders, voegt de data over het aantal boeken geen waarde meer toe aan onze analyse. In onderstaande plot hebben we het IQ van de ouders in 10 even grote groepen ingedeeld. Dan zien we dat binnen die groepen het aantal boeken de CITO-scores niet meer verklaren (vlakke lijn).</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>In het kader van dit blog definieren we causaliteit als het verschijnsel dat als we een variabele veranderen <strong>in de wereld</strong>, dat dan een andere variabele ook verandert <strong>als gevolg hier</strong>. In het bovenstaande voorbeeld is het aantal boeken geen oorzaak van de CITO-scores. Als we het aantal boeken zouden veranderen, dan verandert de CITO score niet. Het IQ van de ouders is wel een oorzaak van hogere CITO-scores. In dit voorbeeld kunnen wij ons overigens niet voorstellen dat we het IQ van de ouders veranderen. We kunnen wel een counter factual beredeneren: wanneer het IQ van de ouders anders geweest zou zijn, dan zou ook de CITO score anders zijn.</p>
-<!-- probleem met dit voorbeeld is dat als je het IQ van de ouder zou veranderen, door ze een lobotomie te geven b.v. het IQ van de kinderen niet zou veranderen. -->
-<!-- je kan ook zeggen dat IQ ouder niet de oorzaak is, maar het genetisch materiaal van de ouders, en het gedrag van de ouders in het verleden (nature en nurture).  IQ ouder is dan een gevolg van genetisch materiaal, net als het genetisch materiaal kind een gevolg is van genetisch mat. ouder.-->
+<p>In het kader van dit blog definieren we causaliteit als het verschijnsel dat als we een variabele veranderen <strong>in de wereld</strong>, dat dan een andere variabele ook verandert <strong>als gevolg hiervan</strong>. In het bovenstaande voorbeeld is het aantal boeken geen oorzaak van de CITO-scores. Als we het aantal boeken zouden veranderen, dan verandert de CITO score niet. Het IQ van de ouders is wel een oorzaak van hogere CITO-scores. In dit voorbeeld kunnen wij ons overigens niet voorstellen dat we het IQ van de ouders veranderen. Heel strikt genomen is ook niet zo dat als we het IQ van de ouders zouden kunnen veranderen (b.v. door middel van een lobotomie), dat dan het IQ van de kinderen zou veranderen. We kunnen wel een counter factual beredeneren: wanneer het IQ van de ouders anders geweest zou zijn, dan zou ook de CITO score anders zijn.</p>
 </div>
 <div id="grafische-causale-modellen-in-de-volksmond-dags" class="section level1">
 <h1>Grafische Causale Modellen (in de volksmond: “DAG’s”)</h1>
@@ -545,7 +542,7 @@
 <h2>Confounder</h2>
 <p>We kunnen het hierboven gegeven voorbeeld over het aantal boeken dat ouders bezit en de CITO score van hun kinderen weergeven in een causaal model:</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>Zoals uit het voorbeeld met de data bleek, maak het uit of je de confounder (in het Nederlands: de gezamenlijke oorzaak) wel of niet opneemt in je analyse. In dit geval wordt er gezegd dat het pad tussen de variable <span class="math inline">\(Aantal\_boeken\)</span> en <span class="math inline">\(Cito\_score\)</span> “open” is. Dat betekent er “informatie kan stromen” tussen die variabelen, die de causale analyse verstoort. Om een causale relatie tussen het <span class="math inline">\(Aantal\_boeken\)</span> en de <span class="math inline">\(Cito\_score\)</span> te kunnen identificeren, moet het pad gesloten worden. Het pad kan gesloten worden door de variable <span class="math inline">\(IQ\_ouders\)</span> in de analyse op te nemen. In statistisch jargon wordt dan gezegd dat er “gecontroleerd” wordt voor de variabele <span class="math inline">\(IQ\_ouders\)</span>.</p>
+<p>Zoals uit het voorbeeld met de data bleek, maak het uit of je de confounder (in het Nederlands: de gezamenlijke oorzaak) wel of niet opneemt in je analyse. In dit geval wordt er gezegd dat het pad tussen de variable <span class="math inline">\(Aantal\_boeken\)</span> en <span class="math inline">\(Cito\_score\)</span> “open” is. Dat betekent er “informatie kan stromen” tussen die variabelen, die de causale analyse verstoort. Om een causale relatie tussen het <span class="math inline">\(Aantal\_boeken\)</span> en de <span class="math inline">\(Cito\_score\)</span> te kunnen identificeren, moet het pad <em>Aantal boeken &lt;- IQ ouders -&gt; Cito score</em> gesloten worden. Het pad kan gesloten worden door de variable <span class="math inline">\(IQ\_ouders\)</span> in de analyse op te nemen. Daarmee kunnen we testen of er een correlatie bestaat tussen het <span class="math inline">\(Aantal\_boeken\)</span> en de <span class="math inline">\(Cito_score\)</span>. In statistisch jargon wordt dan gezegd dat er “gecontroleerd” wordt voor de variabele <span class="math inline">\(IQ\_ouders\)</span>.</p>
 <p>Uit het datavoorbeeld blijkt dat wanneer we de variabele <span class="math inline">\(IQ\_ouders\)</span> niet opnemen in de analyse, dat we dan een correlatie vinden tussen de variabelen het <span class="math inline">\(Aantal\_boeken\)</span> en de <span class="math inline">\(Cito\_score\)</span>. Wanneer we de de variabele <span class="math inline">\(IQ\_ouders\)</span> wel opnemen in de analyse, verdwijnt de correlatie.</p>
 <p>Dus wanneer we uitgaan van de DAG, dan kunnen we alleen het causale effect identificeren wanneer we de confouder meenemen. Als we geen data zouden hebben over de variabele <span class="math inline">\(IQ\_ouders\)</span>, dan kunnen we dus ook geen causaal effect schatten. Ook niet met de meest geavanceerde Artificial Intelligence algorithmen!</p>
 </div>
@@ -555,7 +552,7 @@
 <p>In dit voorbeeld gaan we er vanuit dat we een causale relatie willen identificeren tussen Lengte en Snelheid binnen een groep basketbalspelers. Daarbij gaan we er vanuit dat er zowel professionele basketballers zijn (“NBA”) als amateurs (“geen NBA”). Spelers in de NBA zijn in het algemeen zowel snel als lang. Wanneer ze niet lang zijn, dan moeten om ze hun lengte te compenseren wel enorm snel zijn (of vice versa).</p>
 <p>Deze informatie kunnen we weergeven in de volgende DAG:</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>We kunnen nu kijken wat er gebeurd wanneer we wel of niet de professionele status van de basketballers meenemen in onze analyse.</p>
+<p>We kunnen nu kijken wat er gebeurt wanneer we wel of niet de professionele status van de basketballers meenemen in onze analyse.</p>
 <p>Wanneer we de “collider” niet meenemen in onze analyse, dan vinden we in onze data geen correlatie tussen Lengte en Snelheid binnen onze groep basketballers.</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>Maar wanneer we de professionele status van onze basketballers wel meenemen in de analyse, vinden we plotseling wel een verband!</p>
@@ -564,7 +561,7 @@
 <p>Ook als je een regressie zou doen, dan blijkt dat</p>
 <ul>
 <li>geen verband is tussen lengte en snelheid</li>
-<li>maar er wel een verband ontstaat zodra je toevoegt dat mensen in de NBA spelen.</li>
+<li>maar er wel een verband ontstaat zodra je de variabele <span class="math inline">\(NBA\)</span> toevoegt.</li>
 </ul>
 <table style="text-align:center">
 <tr>
@@ -984,7 +981,7 @@ F Statistic
 <div id="voorbeeld-van-een-meer-complexe-dag" class="section level1">
 <h1>Voorbeeld van een meer complexe DAG</h1>
 <p>In haar afstudeerscriptie voor haar studie economie heeft Mijntje Jansen in 2019 onderzoek gedaan naar de invloed van de samenstelling van het bestuur in de verpleeghuiszorg qua geslacht op de beleefde kwaliteit van zorg. Om deze vraag te kunnen beantwoorden heeft ze de onderstaande DAG gemaakt.</p>
-<p>Deze DAG laat zien dat DAG’s behoorlijk complex kunnen zijn. Het is bij meer complexe DAG’s ingewikkeld om te bepalen welke variabelen nodig zijn om causale verbanden te kunnen identificeren. Dit wordt ook wel de “minimal adjustment set” genoemd. De R-package <code>dagitty</code> bepaalde de minimum adjustment set geautomatiseerd.</p>
+<p>Deze DAG laat zien dat DAG’s behoorlijk complex kunnen zijn. Het is bij meer complexe DAG’s ingewikkeld om te bepalen welke variabelen nodig zijn om causale verbanden te kunnen identificeren. Dit wordt ook wel de “minimal adjustment set” genoemd. In de R-package <code>dagitty</code> is het bepalen van de minimal adjustment set geautomatiseerd.</p>
 <p>Een tweede reden om deze DAG hier te laten zien is dat dit voorbeeld illustreert dat zelfs complexe modellen zoals hier zijn weergegeven goed kunnen worden besproken met andere -niet noodzakelijkerwijs wiskundig geschoolde- experts. In dit geval heeft Mijntje haar model besproken met bestuurders van verpleeghuisinstellingen, en op basis van deze gesprekken aangepast.</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <!-- Hier tijdens presentatie evt discussie over uitbreiden IQ - boeken DAG -->
@@ -994,17 +991,19 @@ F Statistic
 <p>Nu we de basisbeginselen van variabele selectie en causaliteit hebben besproken, willen we graag een voorbeeld laten zien hoe er met machine learning causale effecten geschat kunnen worden. We laten zien dat het causale model erg belangrijk is voor de conclusies.</p>
 <p>In dit voorbeeld gaan we uit van de volgende DAG.</p>
 <p>We hebben een aantal variabelen <span class="math inline">\(V_i, 1 \leq i \leq 8\)</span> (Zoals bijvoorbeeld leeftijd, chronische ziekten etc.) die een invloed hebben op de ziektelast die mensen ondervinden. Deze ziektelast heeft weer een invloed op de zorgkosten die mensen maken.</p>
-<p>Tenslotte is er een interventie <span class="math inline">\(T\)</span>, het zogeheten “wondermiddel”. Deze interventie is heel duur (en heeft daarom een invloed op de zorgkosten). Deze interventie heeft ondanks zijn hoge prijs, geen invloed op de ziektelast.</p>
+<p>Tenslotte is er een interventie <span class="math inline">\(T\)</span>, een zogenaamd “wondermiddel”. Deze interventie is heel duur en heeft daarom een invloed op de zorgkosten. Deze interventie heeft ondanks zijn hoge prijs, geen invloed op de ziektelast.</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
-<p>We hebben op op basis van deze DAG data gesimuleerd. Dat betekent dus dat er in onze data geen verband is tussen het wondermiddel (“Treatment”) en de ziektelast.</p>
+<p>We hebben op basis van deze DAG data gesimuleerd. Dat betekent dus dat er in onze data geen verband is tussen het wondermiddel (“Treatment”) en de ziektelast.</p>
 <p>De variabele <span class="math inline">\(Ziektelast\)</span> is bepaald op basis van de volgende formule:</p>
 <p><span class="math display">\[Ziektelast = abs(scale(V1^3 + 2 * V2 + 3 * V3^2 + 4 * V4 + 5 * V5 + 6 * V6*V7)) + \epsilon\]</span></p>
-<p>Stel nu dat we dit niet weten, en we willen het causale effect van onze <span class="math inline">\(Treatment\)</span> op de <span class="math inline">\(Ziektelast\)</span> schatten.</p>
-<p>Dan blijkt uit de DAG dat de variabele <span class="math inline">\(Zorgkosten\)</span> een collider is, die we niet mee moeten nemen in de analyse.</p>
+<p>De variabele <span class="math inline">\(Zorgkosten\)</span> is als volgt bepaald:</p>
+<p><span class="math display">\[Zorgkosten = 3 * Treatment + 5 * Ziektelast + \epsilon\]</span></p>
+<p>Normaal gesproken kennen we deze vergelijkingen niet en willen met behulp van data analyse het causale effect van onze <span class="math inline">\(Treatment\)</span> op de <span class="math inline">\(Ziektelast\)</span> schatten.</p>
+<p>Uit de DAG blijkt dat de variabele <span class="math inline">\(Zorgkosten\)</span> een collider is, die we niet mee moeten nemen in de analyse.</p>
 <p>Met behulp van machine learning (ML) kunnen we een causaal effect per persoon schatten. We gebruiken in dit geval het <a href="https://en.wikipedia.org/wiki/Random_forest">Random Forest Algoritme</a>, omdat Random Forest een populair ML algoritme is.</p>
 <p>Dat kunnen we doen met behulp van het volgende stappenplan:</p>
 <ol style="list-style-type: decimal">
-<li>Fit een Random Forest model op de data</li>
+<li>Fit een Random Forest model op de data om te kijken welk model (met of zonder variabele <span class="math inline">\(Zorgkosten\)</span>) de <span class="math inline">\(Ziektelast\)</span> het beste voorspelt</li>
 <li>Bepaal het gemiddelde treatment effect met behulp van generalized random forests (grf)</li>
 </ol>
 <p>We doorlopen deze procedure 2 keer:</p>
@@ -1346,14 +1345,14 @@ V8
 </div>
 <div id="voorspelkracht-random-forest" class="section level2">
 <h2>Voorspelkracht Random Forest</h2>
-<p>Als we onze schattingen doen, dan kunnen we eerst kijken naar de voorspelkracht van de modellen. Daarvoor gebruiken we <a href="https://www.investopedia.com/terms/r/r-squared.asp"><span class="math inline">\(R^2\)</span></a>.</p>
+<p>Als we onze schattingen doen, dan kunnen we eerst kijken naar de voorspelkracht van de modellen. Daarvoor gebruiken we <a href="https://www.investopedia.com/terms/r/r-squared.asp"><span class="math inline">\(R^2\)</span></a>. Er zijn ook andere indicatoren voor voorspelkracht.</p>
 <p>Uit de onderstaande grafiek blijkt dat het “verkeerde model” veel beter voorspelt dan het “goede model”. Dus wanneer we het “beste model” zouden kiezen op basis van hoe goed het model voorspelt, dan zouden we het verkeerde model kiezen.</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="schatting-van-het-effect-van-de-interventie" class="section level2">
 <h2>Schatting van het effect van de interventie</h2>
 <p>Dat we het verkeerde model kiezen als we het model selecteren op basis van voorspelkracht blijkt uit de onderstaande grafiek:</p>
-<p>We hebben onze data zo gesimuleerd dat er geen verband bestast tussen onze <span class="math inline">\(Treatment\)</span> en de <span class="math inline">\(Ziektelast\)</span>. Het “goede model” schat het door ons bepaalde nul-effect. Het “verkeerde” model daarentegen laat ten onrechte zien dat onze <span class="math inline">\(Treatment\)</span> de <span class="math inline">\(Ziektelast\)</span> verlaagt.</p>
+<p>We hebben onze data zo gesimuleerd dat er geen verband bestaat tussen onze <span class="math inline">\(Treatment\)</span> en de <span class="math inline">\(Ziektelast\)</span>. Het “goede model” schat het door ons bepaalde nul-effect. Het “verkeerde” model daarentegen laat ten onrechte zien dat onze <span class="math inline">\(Treatment\)</span> de <span class="math inline">\(Ziektelast\)</span> verlaagt.</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 </div>
 </div>
