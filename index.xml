@@ -364,7 +364,7 @@ F Statistic
 &lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Op basis van deze DAG kunnen we data genereren en deze data in een grafiek weergeven.&lt;/p&gt;
 &lt;p&gt;Ook in dit geval hebben we data op basis van deze DAG gesimuleerd en willen we laten zien wat er gebeurt wanneer de mediator (in dit geval de variabele &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt;) wel of niet wordt opgenomen in de analyse.&lt;/p&gt;
-&lt;p&gt;Wanneer we de variable &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; niet opnemen in de analyse, dan zien we een vrij sterke correlatie tussen &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; en het behaalde aantal &lt;span class=&#34;math inline&#34;&gt;\(Punten\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Wanneer we de variable &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; niet opnemen in de analyse, dan zien we een vrij sterke correlatie tussen &lt;span class=&#34;math inline&#34;&gt;\(Budgetten\)&lt;/span&gt; en het behaalde aantal &lt;span class=&#34;math inline&#34;&gt;\(Punten\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Wanneer we de variabele &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; zouden toevoegen aan onze analyse, dan verdwijnt de correlatie. Dit is vergelijkbaar wat er gebeurt met de confounder.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
