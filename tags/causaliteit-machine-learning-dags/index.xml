@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>causaliteit machine learning dags | Academic</title>
-    <link>/tags/causaliteit-machine-learning-dags/</link>
-      <atom:link href="/tags/causaliteit-machine-learning-dags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://misjamikkers.github.io/tags/causaliteit-machine-learning-dags/</link>
+      <atom:link href="https://misjamikkers.github.io/tags/causaliteit-machine-learning-dags/index.xml" rel="self" type="application/rss+xml" />
     <description>causaliteit machine learning dags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018</copyright><lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/misja.jpg</url>
+      <url>https://misjamikkers.github.io/img/misja.jpg</url>
       <title>causaliteit machine learning dags</title>
-      <link>/tags/causaliteit-machine-learning-dags/</link>
+      <link>https://misjamikkers.github.io/tags/causaliteit-machine-learning-dags/</link>
     </image>
     
     <item>
       <title>Causaliteit en Machine Learning</title>
-      <link>/post/causaliteit-en-machine-learning/</link>
+      <link>https://misjamikkers.github.io/post/causaliteit-en-machine-learning/</link>
       <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/post/causaliteit-en-machine-learning/</guid>
+      <guid>https://misjamikkers.github.io/post/causaliteit-en-machine-learning/</guid>
       <description>
 
 
@@ -110,10 +110,10 @@
 &lt;/ul&gt;
 &lt;p&gt;Om het probleem van het voorspellen op basis van correlaties te illustreren, hebben we een fictieve dataset gemaakt met gegevens over het aantal boeken dat ouders bezit en de CITO-scores van hun kinderen.&lt;/p&gt;
 &lt;p&gt;Uit figuur 1 blijkt dat er een correlatie is tussen het aantal boeken dat ouders bezit en de CITO-scores van hun kinderen.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Als deze correlatie een een causaal effect zou zijn, dan zou het helpen om boeken aan ouders van schoolgaande kinderen te geven. In dit geval is het aannemelijker dat er een andere variabele is, die zowel leidt tot meer boeken als tot hogere CITO-scores bij kinderen: het IQ van de ouders.&lt;/p&gt;
 &lt;p&gt;Zodra we rekening houden met (“controleren voor”) het IQ van de ouders, dan verdwijnt het effect. Rekening houden met of controleren voor betekent in dit geval de variabele &lt;em&gt;IQ van de ouders&lt;/em&gt; aan de analyse wordt toegevoegd. Wanneer we informatie hebben over de CITO-scores van kinderen en het IQ van hun ouders, voegt de data over het aantal boeken geen waarde meer toe aan onze analyse. In onderstaande plot hebben we het IQ van de ouders in 10 even grote groepen ingedeeld. Dan zien we dat binnen die groepen het aantal boeken de CITO-scores niet meer verklaren (vlakke lijn).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In het kader van dit blog definieren we causaliteit als het verschijnsel dat als we een variabele veranderen &lt;strong&gt;in de wereld&lt;/strong&gt;, dat dan een andere variabele ook verandert &lt;strong&gt;als gevolg hiervan&lt;/strong&gt;. In het bovenstaande voorbeeld is het aantal boeken geen oorzaak van de CITO-scores. Als we het aantal boeken zouden veranderen, dan verandert de CITO score niet. Het IQ van de ouders is wel een oorzaak van hogere CITO-scores. In dit voorbeeld kunnen wij ons overigens niet voorstellen dat we het IQ van de ouders veranderen. Heel strikt genomen is ook niet zo dat als we het IQ van de ouders zouden kunnen veranderen (b.v. door middel van een lobotomie), dat dan het IQ van de kinderen zou veranderen. We kunnen wel een counter factual beredeneren: wanneer het IQ van de ouders anders geweest zou zijn, dan zou ook de CITO score anders zijn.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;grafische-causale-modellen-in-de-volksmond-dags&#34; class=&#34;section level1&#34;&gt;
@@ -122,7 +122,7 @@
 &lt;h2&gt;Introductie&lt;/h2&gt;
 &lt;p&gt;Het is mogelijk om een causaal model in een stelsel van wiskundige vergelijkingen weer te geven. Dit wordt snel complex. Daarom worden causale modellen ook wel visueel weergegeven als &lt;em&gt;DAG&lt;/em&gt;’s: Directed Acyclic Graphs. Deze DAG’s zijn een visuele weergave van een model dat alle oorzaak-gevolg relaties beschrijft.&lt;/p&gt;
 &lt;p&gt;DAG’s kunnen heel simpel zijn, maar ook complex. Elke complexe DAG kan uit 3 basisvormen worden samengesteld.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Een DAG bestaat uit 3 onderdelen:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;pijlen die de richting aangeven van causale relaties&lt;/li&gt;
@@ -134,7 +134,7 @@
 &lt;div id=&#34;confounder&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Confounder&lt;/h2&gt;
 &lt;p&gt;We kunnen het hierboven gegeven voorbeeld over het aantal boeken dat ouders bezit en de CITO score van hun kinderen weergeven in een causaal model:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Zoals uit het voorbeeld met de data bleek, maak het uit of je de confounder (in het Nederlands: de gezamenlijke oorzaak) wel of niet opneemt in je analyse. In dit geval wordt er gezegd dat het pad tussen de variable &lt;span class=&#34;math inline&#34;&gt;\(Aantal\_boeken\)&lt;/span&gt; en &lt;span class=&#34;math inline&#34;&gt;\(Cito\_score\)&lt;/span&gt; “open” is. Dat betekent er “informatie kan stromen” tussen die variabelen, die de causale analyse verstoort. Om een causale relatie tussen het &lt;span class=&#34;math inline&#34;&gt;\(Aantal\_boeken\)&lt;/span&gt; en de &lt;span class=&#34;math inline&#34;&gt;\(Cito\_score\)&lt;/span&gt; te kunnen identificeren, moet het pad &lt;em&gt;Aantal boeken &amp;lt;- IQ ouders -&amp;gt; Cito score&lt;/em&gt; gesloten worden. Het pad kan gesloten worden door de variable &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt; in de analyse op te nemen. Daarmee kunnen we testen of er een correlatie bestaat tussen het &lt;span class=&#34;math inline&#34;&gt;\(Aantal\_boeken\)&lt;/span&gt; en de &lt;span class=&#34;math inline&#34;&gt;\(Cito_score\)&lt;/span&gt;. In statistisch jargon wordt dan gezegd dat er “gecontroleerd” wordt voor de variabele &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Uit het datavoorbeeld blijkt dat wanneer we de variabele &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt; niet opnemen in de analyse, dat we dan een correlatie vinden tussen de variabelen het &lt;span class=&#34;math inline&#34;&gt;\(Aantal\_boeken\)&lt;/span&gt; en de &lt;span class=&#34;math inline&#34;&gt;\(Cito\_score\)&lt;/span&gt;. Wanneer we de de variabele &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt; wel opnemen in de analyse, verdwijnt de correlatie.&lt;/p&gt;
 &lt;p&gt;Dus wanneer we uitgaan van de DAG, dan kunnen we alleen het causale effect identificeren wanneer we de confouder meenemen. Als we geen data zouden hebben over de variabele &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt;, dan kunnen we dus ook geen causaal effect schatten. Ook niet met de meest geavanceerde Artificial Intelligence algorithmen!&lt;/p&gt;
@@ -144,13 +144,13 @@
 &lt;p&gt;De tweede basisvorm wordt ook wel de “collider” genoemd. In het Nederlands zou je dit kunnen vertalen als het gezamenlijk gevolg.&lt;/p&gt;
 &lt;p&gt;In dit voorbeeld gaan we er vanuit dat we een causale relatie willen identificeren tussen Lengte en Snelheid binnen een groep basketbalspelers. Daarbij gaan we er vanuit dat er zowel professionele basketballers zijn (“NBA”) als amateurs (“geen NBA”). Spelers in de NBA zijn in het algemeen zowel snel als lang. Wanneer ze niet lang zijn, dan moeten om ze hun lengte te compenseren wel enorm snel zijn (of vice versa).&lt;/p&gt;
 &lt;p&gt;Deze informatie kunnen we weergeven in de volgende DAG:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We kunnen nu kijken wat er gebeurt wanneer we wel of niet de professionele status van de basketballers meenemen in onze analyse.&lt;/p&gt;
 &lt;p&gt;Wanneer we de “collider” niet meenemen in onze analyse, dan vinden we in onze data geen correlatie tussen Lengte en Snelheid binnen onze groep basketballers.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Maar wanneer we de professionele status van onze basketballers wel meenemen in de analyse, vinden we plotseling wel een verband!&lt;/p&gt;
 &lt;p&gt;Merk op dat er &lt;strong&gt;selectie&lt;/strong&gt; plaats vindt: We &lt;strong&gt;selecteren&lt;/strong&gt; de NBA-ers (of juist de niet-NBA-ers), en na selectie ontstaat er een correlatie die er voorheen niet was.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Ook als je een regressie zou doen, dan blijkt dat&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;geen verband is tussen lengte en snelheid&lt;/li&gt;
@@ -362,13 +362,13 @@ F Statistic
 &lt;p&gt;De derde basisvorm wordt de mediator genoemd. In dit geval beinvloedt 1 variabele een tweede variabele die op haar beurt een derde variable beinvloedt.&lt;/p&gt;
 &lt;p&gt;In het volgende gestileerde voorbeeld zijn we geinteresseerd in de causale relatie tussen het budget van bijvoorbeeld een professioneel voetbalteam en de punten die dat team haalt.&lt;/p&gt;
 &lt;p&gt;Omdat je (althans: voor zover wij weten) geen punten kunt kopen, moet een eventuele causale relatie door een tweede variable lopen. In dit geval zegt de DAG dat teams met een hoger budget zich betere spelers kunnen veroorloven. En een team met betere spelers behaalt meer punten.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Op basis van deze DAG kunnen we data genereren en deze data in een grafiek weergeven.&lt;/p&gt;
 &lt;p&gt;Ook in dit geval hebben we data op basis van deze DAG gesimuleerd en willen we laten zien wat er gebeurt wanneer de mediator (in dit geval de variabele &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt;) wel of niet wordt opgenomen in de analyse.&lt;/p&gt;
 &lt;p&gt;Wanneer we de variable &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; niet opnemen in de analyse, dan zien we een vrij sterke correlatie tussen &lt;span class=&#34;math inline&#34;&gt;\(Budgetten\)&lt;/span&gt; en het behaalde aantal &lt;span class=&#34;math inline&#34;&gt;\(Punten\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Wanneer we de variabele &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; zouden toevoegen aan onze analyse, dan verdwijnt de correlatie. Dit is vergelijkbaar wat er gebeurt met de confounder.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Ook uit de resultaten van een simpele regressie blijkt dit:&lt;/p&gt;
 &lt;table style=&#34;text-align:center&#34;&gt;
 &lt;tr&gt;
@@ -576,7 +576,7 @@ F Statistic
 &lt;p&gt;In haar afstudeerscriptie voor haar studie economie heeft Mijntje Jansen in 2019 onderzoek gedaan naar de invloed van de samenstelling van het bestuur in de verpleeghuiszorg qua geslacht op de beleefde kwaliteit van zorg. Om deze vraag te kunnen beantwoorden heeft ze de onderstaande DAG gemaakt.&lt;/p&gt;
 &lt;p&gt;Deze DAG laat zien dat DAG’s behoorlijk complex kunnen zijn. Het is bij meer complexe DAG’s ingewikkeld om te bepalen welke variabelen nodig zijn om causale verbanden te kunnen identificeren. Dit wordt ook wel de “minimal adjustment set” genoemd. In de R-package &lt;code&gt;dagitty&lt;/code&gt; is het bepalen van de minimal adjustment set geautomatiseerd.&lt;/p&gt;
 &lt;p&gt;Een tweede reden om deze DAG hier te laten zien is dat dit voorbeeld illustreert dat zelfs complexe modellen zoals hier zijn weergegeven goed kunnen worden besproken met andere -niet noodzakelijkerwijs wiskundig geschoolde- experts. In dit geval heeft Mijntje haar model besproken met bestuurders van verpleeghuisinstellingen, en op basis van deze gesprekken aangepast.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;!-- Hier tijdens presentatie evt discussie over uitbreiden IQ - boeken DAG --&gt;
 &lt;/div&gt;
 &lt;div id=&#34;machine-learning-en-causaliteit&#34; class=&#34;section level1&#34;&gt;
@@ -585,7 +585,7 @@ F Statistic
 &lt;p&gt;In dit voorbeeld gaan we uit van de volgende DAG.&lt;/p&gt;
 &lt;p&gt;We hebben een aantal variabelen &lt;span class=&#34;math inline&#34;&gt;\(V_i, 1 \leq i \leq 8\)&lt;/span&gt; (Zoals bijvoorbeeld leeftijd, chronische ziekten etc.) die een invloed hebben op de ziektelast die mensen ondervinden. Deze ziektelast heeft weer een invloed op de zorgkosten die mensen maken.&lt;/p&gt;
 &lt;p&gt;Tenslotte is er een interventie &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, een zogenaamd “wondermiddel”. Deze interventie is heel duur en heeft daarom een invloed op de zorgkosten. Deze interventie heeft ondanks zijn hoge prijs, geen invloed op de ziektelast.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We hebben op basis van deze DAG data gesimuleerd. Dat betekent dus dat er in onze data geen verband is tussen het wondermiddel (“Treatment”) en de ziektelast.&lt;/p&gt;
 &lt;p&gt;De variabele &lt;span class=&#34;math inline&#34;&gt;\(Ziektelast\)&lt;/span&gt; is bepaald op basis van de volgende formule:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Ziektelast = abs(scale(V1^3 + 2 * V2 + 3 * V3^2 + 4 * V4 + 5 * V5 + 6 * V6*V7)) + \epsilon\]&lt;/span&gt;&lt;/p&gt;
@@ -940,13 +940,13 @@ V8
 &lt;h2&gt;Voorspelkracht Random Forest&lt;/h2&gt;
 &lt;p&gt;Als we onze schattingen doen, dan kunnen we eerst kijken naar de voorspelkracht van de modellen. Daarvoor gebruiken we &lt;a href=&#34;https://www.investopedia.com/terms/r/r-squared.asp&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt;&lt;/a&gt;. Er zijn ook andere indicatoren voor voorspelkracht.&lt;/p&gt;
 &lt;p&gt;Uit de onderstaande grafiek blijkt dat het “verkeerde model” veel beter voorspelt dan het “goede model”. Dus wanneer we het “beste model” zouden kiezen op basis van hoe goed het model voorspelt, dan zouden we het verkeerde model kiezen.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;schatting-van-het-effect-van-de-interventie&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Schatting van het effect van de interventie&lt;/h2&gt;
 &lt;p&gt;Dat we het verkeerde model kiezen als we het model selecteren op basis van voorspelkracht blijkt uit de onderstaande grafiek:&lt;/p&gt;
 &lt;p&gt;We hebben onze data zo gesimuleerd dat er geen verband bestaat tussen onze &lt;span class=&#34;math inline&#34;&gt;\(Treatment\)&lt;/span&gt; en de &lt;span class=&#34;math inline&#34;&gt;\(Ziektelast\)&lt;/span&gt;. Het “goede model” schat het door ons bepaalde nul-effect. Het “verkeerde” model daarentegen laat ten onrechte zien dat onze &lt;span class=&#34;math inline&#34;&gt;\(Treatment\)&lt;/span&gt; de &lt;span class=&#34;math inline&#34;&gt;\(Ziektelast\)&lt;/span&gt; verlaagt.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/blog_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;conclusie&#34; class=&#34;section level1&#34;&gt;

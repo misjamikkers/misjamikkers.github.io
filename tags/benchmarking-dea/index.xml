@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>benchmarking DEA | Academic</title>
-    <link>/tags/benchmarking-dea/</link>
-      <atom:link href="/tags/benchmarking-dea/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://misjamikkers.github.io/tags/benchmarking-dea/</link>
+      <atom:link href="https://misjamikkers.github.io/tags/benchmarking-dea/index.xml" rel="self" type="application/rss+xml" />
     <description>benchmarking DEA</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018</copyright><lastBuildDate>Wed, 21 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/misja.jpg</url>
+      <url>https://misjamikkers.github.io/img/misja.jpg</url>
       <title>benchmarking DEA</title>
-      <link>/tags/benchmarking-dea/</link>
+      <link>https://misjamikkers.github.io/tags/benchmarking-dea/</link>
     </image>
     
     <item>
       <title>A benchmarking example in R</title>
-      <link>/post/dea-example-students/</link>
+      <link>https://misjamikkers.github.io/post/dea-example-students/</link>
       <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>/post/dea-example-students/</guid>
+      <guid>https://misjamikkers.github.io/post/dea-example-students/</guid>
       <description>
 
 
@@ -59,7 +59,7 @@ d1 &amp;lt;- as.data.frame(id) %&amp;gt;%
   select(TC, Cases, Settlements)
 
 suppressWarnings(chart.Correlation(d_CC))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/DEA_example_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;model-1-with-1-input-tc-and-1-output-cases&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Model 1 with 1 input (TC) and 1 output (Cases)&lt;/h1&gt;
@@ -147,7 +147,7 @@ kable(summary(d_eff))&lt;/code&gt;&lt;/pre&gt;
   xlab(&amp;quot;True efficiency&amp;quot;) +
   ylab(&amp;quot;Efficiency scores model 1&amp;quot;) +
   theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/DEA_example_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can conclude that our model does not perform very good:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;most efficiency scores are underestimated&lt;/li&gt;
@@ -260,7 +260,7 @@ ggplot(data = Diff, aes(x = reorder(id, Difference), y = Difference)) +
   theme_minimal() +
   xlab(&amp;quot;ID&amp;quot;) +
    theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 5))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/DEA_example_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can also have a closer look at the peers:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d_peers_CRS &amp;lt;- d_CRS_1%&amp;gt;%
   filter(efficiency_scores_CRS == 1)
@@ -319,7 +319,7 @@ kable(d_peers_CRS)&lt;/code&gt;&lt;/pre&gt;
   xlab(&amp;quot;True efficiency&amp;quot;) +
   ylab(&amp;quot;Efficiency scores model 2&amp;quot;) +
   theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/DEA_example_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can now conclude that the model performs reasonbly well.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -538,7 +538,7 @@ kable(d_peers_VRS)&lt;/code&gt;&lt;/pre&gt;
   xlab(&amp;quot;True efficiency&amp;quot;) +
   ylab(&amp;quot;Efficiency scores model 3&amp;quot;) +
   theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/DEA_example_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;As we see, in general firms improved (a bit). Especially large or small firms will be efficient be default.&lt;/p&gt;
 &lt;p&gt;Please note:&lt;/p&gt;
 &lt;ul&gt;
