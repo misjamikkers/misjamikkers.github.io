@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 3.2.0">
-  <meta name="generator" content="Hugo 0.53" />
-  <meta name="author" content="Misja Mikkers">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
 
   
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Misja Mikkers">
+
   
   
   
@@ -18,22 +31,10 @@
   <meta name="description" content="Het doel van dit blog is om een toegankelijke inleiding te geven over causaliteit en data analyse.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://misjamikkers.github.io/post/causaliteit-en-machine-learning/">
+  <link rel="alternate" hreflang="en-us" href="/post/causaliteit-en-machine-learning/">
 
   
 
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
   
   
@@ -46,10 +47,9 @@
   
   
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
     
@@ -60,12 +60,15 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
 
     
 
@@ -73,54 +76,120 @@
 
   
   
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
   
-
-  <link rel="stylesheet" href="/styles.css">
-  
-
-  
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
   
 
   
-  <link rel="alternate" href="https://misjamikkers.github.io/index.xml" type="application/rss+xml" title="Misja Mikkers">
-  <link rel="feed" href="https://misjamikkers.github.io/index.xml" type="application/rss+xml" title="Misja Mikkers">
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
   
 
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://misjamikkers.github.io/post/causaliteit-en-machine-learning/">
+  <link rel="canonical" href="/post/causaliteit-en-machine-learning/">
 
   
   
   
   
     
+  
   
   <meta property="twitter:card" content="summary_large_image">
   
-  <meta property="og:site_name" content="Misja Mikkers">
-  <meta property="og:url" content="https://misjamikkers.github.io/post/causaliteit-en-machine-learning/">
-  <meta property="og:title" content="Causaliteit en Machine Learning | Misja Mikkers">
-  <meta property="og:description" content="Het doel van dit blog is om een toegankelijke inleiding te geven over causaliteit en data analyse."><meta property="og:image" content="https://misjamikkers.github.io/img/headers/DAGbeach.JPG">
-  <meta property="og:locale" content="en-us">
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/post/causaliteit-en-machine-learning/">
+  <meta property="og:title" content="Causaliteit en Machine Learning | Academic">
+  <meta property="og:description" content="Het doel van dit blog is om een toegankelijke inleiding te geven over causaliteit en data analyse."><meta property="og:image" content="/img/headers/DAGbeach.JPG">
+  <meta property="twitter:image" content="/img/headers/DAGbeach.JPG"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-16T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-09-16T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-09-16T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-16T00:00:00&#43;00:00">
+
   
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/causaliteit-en-machine-learning/"
+  },
+  "headline": "Causaliteit en Machine Learning",
+  
+  "datePublished": "2019-09-16T00:00:00Z",
+  "dateModified": "2019-09-16T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Misja Mikkers"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academic",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "Het doel van dit blog is om een toegankelijke inleiding te geven over causaliteit en data analyse."
+}
+</script>
 
   
 
   
 
-  <title>Causaliteit en Machine Learning | Misja Mikkers</title>
+
+  
+
+
+  
+
+
+
+
+
+  <title>Causaliteit en Machine Learning | Academic</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
   <aside class="search-results" id="search">
   <div class="container">
     <section class="search-header">
@@ -137,7 +206,7 @@
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
         
       </div>
 
@@ -153,11 +222,12 @@
 </aside>
 
 
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
-      <a class="navbar-brand" href="/">Misja Mikkers</a>
+      <a class="navbar-brand" href="/">Academic</a>
       
       <button type="button" class="navbar-toggler" data-toggle="collapse"
               data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -170,85 +240,112 @@
 
       
       
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span></span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
       <ul class="navbar-nav ml-auto">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#about">
-            
-            <span>Home</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#posts">
-            
-            <span>Posts</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#teaching">
-            
-            <span>Teaching</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#contact">
-            
-            <span>Contact</span>
-            
-          </a>
-        </li>
-
-        
-        
-
       
 
         
@@ -274,7 +371,7 @@
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+  <article class="article">
 
   
 
@@ -289,7 +386,7 @@
 <div class="article-header">
   
   
-  <img src="/img/headers/DAGbeach.JPG" class="article-banner" itemprop="image" alt="">
+  <img src="/img/headers/DAGbeach.JPG" class="article-banner" alt="">
   
 
   
@@ -304,32 +401,30 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Causaliteit en Machine Learning</h1>
+  <h1>Causaliteit en Machine Learning</h1>
 
   
 
   
     
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Misja Mikkers">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 16, 2019
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2019-09-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-09-16 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Sep 16, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Misja Mikkers">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -340,68 +435,18 @@
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/r/">R</a>
-    
-  </span>
-  
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Causaliteit%20en%20Machine%20Learning&amp;url=https%3a%2f%2fmisjamikkers.github.io%2fpost%2fcausaliteit-en-machine-learning%2f"
-         target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmisjamikkers.github.io%2fpost%2fcausaliteit-en-machine-learning%2f"
-         target="_blank" rel="noopener">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmisjamikkers.github.io%2fpost%2fcausaliteit-en-machine-learning%2f&amp;title=Causaliteit%20en%20Machine%20Learning"
-         target="_blank" rel="noopener">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmisjamikkers.github.io%2fpost%2fcausaliteit-en-machine-learning%2f&amp;title=Causaliteit%20en%20Machine%20Learning"
-         target="_blank" rel="noopener">
-        <i class="fab fa-weibo"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Causaliteit%20en%20Machine%20Learning&amp;body=https%3a%2f%2fmisjamikkers.github.io%2fpost%2fcausaliteit-en-machine-learning%2f">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
+    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a></span>
   
 
 </div>
 
     
-
 
 
 
@@ -423,7 +468,7 @@
 
   <div class="article-container">
 
-    <div class="article-style" itemprop="articleBody">
+    <div class="article-style">
       
 
 
@@ -517,10 +562,10 @@
 </ul>
 <p>Om het probleem van het voorspellen op basis van correlaties te illustreren, hebben we een fictieve dataset gemaakt met gegevens over het aantal boeken dat ouders bezit en de CITO-scores van hun kinderen.</p>
 <p>Uit figuur 1 blijkt dat er een correlatie is tussen het aantal boeken dat ouders bezit en de CITO-scores van hun kinderen.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>Als deze correlatie een een causaal effect zou zijn, dan zou het helpen om boeken aan ouders van schoolgaande kinderen te geven. In dit geval is het aannemelijker dat er een andere variabele is, die zowel leidt tot meer boeken als tot hogere CITO-scores bij kinderen: het IQ van de ouders.</p>
 <p>Zodra we rekening houden met (“controleren voor”) het IQ van de ouders, dan verdwijnt het effect. Rekening houden met of controleren voor betekent in dit geval de variabele <em>IQ van de ouders</em> aan de analyse wordt toegevoegd. Wanneer we informatie hebben over de CITO-scores van kinderen en het IQ van hun ouders, voegt de data over het aantal boeken geen waarde meer toe aan onze analyse. In onderstaande plot hebben we het IQ van de ouders in 10 even grote groepen ingedeeld. Dan zien we dat binnen die groepen het aantal boeken de CITO-scores niet meer verklaren (vlakke lijn).</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>In het kader van dit blog definieren we causaliteit als het verschijnsel dat als we een variabele veranderen <strong>in de wereld</strong>, dat dan een andere variabele ook verandert <strong>als gevolg hiervan</strong>. In het bovenstaande voorbeeld is het aantal boeken geen oorzaak van de CITO-scores. Als we het aantal boeken zouden veranderen, dan verandert de CITO score niet. Het IQ van de ouders is wel een oorzaak van hogere CITO-scores. In dit voorbeeld kunnen wij ons overigens niet voorstellen dat we het IQ van de ouders veranderen. Heel strikt genomen is ook niet zo dat als we het IQ van de ouders zouden kunnen veranderen (b.v. door middel van een lobotomie), dat dan het IQ van de kinderen zou veranderen. We kunnen wel een counter factual beredeneren: wanneer het IQ van de ouders anders geweest zou zijn, dan zou ook de CITO score anders zijn.</p>
 </div>
 <div id="grafische-causale-modellen-in-de-volksmond-dags" class="section level1">
@@ -529,7 +574,7 @@
 <h2>Introductie</h2>
 <p>Het is mogelijk om een causaal model in een stelsel van wiskundige vergelijkingen weer te geven. Dit wordt snel complex. Daarom worden causale modellen ook wel visueel weergegeven als <em>DAG</em>’s: Directed Acyclic Graphs. Deze DAG’s zijn een visuele weergave van een model dat alle oorzaak-gevolg relaties beschrijft.</p>
 <p>DAG’s kunnen heel simpel zijn, maar ook complex. Elke complexe DAG kan uit 3 basisvormen worden samengesteld.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>Een DAG bestaat uit 3 onderdelen:</p>
 <ol style="list-style-type: decimal">
 <li>pijlen die de richting aangeven van causale relaties</li>
@@ -541,7 +586,7 @@
 <div id="confounder" class="section level2">
 <h2>Confounder</h2>
 <p>We kunnen het hierboven gegeven voorbeeld over het aantal boeken dat ouders bezit en de CITO score van hun kinderen weergeven in een causaal model:</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>Zoals uit het voorbeeld met de data bleek, maak het uit of je de confounder (in het Nederlands: de gezamenlijke oorzaak) wel of niet opneemt in je analyse. In dit geval wordt er gezegd dat het pad tussen de variable <span class="math inline">\(Aantal\_boeken\)</span> en <span class="math inline">\(Cito\_score\)</span> “open” is. Dat betekent er “informatie kan stromen” tussen die variabelen, die de causale analyse verstoort. Om een causale relatie tussen het <span class="math inline">\(Aantal\_boeken\)</span> en de <span class="math inline">\(Cito\_score\)</span> te kunnen identificeren, moet het pad <em>Aantal boeken &lt;- IQ ouders -&gt; Cito score</em> gesloten worden. Het pad kan gesloten worden door de variable <span class="math inline">\(IQ\_ouders\)</span> in de analyse op te nemen. Daarmee kunnen we testen of er een correlatie bestaat tussen het <span class="math inline">\(Aantal\_boeken\)</span> en de <span class="math inline">\(Cito_score\)</span>. In statistisch jargon wordt dan gezegd dat er “gecontroleerd” wordt voor de variabele <span class="math inline">\(IQ\_ouders\)</span>.</p>
 <p>Uit het datavoorbeeld blijkt dat wanneer we de variabele <span class="math inline">\(IQ\_ouders\)</span> niet opnemen in de analyse, dat we dan een correlatie vinden tussen de variabelen het <span class="math inline">\(Aantal\_boeken\)</span> en de <span class="math inline">\(Cito\_score\)</span>. Wanneer we de de variabele <span class="math inline">\(IQ\_ouders\)</span> wel opnemen in de analyse, verdwijnt de correlatie.</p>
 <p>Dus wanneer we uitgaan van de DAG, dan kunnen we alleen het causale effect identificeren wanneer we de confouder meenemen. Als we geen data zouden hebben over de variabele <span class="math inline">\(IQ\_ouders\)</span>, dan kunnen we dus ook geen causaal effect schatten. Ook niet met de meest geavanceerde Artificial Intelligence algorithmen!</p>
@@ -551,13 +596,13 @@
 <p>De tweede basisvorm wordt ook wel de “collider” genoemd. In het Nederlands zou je dit kunnen vertalen als het gezamenlijk gevolg.</p>
 <p>In dit voorbeeld gaan we er vanuit dat we een causale relatie willen identificeren tussen Lengte en Snelheid binnen een groep basketbalspelers. Daarbij gaan we er vanuit dat er zowel professionele basketballers zijn (“NBA”) als amateurs (“geen NBA”). Spelers in de NBA zijn in het algemeen zowel snel als lang. Wanneer ze niet lang zijn, dan moeten om ze hun lengte te compenseren wel enorm snel zijn (of vice versa).</p>
 <p>Deze informatie kunnen we weergeven in de volgende DAG:</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>We kunnen nu kijken wat er gebeurt wanneer we wel of niet de professionele status van de basketballers meenemen in onze analyse.</p>
 <p>Wanneer we de “collider” niet meenemen in onze analyse, dan vinden we in onze data geen correlatie tussen Lengte en Snelheid binnen onze groep basketballers.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>Maar wanneer we de professionele status van onze basketballers wel meenemen in de analyse, vinden we plotseling wel een verband!</p>
 <p>Merk op dat er <strong>selectie</strong> plaats vindt: We <strong>selecteren</strong> de NBA-ers (of juist de niet-NBA-ers), en na selectie ontstaat er een correlatie die er voorheen niet was.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Ook als je een regressie zou doen, dan blijkt dat</p>
 <ul>
 <li>geen verband is tussen lengte en snelheid</li>
@@ -769,13 +814,13 @@ F Statistic
 <p>De derde basisvorm wordt de mediator genoemd. In dit geval beinvloedt 1 variabele een tweede variabele die op haar beurt een derde variable beinvloedt.</p>
 <p>In het volgende gestileerde voorbeeld zijn we geinteresseerd in de causale relatie tussen het budget van bijvoorbeeld een professioneel voetbalteam en de punten die dat team haalt.</p>
 <p>Omdat je (althans: voor zover wij weten) geen punten kunt kopen, moet een eventuele causale relatie door een tweede variable lopen. In dit geval zegt de DAG dat teams met een hoger budget zich betere spelers kunnen veroorloven. En een team met betere spelers behaalt meer punten.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <p>Op basis van deze DAG kunnen we data genereren en deze data in een grafiek weergeven.</p>
 <p>Ook in dit geval hebben we data op basis van deze DAG gesimuleerd en willen we laten zien wat er gebeurt wanneer de mediator (in dit geval de variabele <span class="math inline">\(Teamsterkte\)</span>) wel of niet wordt opgenomen in de analyse.</p>
 <p>Wanneer we de variable <span class="math inline">\(Teamsterkte\)</span> niet opnemen in de analyse, dan zien we een vrij sterke correlatie tussen <span class="math inline">\(Budgetten\)</span> en het behaalde aantal <span class="math inline">\(Punten\)</span>.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<p>Wanneer we de variabele <span class="math inline">\(Teamsterkte\)</span> zouden toevoegen aan onze analyse, dan verdwijnt de correlatie. Dit is vergelijkbaar wat er gebeurt met de confounder.</p>
 <p><img src="/post/blog_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Wanneer we de variabele <span class="math inline">\(Teamsterkte\)</span> zouden toevoegen aan onze analyse, dan verdwijnt de correlatie. Dit is vergelijkbaar wat er gebeurt met de confounder.</p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p>Ook uit de resultaten van een simpele regressie blijkt dit:</p>
 <table style="text-align:center">
 <tr>
@@ -983,7 +1028,7 @@ F Statistic
 <p>In haar afstudeerscriptie voor haar studie economie heeft Mijntje Jansen in 2019 onderzoek gedaan naar de invloed van de samenstelling van het bestuur in de verpleeghuiszorg qua geslacht op de beleefde kwaliteit van zorg. Om deze vraag te kunnen beantwoorden heeft ze de onderstaande DAG gemaakt.</p>
 <p>Deze DAG laat zien dat DAG’s behoorlijk complex kunnen zijn. Het is bij meer complexe DAG’s ingewikkeld om te bepalen welke variabelen nodig zijn om causale verbanden te kunnen identificeren. Dit wordt ook wel de “minimal adjustment set” genoemd. In de R-package <code>dagitty</code> is het bepalen van de minimal adjustment set geautomatiseerd.</p>
 <p>Een tweede reden om deze DAG hier te laten zien is dat dit voorbeeld illustreert dat zelfs complexe modellen zoals hier zijn weergegeven goed kunnen worden besproken met andere -niet noodzakelijkerwijs wiskundig geschoolde- experts. In dit geval heeft Mijntje haar model besproken met bestuurders van verpleeghuisinstellingen, en op basis van deze gesprekken aangepast.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <!-- Hier tijdens presentatie evt discussie over uitbreiden IQ - boeken DAG -->
 </div>
 <div id="machine-learning-en-causaliteit" class="section level1">
@@ -992,7 +1037,7 @@ F Statistic
 <p>In dit voorbeeld gaan we uit van de volgende DAG.</p>
 <p>We hebben een aantal variabelen <span class="math inline">\(V_i, 1 \leq i \leq 8\)</span> (Zoals bijvoorbeeld leeftijd, chronische ziekten etc.) die een invloed hebben op de ziektelast die mensen ondervinden. Deze ziektelast heeft weer een invloed op de zorgkosten die mensen maken.</p>
 <p>Tenslotte is er een interventie <span class="math inline">\(T\)</span>, een zogenaamd “wondermiddel”. Deze interventie is heel duur en heeft daarom een invloed op de zorgkosten. Deze interventie heeft ondanks zijn hoge prijs, geen invloed op de ziektelast.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>We hebben op basis van deze DAG data gesimuleerd. Dat betekent dus dat er in onze data geen verband is tussen het wondermiddel (“Treatment”) en de ziektelast.</p>
 <p>De variabele <span class="math inline">\(Ziektelast\)</span> is bepaald op basis van de volgende formule:</p>
 <p><span class="math display">\[Ziektelast = abs(scale(V1^3 + 2 * V2 + 3 * V3^2 + 4 * V4 + 5 * V5 + 6 * V6*V7)) + \epsilon\]</span></p>
@@ -1058,22 +1103,22 @@ Ziektelast
 1,000
 </td>
 <td>
-0.830
+0.834
 </td>
 <td>
-0.558
+0.562
 </td>
 <td>
-0.005
+0.003
 </td>
 <td>
-0.493
+0.494
 </td>
 <td>
-0.936
+0.945
 </td>
 <td>
-2.695
+2.737
 </td>
 </tr>
 <tr>
@@ -1084,7 +1129,7 @@ Treatment
 1,000
 </td>
 <td>
-0.493
+0.474
 </td>
 <td>
 0.500
@@ -1110,22 +1155,22 @@ Zorgkosten
 1,000
 </td>
 <td>
-5.629
+5.589
 </td>
 <td>
-3.197
+3.320
 </td>
 <td>
--0.228
+-0.069
 </td>
 <td>
-3.639
+3.460
 </td>
 <td>
-7.169
+7.192
 </td>
 <td>
-16.276
+16.431
 </td>
 </tr>
 <tr>
@@ -1136,19 +1181,19 @@ V1
 1,000
 </td>
 <td>
-497.768
+498.746
 </td>
 <td>
-287.495
+288.860
 </td>
 <td>
-1
+2
 </td>
 <td>
-254
+243
 </td>
 <td>
-747.2
+747.8
 </td>
 <td>
 1,000
@@ -1162,19 +1207,19 @@ V2
 1,000
 </td>
 <td>
-498.749
+492.975
 </td>
 <td>
-285.709
+293.667
 </td>
 <td>
-2
+1
 </td>
 <td>
-253.5
+236
 </td>
 <td>
-746.2
+741
 </td>
 <td>
 1,000
@@ -1188,19 +1233,19 @@ V3
 1,000
 </td>
 <td>
-499.119
+512.349
 </td>
 <td>
-292.200
+293.801
 </td>
 <td>
-4
+1
 </td>
 <td>
-233.8
+251.8
 </td>
 <td>
-746
+774
 </td>
 <td>
 1,000
@@ -1214,19 +1259,19 @@ V4
 1,000
 </td>
 <td>
-504.484
+489.041
 </td>
 <td>
-294.009
+288.225
 </td>
 <td>
 1
 </td>
 <td>
-243.8
+234
 </td>
 <td>
-769
+729.2
 </td>
 <td>
 1,000
@@ -1240,19 +1285,19 @@ V5
 1,000
 </td>
 <td>
-489.628
+516.896
 </td>
 <td>
-282.146
+292.376
 </td>
 <td>
 1
 </td>
 <td>
-255
+257
 </td>
 <td>
-734.2
+766
 </td>
 <td>
 1,000
@@ -1266,19 +1311,19 @@ V6
 1,000
 </td>
 <td>
-506.039
+497.232
 </td>
 <td>
-284.987
+284.475
 </td>
 <td>
-2
+1
 </td>
 <td>
-270.5
+265.8
 </td>
 <td>
-762.2
+736
 </td>
 <td>
 1,000
@@ -1292,22 +1337,22 @@ V7
 1,000
 </td>
 <td>
-496.600
+505.715
 </td>
 <td>
-283.415
+289.385
 </td>
 <td>
 1
 </td>
 <td>
-265
+261.5
 </td>
 <td>
-735.2
+753.2
 </td>
 <td>
-998
+1,000
 </td>
 </tr>
 <tr>
@@ -1318,22 +1363,22 @@ V8
 1,000
 </td>
 <td>
-498.522
+501.330
 </td>
 <td>
-287.912
+276.913
 </td>
 <td>
-1
+3
 </td>
 <td>
-250.8
+267.8
 </td>
 <td>
-747.5
+744.2
 </td>
 <td>
-999
+998
 </td>
 </tr>
 <tr>
@@ -1347,13 +1392,13 @@ V8
 <h2>Voorspelkracht Random Forest</h2>
 <p>Als we onze schattingen doen, dan kunnen we eerst kijken naar de voorspelkracht van de modellen. Daarvoor gebruiken we <a href="https://www.investopedia.com/terms/r/r-squared.asp"><span class="math inline">\(R^2\)</span></a>. Er zijn ook andere indicatoren voor voorspelkracht.</p>
 <p>Uit de onderstaande grafiek blijkt dat het “verkeerde model” veel beter voorspelt dan het “goede model”. Dus wanneer we het “beste model” zouden kiezen op basis van hoe goed het model voorspelt, dan zouden we het verkeerde model kiezen.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
 <div id="schatting-van-het-effect-van-de-interventie" class="section level2">
 <h2>Schatting van het effect van de interventie</h2>
 <p>Dat we het verkeerde model kiezen als we het model selecteren op basis van voorspelkracht blijkt uit de onderstaande grafiek:</p>
 <p>We hebben onze data zo gesimuleerd dat er geen verband bestaat tussen onze <span class="math inline">\(Treatment\)</span> en de <span class="math inline">\(Ziektelast\)</span>. Het “goede model” schat het door ons bepaalde nul-effect. Het “verkeerde” model daarentegen laat ten onrechte zien dat onze <span class="math inline">\(Treatment\)</span> de <span class="math inline">\(Ziektelast\)</span> verlaagt.</p>
-<p><img src="/post/blog_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="/post/blog_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 </div>
 </div>
 <div id="conclusie" class="section level1">
@@ -1376,14 +1421,15 @@ V8
 </div>
 <div id="aanleiding-blog" class="section level1">
 <h1>Aanleiding Blog</h1>
-<p>Dit blog is geschreven naar aanleiding van een uitnodiging om een workshop te organiseren voor de 7de Meet Up van het Informatieberaad Zorg op 23 september 2019. Het publiek van deze Meet Ups is zeer divers: patiënten, zorgprofessionals, beleidsmakers én leveranciers en inkopers van technische oplossingen voor de zorg zijn bij deze Meet Ups aanwezig.</p>
-<p><a href="https://gsverhoeven.github.io/#about">Gertjan Verhoeven</a> en ik hebben de presentatie die we tijdens de Meet Up hebben gegeven omgezet naar dit blog.</p>
-<p>De code van het blog en de presentatie zijn <a href="https://github.com/misjamikkers/Meetup_Informatieberaad">hier te vinden</a></p>
+<p>Dit blog is geschreven naar aanleiding van een uitnodiging om een workshop te organiseren voor de 7de Meet Up van het Informatieberaad Zorg op 23 september 2019. Het publiek van deze Meet Ups is zeer divers: pati</p>
 </div>
 
     </div>
 
     
+
+
+
 
 
 <div class="article-tags">
@@ -1394,159 +1440,211 @@ V8
 
 
 
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-
-
-
-
-
-
-<div class="media author-card" itemscope itemtype="http://schema.org/Person">
-  
-  <img class="portrait mr-3" src="/img/misja.jpg" itemprop="image" alt="Avatar">
-  
-  <div class="media-body">
-    <h5 class="card-title" itemprop="name"><a href="/">Misja Mikkers</a></h5>
-    <h6 class="card-subtitle">chief economist and professor organization and financing of the health care sector</h6>
-    
-    <ul class="network-icon" aria-hidden="true">
-      
       
       
       
         
       
       
-      
-      
-      
-        
       
       <li>
-        <a itemprop="sameAs" href="/#contact" >
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-      
-      
-      
-      
-        
-      
-      
-      
-      
-      
-        
-      
-      <li>
-        <a itemprop="sameAs" href="https://twitter.com/ICIRSPE" target="_blank" rel="noopener">
+        <a href="https://twitter.com/intent/tweet?url=/post/causaliteit-en-machine-learning/&amp;text=Causaliteit%20en%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
-      
-      
-      
-      
-      
+    
       
       
       
         
+      
+      
       
       <li>
-        <a itemprop="sameAs" href="https://scholar.google.nl/citations?hl=nl&amp;user=qhsTT0wAAAAJ" target="_blank" rel="noopener">
-          <i class="ai ai-google-scholar"></i>
+        <a href="https://www.facebook.com/sharer.php?u=/post/causaliteit-en-machine-learning/&amp;t=Causaliteit%20en%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
         </a>
       </li>
-      
-      
-      
-      
-        
-      
-      
+    
       
       
       
         
+      
+      
       
       <li>
-        <a itemprop="sameAs" href="https://github.com/misjamikkers" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i>
+        <a href="mailto:?subject=Causaliteit%20en%20Machine%20Learning&amp;body=/post/causaliteit-en-machine-learning/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
         </a>
       </li>
+    
       
-    </ul>
-  </div>
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/causaliteit-en-machine-learning/&amp;title=Causaliteit%20en%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Causaliteit%20en%20Machine%20Learning%20/post/causaliteit-en-machine-learning/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/causaliteit-en-machine-learning/&amp;title=Causaliteit%20en%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
 
 
 
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
     
+  
+  
+  <div class="media author-card content-widget-hr">
     
 
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Misja Mikkers</a></h5>
+      <h6 class="card-subtitle">chief economist and professor organization and financing of the health care sector</h6>
+      <p class="card-text">My research interests Causal Inference, Bayesian Statistics, Industrial organization and competition policy, Regulation and Data science</p>
+      <ul class="network-icon" aria-hidden="true">
+  
     
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/ICIRSPE" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=qhsTT0wAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/misjamikkers" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
 
-    
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+
 
 
   </div>
 </article>
 
-<div class="container">
-  <footer class="site-footer">
-  
-
-  <p class="powered-by">
-    &copy; 2018 &middot; 
-
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" id="back_to_top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-</div>
-
-
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
+      
 
     
     
@@ -1557,29 +1655,32 @@ V8
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js" integrity="sha256-vOIuDSYDirTfyr+S2MjFnhOz6Rgiz4ODFAHATG0rFxw=" crossorigin="anonymous" title="mermaid"></script>
+      
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
         
       
 
       
       
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
 
     
     
-
-    
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
     
 
     
@@ -1589,13 +1690,13 @@ V8
 
     
     
+    
+    
+    
+    
     <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "results found",
-        'no_results': "No results found"
-      };
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
         'project': "Projects",
@@ -1634,16 +1735,93 @@ V8
 
     
     
+
     
     
     
     
     
     
-    <script src="/js/academic.min.d037ee5294b166a79dec317c58aea9cc.js"></script>
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
 
     
 
-  </body>
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
-

@@ -1,35 +1,1519 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Misja Mikkers</title>
-    <link>https://misjamikkers.github.io/categories/r/</link>
-    <description>Recent content in R on Misja Mikkers</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://misjamikkers.github.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>R | Academic</title>
+    <link>/categories/r/</link>
+      <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <description>R</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018</copyright><lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/misja.jpg</url>
+      <title>R</title>
+      <link>/categories/r/</link>
+    </image>
     
     <item>
       <title>Causaliteit en Machine Learning</title>
-      <link>https://misjamikkers.github.io/post/causaliteit-en-machine-learning/</link>
+      <link>/post/causaliteit-en-machine-learning/</link>
       <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://misjamikkers.github.io/post/causaliteit-en-machine-learning/</guid>
-      <description>Door Misja Mikkers &amp;amp; Gertjan VerhoevenInleidingWe willen in dit blog een toegankelijke inleiding geven over causaliteit en data analyse.
-Het voorspellen van fenomenen met behulp machine learning is de afgelopen jaren een groot succes gebleken. Grote hoeveelheden data en toegenomen computerkracht hebben geleid tot veel ontwikkelingen en toepassingen op het gebied van voorspellen. Voorbeelden zijn het real time voorspellen van creditcard fraude, beeldherkenning en het systeem van aanbevelingen bij bedrijven als Spotify, Bol, Netflix etc.</description>
+      <guid>/post/causaliteit-en-machine-learning/</guid>
+      <description>
+
+
+&lt;div id=&#34;door-misja-mikkers-gertjan-verhoeven&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;em&gt;Door Misja Mikkers &amp;amp; Gertjan Verhoeven&lt;/em&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inleiding&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Inleiding&lt;/h1&gt;
+&lt;p&gt;We willen in dit blog een toegankelijke inleiding geven over causaliteit en data analyse.&lt;/p&gt;
+&lt;p&gt;Het voorspellen van fenomenen met behulp machine learning is de afgelopen jaren een groot succes gebleken. Grote hoeveelheden data en toegenomen computerkracht hebben geleid tot veel ontwikkelingen en toepassingen op het gebied van voorspellen. Voorbeelden zijn het real time voorspellen van creditcard fraude, beeldherkenning en het systeem van aanbevelingen bij bedrijven als Spotify, Bol, Netflix etc. Op deze &lt;a href=&#34;https://www.forbes.com/sites/bernardmarr/2016/09/30/what-are-the-top-10-use-cases-for-machine-learning-and-ai/#2318fab294c9&#34;&gt;website&lt;/a&gt; worden meer voorbeelden gegeven.&lt;/p&gt;
+&lt;p&gt;Deze voorbeelden hebben gemeen dat ze zich richten op het voorspellen van fenomenen, maar niet gericht zijn op causaliteit. Als de wereld verandert, dan vermindert de voorspellende waarde van het model en wordt het model opnieuw “getraind”. &lt;a href=&#34;https://www.medischcontact.nl/nieuws/laatste-nieuws/artikel/google-voorspelt-griep.htm&#34;&gt;Medisch Contact&lt;/a&gt; schrijft bijvoorbeeld dat Google een griepgolf kan voorspellen op basis van zoektermen. Maar dat is geen causaliteit. Het is namelijk niet zo dat het zoekgedrag van mensen griep veroorzaakt. Dus als het zoekgedrag van mensen verandert als gevolg van deze berichtgeving, dan verandert het aantal griepgevallen niet.Voor Google is dat op zich geen probleem: ze kunnen het model aanpassen (“opnieuw trainen”) aan het nieuwe zoekgedrag.&lt;/p&gt;
+&lt;p&gt;De verwarring komt doordat het woord voorspellen in passieve, niet-causale zin gebruikt kan worden, b.v. als iemand ziek is en thuiszorg krijgt, voorspel ik een hoge kans dat deze persoon ouder dan 65 is. Maar het kan ook in actieve, causale zin gebruikt worden: b.v. ik voorspel dat als ik de prijs van dit product verlaag met 5%, dat ik er dan 10% meer van verkoop. Dit is een “causale” voorspelling, oorzaak en gevolg.&lt;/p&gt;
+&lt;p&gt;Wij zullen in dit blog betogen dat het bij machine learning cruciaal is om onderscheid te maken tussen passief voorspellen en het voorspellen van oorzaak-gevolg effecten. En wat het betekent voor analyses om de switch te maken van voorspellen naar begrijpen en hoe de voorspelkracht van allerlei algoritmes gecombineerd kan worden met de notie van causaliteit.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cum-hoc-ergo-propter-hoc&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Cum hoc ergo propter hoc&lt;/h1&gt;
+&lt;!-- correlatie is geen causatie / wat is causatie--&gt;
+&lt;p&gt;Het feit dat 2 verschijnselen samen optreden, cum hoc ergo propter hoc (“met dit, dus vanwege dit”) betekent niet dat er een oorzakelijk verband is tussen 2 fenomenen. Bij causaliteit gaat het om oorzaak en gevolg. Als een bepaald fenomeen de oorzaak is van een ander fenomeen, dan kunnen we ons ook &lt;strong&gt;counter factuals&lt;/strong&gt; voorstellen. Dus wanneer het volgen van een opleiding leidt tot meer inkomen, dan kunnen we ook voor een gegeven persoon vragen wat zijn inkomen geweest &lt;em&gt;zou zijn&lt;/em&gt; wanneer hij een andere opleiding gevolgd zou hebben.&lt;/p&gt;
+&lt;p&gt;Of in andere woorden, een causaal effect kan aangeduid worden als het verschil tussen de uitkomst wanneer een bepaalde interventie is toegepast, en de uitkomst wanneer de interventie &lt;strong&gt;niet&lt;/strong&gt; zou worden toegepast.&lt;/p&gt;
+&lt;p&gt;Helaas zien de data die we krijgen er vaak als volgt uit:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;X_1&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;X_2&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;X_3&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;X_i&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;I&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Y0&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Y1&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Man&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;9&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;14&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;67&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Vrouw&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;60&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;36&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;113&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Vrouw&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;54&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;…&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;…&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;…&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;…&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;…&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;…&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;…&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Waarbij de uitkomst is weergegeven als &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; en &lt;span class=&#34;math inline&#34;&gt;\(I\)&lt;/span&gt; staat voor het wel (&lt;span class=&#34;math inline&#34;&gt;\(I=1\)&lt;/span&gt;) of niet (&lt;span class=&#34;math inline&#34;&gt;\(I=0\)&lt;/span&gt;) doen van een interventie. &lt;span class=&#34;math inline&#34;&gt;\(Y0\)&lt;/span&gt; is de uitkomst wanneer er geen interventie is gedaan en &lt;span class=&#34;math inline&#34;&gt;\(Y1\)&lt;/span&gt; is de uitkomst wanneer er wel een interventie is gedaan. De &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;-en staan voor voorspellende kenmerken.&lt;/p&gt;
+&lt;p&gt;Het probleem is dat we altijd maar 1 van de potentiele uitkomsten kennen. De ontbrekende uitkomst is in de tabel weergegeven als “NA” .&lt;/p&gt;
+&lt;p&gt;Met machine learning kunnen we ontbrekende waarden vaak goed voorspellen. Daarmee kunnen we machine learning dus gebruiken voor het schatten van causale effecten. (Om het netjes te doen zouden we overigens alle waarden voor &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; bij &lt;span class=&#34;math inline&#34;&gt;\(I = 0\)&lt;/span&gt; en &lt;span class=&#34;math inline&#34;&gt;\(I = 1\)&lt;/span&gt; moeten voorspellen, niet alleen de ontbrekende waarden.)&lt;/p&gt;
+&lt;p&gt;In dit blog willen we laten zien, dat je dat niet zo maar kunt doen. Om echt causale conclusies te kunnen trekken, moet je goed nadenken over welke variabelen je wel en niet kunt gebruiken om &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; gegeven de interventie &lt;span class=&#34;math inline&#34;&gt;\(I\)&lt;/span&gt; te kunnen voorspellen. Met andere woorden: om een &lt;strong&gt;causale&lt;/strong&gt; voorspelling te doen over een interventie in de wereld, kun je niet zomaar machine learning gebruiken om de ontbrekende uitkomsten te voorspellen.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;voorspellen-versus-begrijpen&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Voorspellen versus begrijpen&lt;/h1&gt;
+&lt;p&gt;Bij het voorspellen van fenomenen gaat het om het vinden van patronen (“correlaties”) in de data. Op basis van data kunnen we voorspellen, beschrijven en correlaties ontdekken. Op basis van de data alleen kunnen we geen causale conclusies trekken.&lt;/p&gt;
+&lt;p&gt;Om fenomenen te kunnen &lt;strong&gt;verklaren&lt;/strong&gt; (begrijpen) is een causaal model nodig. In een causaal model wordt de kennis over oorzaken en gevolgen expliciet vastgelegd. Het causale model staat dus buiten de data en geeft weer wat de veronderstellingen zijn van de onderzoeker.&lt;/p&gt;
+&lt;p&gt;Gegeven een causaal model kunnen vragen beantwoord worden als:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wat zijn de oorzaken van een bepaald fenomeen?&lt;/li&gt;
+&lt;li&gt;Welke gevolgen heeft ingrijpen op een oorzaak op het bestudeerde fenomeen?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Als we begrijpen wat een voorspelling drijft, dan kunnen we we iets doen om het verschijnsel waarin we zijn geinteresseerd te veranderen. Dat iets doen noemen we in dit blog een “interventie”. Voorbeelden van interventies zijn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;beleid formuleren&lt;/li&gt;
+&lt;li&gt;een medische ingreep doen&lt;/li&gt;
+&lt;li&gt;meer informatie verschaffen aan mensen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Om het probleem van het voorspellen op basis van correlaties te illustreren, hebben we een fictieve dataset gemaakt met gegevens over het aantal boeken dat ouders bezit en de CITO-scores van hun kinderen.&lt;/p&gt;
+&lt;p&gt;Uit figuur 1 blijkt dat er een correlatie is tussen het aantal boeken dat ouders bezit en de CITO-scores van hun kinderen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Als deze correlatie een een causaal effect zou zijn, dan zou het helpen om boeken aan ouders van schoolgaande kinderen te geven. In dit geval is het aannemelijker dat er een andere variabele is, die zowel leidt tot meer boeken als tot hogere CITO-scores bij kinderen: het IQ van de ouders.&lt;/p&gt;
+&lt;p&gt;Zodra we rekening houden met (“controleren voor”) het IQ van de ouders, dan verdwijnt het effect. Rekening houden met of controleren voor betekent in dit geval de variabele &lt;em&gt;IQ van de ouders&lt;/em&gt; aan de analyse wordt toegevoegd. Wanneer we informatie hebben over de CITO-scores van kinderen en het IQ van hun ouders, voegt de data over het aantal boeken geen waarde meer toe aan onze analyse. In onderstaande plot hebben we het IQ van de ouders in 10 even grote groepen ingedeeld. Dan zien we dat binnen die groepen het aantal boeken de CITO-scores niet meer verklaren (vlakke lijn).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In het kader van dit blog definieren we causaliteit als het verschijnsel dat als we een variabele veranderen &lt;strong&gt;in de wereld&lt;/strong&gt;, dat dan een andere variabele ook verandert &lt;strong&gt;als gevolg hiervan&lt;/strong&gt;. In het bovenstaande voorbeeld is het aantal boeken geen oorzaak van de CITO-scores. Als we het aantal boeken zouden veranderen, dan verandert de CITO score niet. Het IQ van de ouders is wel een oorzaak van hogere CITO-scores. In dit voorbeeld kunnen wij ons overigens niet voorstellen dat we het IQ van de ouders veranderen. Heel strikt genomen is ook niet zo dat als we het IQ van de ouders zouden kunnen veranderen (b.v. door middel van een lobotomie), dat dan het IQ van de kinderen zou veranderen. We kunnen wel een counter factual beredeneren: wanneer het IQ van de ouders anders geweest zou zijn, dan zou ook de CITO score anders zijn.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;grafische-causale-modellen-in-de-volksmond-dags&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Grafische Causale Modellen (in de volksmond: “DAG’s”)&lt;/h1&gt;
+&lt;div id=&#34;introductie&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introductie&lt;/h2&gt;
+&lt;p&gt;Het is mogelijk om een causaal model in een stelsel van wiskundige vergelijkingen weer te geven. Dit wordt snel complex. Daarom worden causale modellen ook wel visueel weergegeven als &lt;em&gt;DAG&lt;/em&gt;’s: Directed Acyclic Graphs. Deze DAG’s zijn een visuele weergave van een model dat alle oorzaak-gevolg relaties beschrijft.&lt;/p&gt;
+&lt;p&gt;DAG’s kunnen heel simpel zijn, maar ook complex. Elke complexe DAG kan uit 3 basisvormen worden samengesteld.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Een DAG bestaat uit 3 onderdelen:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;pijlen die de richting aangeven van causale relaties&lt;/li&gt;
+&lt;li&gt;variabelen (die zowel geobserveerd als niet geobserveerd kunnen zijn)&lt;/li&gt;
+&lt;li&gt;ontbrekende pijlen tussen variabelen&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Hierna bespreken we de 3 basisvormen met een voorbeeld op basis van gefingeerde data. Daarna laten we een meer complexe DAG zien en tenslotte laten we met een voorbeeld zien hoe een DAG behulpzaam kan zijn bij het trekken van causale conclusies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;confounder&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Confounder&lt;/h2&gt;
+&lt;p&gt;We kunnen het hierboven gegeven voorbeeld over het aantal boeken dat ouders bezit en de CITO score van hun kinderen weergeven in een causaal model:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Zoals uit het voorbeeld met de data bleek, maak het uit of je de confounder (in het Nederlands: de gezamenlijke oorzaak) wel of niet opneemt in je analyse. In dit geval wordt er gezegd dat het pad tussen de variable &lt;span class=&#34;math inline&#34;&gt;\(Aantal\_boeken\)&lt;/span&gt; en &lt;span class=&#34;math inline&#34;&gt;\(Cito\_score\)&lt;/span&gt; “open” is. Dat betekent er “informatie kan stromen” tussen die variabelen, die de causale analyse verstoort. Om een causale relatie tussen het &lt;span class=&#34;math inline&#34;&gt;\(Aantal\_boeken\)&lt;/span&gt; en de &lt;span class=&#34;math inline&#34;&gt;\(Cito\_score\)&lt;/span&gt; te kunnen identificeren, moet het pad &lt;em&gt;Aantal boeken &amp;lt;- IQ ouders -&amp;gt; Cito score&lt;/em&gt; gesloten worden. Het pad kan gesloten worden door de variable &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt; in de analyse op te nemen. Daarmee kunnen we testen of er een correlatie bestaat tussen het &lt;span class=&#34;math inline&#34;&gt;\(Aantal\_boeken\)&lt;/span&gt; en de &lt;span class=&#34;math inline&#34;&gt;\(Cito_score\)&lt;/span&gt;. In statistisch jargon wordt dan gezegd dat er “gecontroleerd” wordt voor de variabele &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Uit het datavoorbeeld blijkt dat wanneer we de variabele &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt; niet opnemen in de analyse, dat we dan een correlatie vinden tussen de variabelen het &lt;span class=&#34;math inline&#34;&gt;\(Aantal\_boeken\)&lt;/span&gt; en de &lt;span class=&#34;math inline&#34;&gt;\(Cito\_score\)&lt;/span&gt;. Wanneer we de de variabele &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt; wel opnemen in de analyse, verdwijnt de correlatie.&lt;/p&gt;
+&lt;p&gt;Dus wanneer we uitgaan van de DAG, dan kunnen we alleen het causale effect identificeren wanneer we de confouder meenemen. Als we geen data zouden hebben over de variabele &lt;span class=&#34;math inline&#34;&gt;\(IQ\_ouders\)&lt;/span&gt;, dan kunnen we dus ook geen causaal effect schatten. Ook niet met de meest geavanceerde Artificial Intelligence algorithmen!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;collider&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Collider&lt;/h2&gt;
+&lt;p&gt;De tweede basisvorm wordt ook wel de “collider” genoemd. In het Nederlands zou je dit kunnen vertalen als het gezamenlijk gevolg.&lt;/p&gt;
+&lt;p&gt;In dit voorbeeld gaan we er vanuit dat we een causale relatie willen identificeren tussen Lengte en Snelheid binnen een groep basketbalspelers. Daarbij gaan we er vanuit dat er zowel professionele basketballers zijn (“NBA”) als amateurs (“geen NBA”). Spelers in de NBA zijn in het algemeen zowel snel als lang. Wanneer ze niet lang zijn, dan moeten om ze hun lengte te compenseren wel enorm snel zijn (of vice versa).&lt;/p&gt;
+&lt;p&gt;Deze informatie kunnen we weergeven in de volgende DAG:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We kunnen nu kijken wat er gebeurt wanneer we wel of niet de professionele status van de basketballers meenemen in onze analyse.&lt;/p&gt;
+&lt;p&gt;Wanneer we de “collider” niet meenemen in onze analyse, dan vinden we in onze data geen correlatie tussen Lengte en Snelheid binnen onze groep basketballers.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Maar wanneer we de professionele status van onze basketballers wel meenemen in de analyse, vinden we plotseling wel een verband!&lt;/p&gt;
+&lt;p&gt;Merk op dat er &lt;strong&gt;selectie&lt;/strong&gt; plaats vindt: We &lt;strong&gt;selecteren&lt;/strong&gt; de NBA-ers (of juist de niet-NBA-ers), en na selectie ontstaat er een correlatie die er voorheen niet was.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Ook als je een regressie zou doen, dan blijkt dat&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;geen verband is tussen lengte en snelheid&lt;/li&gt;
+&lt;li&gt;maar er wel een verband ontstaat zodra je de variabele &lt;span class=&#34;math inline&#34;&gt;\(NBA\)&lt;/span&gt; toevoegt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table style=&#34;text-align:center&#34;&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34;&gt;
+&lt;em&gt;Dependent variable:&lt;/em&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34;&gt;
+Snelheid
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(1)
+&lt;/td&gt;
+&lt;td&gt;
+(2)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Lengte
+&lt;/td&gt;
+&lt;td&gt;
+-0.862
+&lt;/td&gt;
+&lt;td&gt;
+-5.463&lt;sup&gt;***&lt;/sup&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(0.936)
+&lt;/td&gt;
+&lt;td&gt;
+(0.605)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+NBA1
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+5.169&lt;sup&gt;***&lt;/sup&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(0.184)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Constant
+&lt;/td&gt;
+&lt;td&gt;
+11.416&lt;sup&gt;***&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+17.348&lt;sup&gt;***&lt;/sup&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(1.693)
+&lt;/td&gt;
+&lt;td&gt;
+(1.075)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Observations
+&lt;/td&gt;
+&lt;td&gt;
+500
+&lt;/td&gt;
+&lt;td&gt;
+500
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+R&lt;sup&gt;2&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+0.002
+&lt;/td&gt;
+&lt;td&gt;
+0.614
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Adjusted R&lt;sup&gt;2&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+-0.0003
+&lt;/td&gt;
+&lt;td&gt;
+0.612
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Residual Std. Error
+&lt;/td&gt;
+&lt;td&gt;
+3.172 (df = 498)
+&lt;/td&gt;
+&lt;td&gt;
+1.975 (df = 497)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+F Statistic
+&lt;/td&gt;
+&lt;td&gt;
+0.848 (df = 1; 498)
+&lt;/td&gt;
+&lt;td&gt;
+394.922&lt;sup&gt;***&lt;/sup&gt; (df = 2; 497)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;em&gt;Note:&lt;/em&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;text-align:right&#34;&gt;
+&lt;sup&gt;&lt;em&gt;&lt;/sup&gt;p&amp;lt;0.1; &lt;sup&gt;&lt;strong&gt;&lt;/sup&gt;p&amp;lt;0.05; &lt;sup&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/sup&gt;p&amp;lt;0.01
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- &amp;nbsp; --&gt;
+&lt;p&gt;Dus: je creert een correlatie waar die er niet is door een collider variabele in je analyse mee te nemen. In termen van de DAG zeggen we dat een collider de informatiestroom tussen de variabelen &lt;span class=&#34;math inline&#34;&gt;\(Lengte\)&lt;/span&gt; en &lt;span class=&#34;math inline&#34;&gt;\(Snelheid\)&lt;/span&gt; blokkeert. Door deze variabele mee te nemen in de analyse, deblokkeren (openen) we het pad, en ontstaan er correlaties die niet-causaal zijn.&lt;/p&gt;
+&lt;p&gt;We moeten colliders dus nooit meenemen in analyses. Wanneer we dat wel doen, dan trekken we ten onrechte de conclusie dat er een causaal verband bestaat tussen in dit geval Lengte en Snelheid bij basketballers.&lt;/p&gt;
+&lt;!-- Conditioning on the collider via regression analysis, stratification, experimental design, or sample selection based on values of the collider create a non-causal association between X and Y (Berkson&#39;s paradox, 1938, Mayo Clinic, epi!!!). --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mediator&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Mediator&lt;/h2&gt;
+&lt;p&gt;De derde basisvorm wordt de mediator genoemd. In dit geval beinvloedt 1 variabele een tweede variabele die op haar beurt een derde variable beinvloedt.&lt;/p&gt;
+&lt;p&gt;In het volgende gestileerde voorbeeld zijn we geinteresseerd in de causale relatie tussen het budget van bijvoorbeeld een professioneel voetbalteam en de punten die dat team haalt.&lt;/p&gt;
+&lt;p&gt;Omdat je (althans: voor zover wij weten) geen punten kunt kopen, moet een eventuele causale relatie door een tweede variable lopen. In dit geval zegt de DAG dat teams met een hoger budget zich betere spelers kunnen veroorloven. En een team met betere spelers behaalt meer punten.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Op basis van deze DAG kunnen we data genereren en deze data in een grafiek weergeven.&lt;/p&gt;
+&lt;p&gt;Ook in dit geval hebben we data op basis van deze DAG gesimuleerd en willen we laten zien wat er gebeurt wanneer de mediator (in dit geval de variabele &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt;) wel of niet wordt opgenomen in de analyse.&lt;/p&gt;
+&lt;p&gt;Wanneer we de variable &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; niet opnemen in de analyse, dan zien we een vrij sterke correlatie tussen &lt;span class=&#34;math inline&#34;&gt;\(Budgetten\)&lt;/span&gt; en het behaalde aantal &lt;span class=&#34;math inline&#34;&gt;\(Punten\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Wanneer we de variabele &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; zouden toevoegen aan onze analyse, dan verdwijnt de correlatie. Dit is vergelijkbaar wat er gebeurt met de confounder.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Ook uit de resultaten van een simpele regressie blijkt dit:&lt;/p&gt;
+&lt;table style=&#34;text-align:center&#34;&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34;&gt;
+&lt;em&gt;Dependent variable:&lt;/em&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34;&gt;
+Punten
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(1)
+&lt;/td&gt;
+&lt;td&gt;
+(2)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Budgetten
+&lt;/td&gt;
+&lt;td&gt;
+1.014&lt;sup&gt;***&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+-0.053
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(0.037)
+&lt;/td&gt;
+&lt;td&gt;
+(0.081)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Teamsterkte
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+0.336&lt;sup&gt;***&lt;/sup&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(0.025)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Constant
+&lt;/td&gt;
+&lt;td&gt;
+21.342&lt;sup&gt;***&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+21.247&lt;sup&gt;***&lt;/sup&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(1.217)
+&lt;/td&gt;
+&lt;td&gt;
+(0.716)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Observations
+&lt;/td&gt;
+&lt;td&gt;
+100
+&lt;/td&gt;
+&lt;td&gt;
+100
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+R&lt;sup&gt;2&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+0.885
+&lt;/td&gt;
+&lt;td&gt;
+0.961
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Adjusted R&lt;sup&gt;2&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+0.884
+&lt;/td&gt;
+&lt;td&gt;
+0.960
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Residual Std. Error
+&lt;/td&gt;
+&lt;td&gt;
+4.027 (df = 98)
+&lt;/td&gt;
+&lt;td&gt;
+2.370 (df = 97)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+F Statistic
+&lt;/td&gt;
+&lt;td&gt;
+752.696&lt;sup&gt;***&lt;/sup&gt; (df = 1; 98)
+&lt;/td&gt;
+&lt;td&gt;
+1,179.476&lt;sup&gt;***&lt;/sup&gt; (df = 2; 97)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;em&gt;Note:&lt;/em&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;text-align:right&#34;&gt;
+&lt;sup&gt;&lt;em&gt;&lt;/sup&gt;p&amp;lt;0.1; &lt;sup&gt;&lt;strong&gt;&lt;/sup&gt;p&amp;lt;0.05; &lt;sup&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/sup&gt;p&amp;lt;0.01
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- &amp;nbsp; --&gt;
+&lt;p&gt;Maar in dit geval willen we de variabele &lt;span class=&#34;math inline&#34;&gt;\(Teamsterkte\)&lt;/span&gt; niet meenemen: We willen weten of meer budget leidt tot meer punten. Dat wil zeggen dat benieuwd zijn naar het aantal punten in het geval we het budget van het voetbalteam verhogen of verlagen. Om een antwoord op die causale vraag te kunnen geven, kan de mediator niet worden meegenomen in de analyse.&lt;/p&gt;
+&lt;!-- Waarom mag / kan dit niet?  --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;voorbeeld-van-een-meer-complexe-dag&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Voorbeeld van een meer complexe DAG&lt;/h1&gt;
+&lt;p&gt;In haar afstudeerscriptie voor haar studie economie heeft Mijntje Jansen in 2019 onderzoek gedaan naar de invloed van de samenstelling van het bestuur in de verpleeghuiszorg qua geslacht op de beleefde kwaliteit van zorg. Om deze vraag te kunnen beantwoorden heeft ze de onderstaande DAG gemaakt.&lt;/p&gt;
+&lt;p&gt;Deze DAG laat zien dat DAG’s behoorlijk complex kunnen zijn. Het is bij meer complexe DAG’s ingewikkeld om te bepalen welke variabelen nodig zijn om causale verbanden te kunnen identificeren. Dit wordt ook wel de “minimal adjustment set” genoemd. In de R-package &lt;code&gt;dagitty&lt;/code&gt; is het bepalen van de minimal adjustment set geautomatiseerd.&lt;/p&gt;
+&lt;p&gt;Een tweede reden om deze DAG hier te laten zien is dat dit voorbeeld illustreert dat zelfs complexe modellen zoals hier zijn weergegeven goed kunnen worden besproken met andere -niet noodzakelijkerwijs wiskundig geschoolde- experts. In dit geval heeft Mijntje haar model besproken met bestuurders van verpleeghuisinstellingen, en op basis van deze gesprekken aangepast.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;!-- Hier tijdens presentatie evt discussie over uitbreiden IQ - boeken DAG --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;machine-learning-en-causaliteit&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Machine learning en causaliteit&lt;/h1&gt;
+&lt;p&gt;Nu we de basisbeginselen van variabele selectie en causaliteit hebben besproken, willen we graag een voorbeeld laten zien hoe er met machine learning causale effecten geschat kunnen worden. We laten zien dat het causale model erg belangrijk is voor de conclusies.&lt;/p&gt;
+&lt;p&gt;In dit voorbeeld gaan we uit van de volgende DAG.&lt;/p&gt;
+&lt;p&gt;We hebben een aantal variabelen &lt;span class=&#34;math inline&#34;&gt;\(V_i, 1 \leq i \leq 8\)&lt;/span&gt; (Zoals bijvoorbeeld leeftijd, chronische ziekten etc.) die een invloed hebben op de ziektelast die mensen ondervinden. Deze ziektelast heeft weer een invloed op de zorgkosten die mensen maken.&lt;/p&gt;
+&lt;p&gt;Tenslotte is er een interventie &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, een zogenaamd “wondermiddel”. Deze interventie is heel duur en heeft daarom een invloed op de zorgkosten. Deze interventie heeft ondanks zijn hoge prijs, geen invloed op de ziektelast.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We hebben op basis van deze DAG data gesimuleerd. Dat betekent dus dat er in onze data geen verband is tussen het wondermiddel (“Treatment”) en de ziektelast.&lt;/p&gt;
+&lt;p&gt;De variabele &lt;span class=&#34;math inline&#34;&gt;\(Ziektelast\)&lt;/span&gt; is bepaald op basis van de volgende formule:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Ziektelast = abs(scale(V1^3 + 2 * V2 + 3 * V3^2 + 4 * V4 + 5 * V5 + 6 * V6*V7)) + \epsilon\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;De variabele &lt;span class=&#34;math inline&#34;&gt;\(Zorgkosten\)&lt;/span&gt; is als volgt bepaald:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Zorgkosten = 3 * Treatment + 5 * Ziektelast + \epsilon\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Normaal gesproken kennen we deze vergelijkingen niet en willen met behulp van data analyse het causale effect van onze &lt;span class=&#34;math inline&#34;&gt;\(Treatment\)&lt;/span&gt; op de &lt;span class=&#34;math inline&#34;&gt;\(Ziektelast\)&lt;/span&gt; schatten.&lt;/p&gt;
+&lt;p&gt;Uit de DAG blijkt dat de variabele &lt;span class=&#34;math inline&#34;&gt;\(Zorgkosten\)&lt;/span&gt; een collider is, die we niet mee moeten nemen in de analyse.&lt;/p&gt;
+&lt;p&gt;Met behulp van machine learning (ML) kunnen we een causaal effect per persoon schatten. We gebruiken in dit geval het &lt;a href=&#34;https://en.wikipedia.org/wiki/Random_forest&#34;&gt;Random Forest Algoritme&lt;/a&gt;, omdat Random Forest een populair ML algoritme is.&lt;/p&gt;
+&lt;p&gt;Dat kunnen we doen met behulp van het volgende stappenplan:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Fit een Random Forest model op de data om te kijken welk model (met of zonder variabele &lt;span class=&#34;math inline&#34;&gt;\(Zorgkosten\)&lt;/span&gt;) de &lt;span class=&#34;math inline&#34;&gt;\(Ziektelast\)&lt;/span&gt; het beste voorspelt&lt;/li&gt;
+&lt;li&gt;Bepaal het gemiddelde treatment effect met behulp van generalized random forests (grf)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We doorlopen deze procedure 2 keer:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;Een analyse waarbij we de ziektelast voorspellen met alle variabelen (“het verkeerde model”)&lt;/li&gt;
+&lt;li&gt;Een analyse waarbij we de ziektelast voorspellen met alle variabelen minus de collider &lt;span class=&#34;math inline&#34;&gt;\(Zorgkosten\)&lt;/span&gt; (“het goede model”)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;summary-statistics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Summary statistics&lt;/h2&gt;
+&lt;p&gt;In deze tabel zien we een samenvatting van onze dataset.&lt;/p&gt;
+
+&lt;table style=&#34;text-align:center&#34;&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;8&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Statistic
+&lt;/td&gt;
+&lt;td&gt;
+N
+&lt;/td&gt;
+&lt;td&gt;
+Mean
+&lt;/td&gt;
+&lt;td&gt;
+St. Dev.
+&lt;/td&gt;
+&lt;td&gt;
+Min
+&lt;/td&gt;
+&lt;td&gt;
+Pctl(25)
+&lt;/td&gt;
+&lt;td&gt;
+Pctl(75)
+&lt;/td&gt;
+&lt;td&gt;
+Max
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;8&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Ziektelast
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+0.834
+&lt;/td&gt;
+&lt;td&gt;
+0.562
+&lt;/td&gt;
+&lt;td&gt;
+0.003
+&lt;/td&gt;
+&lt;td&gt;
+0.494
+&lt;/td&gt;
+&lt;td&gt;
+0.945
+&lt;/td&gt;
+&lt;td&gt;
+2.737
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Treatment
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+0.474
+&lt;/td&gt;
+&lt;td&gt;
+0.500
+&lt;/td&gt;
+&lt;td&gt;
+0
+&lt;/td&gt;
+&lt;td&gt;
+0
+&lt;/td&gt;
+&lt;td&gt;
+1
+&lt;/td&gt;
+&lt;td&gt;
+1
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Zorgkosten
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+5.589
+&lt;/td&gt;
+&lt;td&gt;
+3.320
+&lt;/td&gt;
+&lt;td&gt;
+-0.069
+&lt;/td&gt;
+&lt;td&gt;
+3.460
+&lt;/td&gt;
+&lt;td&gt;
+7.192
+&lt;/td&gt;
+&lt;td&gt;
+16.431
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+V1
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+498.746
+&lt;/td&gt;
+&lt;td&gt;
+288.860
+&lt;/td&gt;
+&lt;td&gt;
+2
+&lt;/td&gt;
+&lt;td&gt;
+243
+&lt;/td&gt;
+&lt;td&gt;
+747.8
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+V2
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+492.975
+&lt;/td&gt;
+&lt;td&gt;
+293.667
+&lt;/td&gt;
+&lt;td&gt;
+1
+&lt;/td&gt;
+&lt;td&gt;
+236
+&lt;/td&gt;
+&lt;td&gt;
+741
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+V3
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+512.349
+&lt;/td&gt;
+&lt;td&gt;
+293.801
+&lt;/td&gt;
+&lt;td&gt;
+1
+&lt;/td&gt;
+&lt;td&gt;
+251.8
+&lt;/td&gt;
+&lt;td&gt;
+774
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+V4
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+489.041
+&lt;/td&gt;
+&lt;td&gt;
+288.225
+&lt;/td&gt;
+&lt;td&gt;
+1
+&lt;/td&gt;
+&lt;td&gt;
+234
+&lt;/td&gt;
+&lt;td&gt;
+729.2
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+V5
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+516.896
+&lt;/td&gt;
+&lt;td&gt;
+292.376
+&lt;/td&gt;
+&lt;td&gt;
+1
+&lt;/td&gt;
+&lt;td&gt;
+257
+&lt;/td&gt;
+&lt;td&gt;
+766
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+V6
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+497.232
+&lt;/td&gt;
+&lt;td&gt;
+284.475
+&lt;/td&gt;
+&lt;td&gt;
+1
+&lt;/td&gt;
+&lt;td&gt;
+265.8
+&lt;/td&gt;
+&lt;td&gt;
+736
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+V7
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+505.715
+&lt;/td&gt;
+&lt;td&gt;
+289.385
+&lt;/td&gt;
+&lt;td&gt;
+1
+&lt;/td&gt;
+&lt;td&gt;
+261.5
+&lt;/td&gt;
+&lt;td&gt;
+753.2
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+V8
+&lt;/td&gt;
+&lt;td&gt;
+1,000
+&lt;/td&gt;
+&lt;td&gt;
+501.330
+&lt;/td&gt;
+&lt;td&gt;
+276.913
+&lt;/td&gt;
+&lt;td&gt;
+3
+&lt;/td&gt;
+&lt;td&gt;
+267.8
+&lt;/td&gt;
+&lt;td&gt;
+744.2
+&lt;/td&gt;
+&lt;td&gt;
+998
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;8&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- &amp;nbsp; --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;voorspelkracht-random-forest&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Voorspelkracht Random Forest&lt;/h2&gt;
+&lt;p&gt;Als we onze schattingen doen, dan kunnen we eerst kijken naar de voorspelkracht van de modellen. Daarvoor gebruiken we &lt;a href=&#34;https://www.investopedia.com/terms/r/r-squared.asp&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt;&lt;/a&gt;. Er zijn ook andere indicatoren voor voorspelkracht.&lt;/p&gt;
+&lt;p&gt;Uit de onderstaande grafiek blijkt dat het “verkeerde model” veel beter voorspelt dan het “goede model”. Dus wanneer we het “beste model” zouden kiezen op basis van hoe goed het model voorspelt, dan zouden we het verkeerde model kiezen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;schatting-van-het-effect-van-de-interventie&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Schatting van het effect van de interventie&lt;/h2&gt;
+&lt;p&gt;Dat we het verkeerde model kiezen als we het model selecteren op basis van voorspelkracht blijkt uit de onderstaande grafiek:&lt;/p&gt;
+&lt;p&gt;We hebben onze data zo gesimuleerd dat er geen verband bestaat tussen onze &lt;span class=&#34;math inline&#34;&gt;\(Treatment\)&lt;/span&gt; en de &lt;span class=&#34;math inline&#34;&gt;\(Ziektelast\)&lt;/span&gt;. Het “goede model” schat het door ons bepaalde nul-effect. Het “verkeerde” model daarentegen laat ten onrechte zien dat onze &lt;span class=&#34;math inline&#34;&gt;\(Treatment\)&lt;/span&gt; de &lt;span class=&#34;math inline&#34;&gt;\(Ziektelast\)&lt;/span&gt; verlaagt.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/blog_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusie&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Conclusie&lt;/h1&gt;
+&lt;p&gt;In dit blog hebben we laten zien dat het essentieel is om een causaal model te maken als je causale effecten wilt schatten. Zeker wanneer er machine learning technieken worden gebruikt, is de verleiding groot om zoveel mogelijk variabelen mee te nemen. In dit blog hebben we laten zien dat het toegeven aan deze verleiding tot verkeerde conclusies kan leiden.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;meer-weten&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Meer weten?&lt;/h1&gt;
+&lt;p&gt;Hopelijk heb je nu de smaak te pakken en wil je meer weten over causale modellen, en hoe je hiermee causale effecten kunt schatten op basis van data. Een redelijke compacte, maar toch toegankelijke introductie is een boek hoofdstuk van Felix Elwert, &lt;a href=&#34;https://www.researchgate.net/profile/Felix_Elwert/publication/278717528_Graphical_Causal_Models/links/55c3b51f08aeb97567401b57/Graphical-Causal-Models.pdf&#34;&gt;Graphical Causal Models&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Een uitgebreidere introductie is het inmiddels zeer populaire &lt;a href=&#34;http://bayes.cs.ucla.edu/WHY/&#34;&gt;“Book of Why”&lt;/a&gt; van Judea Pearl en Dana Mackenzie.&lt;/p&gt;
+&lt;p&gt;Als je echt een studieboek wil met sommetjes kun je het beste het boek &lt;a href=&#34;https://www.amazon.com/Causal-Inference-Statistics-Judea-Pearl/dp/1119186846&#34;&gt;“Causal inference in Statistics: a primer”&lt;/a&gt; nemen, van Pearl, Glymour en Jewell.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bronvermelding-voorbeelden&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Bronvermelding voorbeelden&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Het boeken / IQ voorbeeld is ontleend aan het boek &lt;a href=&#34;https://www.amazon.com/Freakonomics-Economist-Explores-Hidden-Everything/dp/0060731338&#34;&gt;Freakonomics&lt;/a&gt; door Levitt en Dubner.&lt;/li&gt;
+&lt;li&gt;Het NBA voorbeeld komt van &lt;a href=&#34;https://twitter.com/statsepi/status/1117510895637340160&#34;&gt;Twitter&lt;/a&gt;, Darren Dahly en Maria Glymour.&lt;/li&gt;
+&lt;li&gt;Voor het bepalen van het treatment effect in het laaste voorbeeld hebben Generalized Random Forests gebruikt. Zie &lt;a href=&#34;https://arxiv.org/pdf/1610.01271.pdf&#34;&gt;Athey, Tibshirani en Wager(2018)&lt;/a&gt;. De gebruike code is ontleend aan &lt;a href=&#34;https://arxiv.org/pdf/1902.07409.pdf&#34;&gt;Athey and Wager (2019)&lt;/a&gt;. Het is overigens mogelijk om heterogene treatment effecten te schatten. Dat hebben wij in het kader van dit voorbeeld niet gedaan.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;aanleiding-blog&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Aanleiding Blog&lt;/h1&gt;
+&lt;p&gt;Dit blog is geschreven naar aanleiding van een uitnodiging om een workshop te organiseren voor de 7de Meet Up van het Informatieberaad Zorg op 23 september 2019. Het publiek van deze Meet Ups is zeer divers: pati&lt;/p&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>A benchmarking example in R</title>
-      <link>https://misjamikkers.github.io/post/dea-example-students/</link>
+      <link>/post/dea-example-students/</link>
       <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://misjamikkers.github.io/post/dea-example-students/</guid>
-      <description>IntroductionIn this post we will give you an example of a DEA benchmark performed in R. We will do this with simulated data.
-In this case study we consider 100 courts. Courts handle ‘disputes’, which result in cases or settlements. Hence, settlements and cases are (perfect) substitutes. On the input side, courts incur costs. We consider several DEA models for benchmarking courts. The aim of this example is to learn how to apply DEA and to demonstrate that DEA is capable to reveal inefficiency.</description>
+      <guid>/post/dea-example-students/</guid>
+      <description>
+
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In this post we will give you an example of a DEA benchmark performed in R. We will do this with simulated data.&lt;/p&gt;
+&lt;p&gt;In this case study we consider 100 courts. Courts handle ‘disputes’, which result in cases or settlements. Hence, settlements and cases are (perfect) substitutes. On the input side, courts incur costs. We consider several DEA models for benchmarking courts. The aim of this example is to learn how to apply DEA and to demonstrate that DEA is capable to reveal inefficiency. Therefore, we will first simulate our dataset of 100 courts, based on a certain assumption on inefficiency of each court (we will therefore know the’true efficiency’). And then we will use DEA to determine efficiency by means of DEA. By comparing DEA results to the assumed efficiency, we will establish whether DEA is capable to reveal true efficiency.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Packages&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse) # for manipulating data and plots
+library(Benchmarking) # for DEA
+library(PerformanceAnalytics) # for correlation plots
+library(knitr) # for tables&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;simulation-of-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Simulation of data&lt;/h1&gt;
+&lt;p&gt;We will first simulate some simple data of 100 Courts. The courts produce Solutions to disputes (“production”), which are “Cases” and “Settlements”&lt;/p&gt;
+&lt;p&gt;ID: just an identification number that we will not use: Total_Eff_Cost : Is the “real efficient total cost”, not observed in practice Efficiency: This is the “real efficiency score”, not observed in practice. Because we want to have some efficient firms for this examples we make sure that firms with id’s 1, 50 and 100 become efficient. Total cost: The total cost we observe and can use in our benchmark as input Cases: The number of verdicts written by each court Settlements: Cases that did not come to a verdict (e.g. plea guilty or compromise) Production: The total of cases and settlements&lt;/p&gt;
+&lt;p&gt;The data is simulated so that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;all inefficiency leads to higher cost&lt;/li&gt;
+&lt;li&gt;production is a (lineair) function of total efficient cost&lt;/li&gt;
+&lt;li&gt;which means we have chosen for a CRS technology (see discussion later)&lt;/li&gt;
+&lt;li&gt;settlements and cases are subsitutes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(123)
+id &amp;lt;- 1:100 
+d1 &amp;lt;- as.data.frame(id) %&amp;gt;%
+  mutate(Total_Eff_Cost = round(runif(100, 100, 500),0)) %&amp;gt;%
+  mutate(Efficiency_1 = round(runif(100, 0.6, 1 ),2))  %&amp;gt;%
+  mutate(Efficiency = ifelse(id == 1 | id ==50 | id ==100, 1, Efficiency_1)) %&amp;gt;%
+  mutate(TC = round(Total_Eff_Cost * (1/Efficiency), 0)) %&amp;gt;%
+  mutate(Production = round(15 * Total_Eff_Cost,0)) %&amp;gt;%
+  mutate(Share_cases = round(runif(100, 0.4, 0.7),2)) %&amp;gt;%
+  mutate(Cases = round(Share_cases * Production, 0)) %&amp;gt;%
+  mutate(Settlements = round((1-Share_cases) * Production, 0))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can inspect the observable data:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d_CC &amp;lt;- d1 %&amp;gt;%
+  select(TC, Cases, Settlements)
+
+suppressWarnings(chart.Correlation(d_CC))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-1-with-1-input-tc-and-1-output-cases&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Model 1 with 1 input (TC) and 1 output (Cases)&lt;/h1&gt;
+&lt;p&gt;For this model we chose to run a CRS model with 1 input: TC (Total Cost) and 1 output (Cases).&lt;/p&gt;
+&lt;p&gt;Since Settlements and Cases are subsitutes, firms with relatively more Settlements should score worse.&lt;/p&gt;
+&lt;div id=&#34;select-our-inputs-and-outputs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Select our inputs and outputs&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;Benchmarking&lt;/code&gt; package needs inputs and outputs to be matrices. As long as we want 1 input and 1 ouput, we just need to select the relevant variables.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mx &amp;lt;- d1 %&amp;gt;%
+  select(TC)
+my &amp;lt;- d1 %&amp;gt;%
+  select(Cases)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;running-the-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Running the model&lt;/h2&gt;
+&lt;p&gt;Now we can run the DEA model:&lt;/p&gt;
+&lt;p&gt;We need to chose the inputs and the outputs (as we have done above), the orientation (since we are interested in input minimization we chose “in”) and returns to scale (CRS)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model_1 &amp;lt;- dea(mx, my, ORIENTATION = &amp;quot;in&amp;quot;, RTS= &amp;quot;crs&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;looking-at-the-output&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Looking at the output&lt;/h2&gt;
+&lt;p&gt;The package &lt;code&gt;Benchmarking&lt;/code&gt; produces a list with some information.&lt;/p&gt;
+&lt;p&gt;Most interesting information are the scores and the peers.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;efficiency_scores &amp;lt;- model_1$eff
+
+d_eff &amp;lt;- as.data.frame(efficiency_scores) %&amp;gt;%
+  mutate(Peers = peers(model_1))
+
+kable(summary(d_eff))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;efficiency_scores&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Peers.peer1&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Min. :0.4190&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Min. :100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1st Qu.:0.5835&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1st Qu.:100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Median :0.6812&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Median :100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Mean :0.6896&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Mean :100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3rd Qu.:0.7901&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3rd Qu.:100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Max. :1.0000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Max. :100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As we can see, DMU with id 100 is peer for all firms.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation-of-the-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation of the model&lt;/h2&gt;
+&lt;p&gt;In reality we cannot evulate the model, but since we work with simulated data we can see how well our model performs by comparing the “real efficiency scores” with the estimated scores from the model.&lt;/p&gt;
+&lt;p&gt;First, we will add the efficiency scores to our initial dataset&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- d1 %&amp;gt;%
+  mutate(Model_1 = model_1$eff)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can plot the modelled inefficiency versus the real inefficiency&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = d1, aes(x= Efficiency, y=Model_1)) + 
+  geom_point(color = &amp;quot;blue&amp;quot;) + 
+  geom_abline(intercept = 0, slope = 1, color = &amp;quot;red&amp;quot;) + 
+  xlim(0.4,1) +
+  ylim(0.4,1) +
+  xlab(&amp;quot;True efficiency&amp;quot;) +
+  ylab(&amp;quot;Efficiency scores model 1&amp;quot;) +
+  theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can conclude that our model does not perform very good:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;most efficiency scores are underestimated&lt;/li&gt;
+&lt;li&gt;a few are overstated&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The reason is that we only took 1 output, while in our simulated dataset Courts produced 2 outputs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-model-1-input-2-outputs-crs&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Full model (1 input, 2 outputs) CRS&lt;/h1&gt;
+&lt;div id=&#34;select-our-inputs-and-outputs-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Select our inputs and outputs&lt;/h2&gt;
+&lt;p&gt;We will run a model with 1 input (TC) and 2 outputs (Cases and Settlements). First we have to select the right variables as input and outputs. Please note: since we have 2 chosen 2 outputs, we should explicitly transform the dataframe into a matrix.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mx_1 &amp;lt;- d1 %&amp;gt;%
+  select(TC)
+
+my_1a &amp;lt;- d1 %&amp;gt;%
+  select(Cases, Settlements)
+
+my_1 &amp;lt;- as.matrix(my_1a)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;running-the-model-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Running the model&lt;/h2&gt;
+&lt;p&gt;The only change compared to the first model is the difference in outputs.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model_CRS &amp;lt;- dea(mx_1, my_1, ORIENTATION = &amp;quot;in&amp;quot;, RTS= &amp;quot;crs&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;looking-at-the-output-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Looking at the output&lt;/h2&gt;
+&lt;p&gt;Again we can extract the efficiency scores and peers&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;efficiency_scores_CRS &amp;lt;- model_CRS$eff
+
+Peers &amp;lt;-as.data.frame(peers(model_CRS))
+
+id &amp;lt;- 1: 100
+d_CRS &amp;lt;- as.data.frame(id) %&amp;gt;%
+  mutate(efficiency_scores_CRS = efficiency_scores_CRS)
+
+d_CRS_1 &amp;lt;- cbind(d_CRS, Peers)
+
+kable(summary(d_CRS_1))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;id&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;efficiency_scores_CRS&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;peer1&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;peer2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Min. : 1.00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Min. :0.6016&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Min. : 1.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Min. : 93.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1st Qu.: 25.75&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1st Qu.:0.7206&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1st Qu.: 1.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1st Qu.:100.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Median : 50.50&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Median :0.8093&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Median : 1.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Median :100.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Mean : 50.50&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Mean :0.8189&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Mean : 30.07&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Mean : 98.28&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3rd Qu.: 75.25&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3rd Qu.:0.9068&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3rd Qu.: 93.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3rd Qu.:100.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Max. :100.00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Max. :1.0000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Max. :100.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Max. :100.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA’s :31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We can that the efficiency scores -in general- have improved. The average score is up from around 69% to nearly 82%.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;id &amp;lt;- 1:100
+Diff &amp;lt;- as.data.frame(id) %&amp;gt;%
+  mutate(Difference = round(d_CRS_1$efficiency_scores_CRS - d_eff$efficiency_scores , 2))
+
+ggplot(data = Diff, aes(x = reorder(id, Difference), y = Difference)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, color = &amp;quot;blue&amp;quot;, fill = &amp;quot;lightblue&amp;quot;) + 
+  theme_minimal() +
+  xlab(&amp;quot;ID&amp;quot;) +
+   theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 5))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can also have a closer look at the peers:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d_peers_CRS &amp;lt;- d_CRS_1%&amp;gt;%
+  filter(efficiency_scores_CRS == 1)
+
+kable(d_peers_CRS)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;right&#34;&gt;id&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;efficiency_scores_CRS&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;peer1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;peer2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;50&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;93&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;93&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We now see more peers. In the dataframe DMU’s with id’s 1, 100 and 93 are peer. DMU with ID 50 (has also score 1, but is not a peer)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation-of-the-model-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation of the model&lt;/h2&gt;
+&lt;p&gt;In reality we cannot evulate the model, but since we work with simulated data we can see how well our model performs by comparing the “real efficiency scores” with the estimated scores from the model.&lt;/p&gt;
+&lt;p&gt;First, we will add the efficiency scores to our initial dataset&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- d1 %&amp;gt;%
+  mutate(Model_CRS = model_CRS$eff)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can plot the modelled inefficiency versus the real inefficiency&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = d1, aes(x= Efficiency, y=Model_CRS)) + 
+  geom_point(color = &amp;quot;blue&amp;quot;) + 
+  geom_abline(intercept = 0, slope = 1, color = &amp;quot;red&amp;quot;) + 
+  xlim(0.5,1) +
+  ylim(0.5,1) +
+  xlab(&amp;quot;True efficiency&amp;quot;) +
+  ylab(&amp;quot;Efficiency scores model 2&amp;quot;) +
+  theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can now conclude that the model performs reasonbly well.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-2-vrs&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Model 2 VRS&lt;/h1&gt;
+&lt;p&gt;We will now estimate the same model with VRS.&lt;/p&gt;
+&lt;div id=&#34;running-the-model-2&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Running the model&lt;/h2&gt;
+&lt;p&gt;We only have to change the RTS (Returns to scale option) into VRS.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model_VRS &amp;lt;- dea(mx_1, my_1, ORIENTATION = &amp;quot;in&amp;quot;, RTS= &amp;quot;vrs&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again we can extract the efficiency scores and peers&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;efficiency_scores_VRS &amp;lt;- model_VRS$eff
+
+Peers &amp;lt;-as.data.frame(peers(model_VRS))
+
+id &amp;lt;- 1: 100
+d_VRS &amp;lt;- as.data.frame(id) %&amp;gt;%
+  mutate(efficiency_scores_VRS = efficiency_scores_VRS)
+
+d_VRS_1 &amp;lt;- cbind(d_VRS, Peers)
+
+kable(summary(d_VRS_1))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;id&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;efficiency_scores_VRS&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;peer1&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;peer2&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;peer3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Min. : 1.00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Min. :0.6047&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Min. : 1.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Min. : 18.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Min. : 24.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1st Qu.: 25.75&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1st Qu.:0.7433&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1st Qu.: 6.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1st Qu.: 20.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1st Qu.: 93.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Median : 50.50&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Median :0.8491&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Median : 11.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Median : 50.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Median : 93.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Mean : 50.50&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Mean :0.8413&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Mean : 22.33&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Mean : 57.78&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Mean : 92.91&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3rd Qu.: 75.25&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3rd Qu.:0.9523&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3rd Qu.: 26.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3rd Qu.: 89.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3rd Qu.:100.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Max. :100.00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Max. :1.0000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Max. :100.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Max. :100.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Max. :100.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA’s :13&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA’s :34&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The score is slightly higher than under CRS (from approx 82% to 84%)&lt;/p&gt;
+&lt;p&gt;We can also have a closer look at the peers:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d_peers_VRS &amp;lt;- d_VRS_1%&amp;gt;%
+  filter(efficiency_scores_VRS == 1)
+
+kable(d_peers_VRS)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;right&#34;&gt;id&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;efficiency_scores_VRS&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;peer1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;peer2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;peer3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;18&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;18&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;20&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;20&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;24&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;24&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;26&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;26&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;50&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;50&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;74&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;74&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;87&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;87&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;89&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;89&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;93&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;93&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We see now much more firms with score 1, being their own peers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation-of-the-model-2&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation of the model&lt;/h2&gt;
+&lt;p&gt;We can add the efficiency scores to our initial model&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- d1 %&amp;gt;%
+  mutate(Model_VRS = model_VRS$eff)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can plot the modelled inefficiency versus the real inefficiency&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = d1, aes(x= Efficiency, y=Model_VRS)) + 
+  geom_point(color = &amp;quot;blue&amp;quot;) + 
+  geom_abline(intercept = 0, slope = 1, color = &amp;quot;red&amp;quot;) + 
+  xlim(0.4,1) +
+  ylim(0.4,1) +
+  xlab(&amp;quot;True efficiency&amp;quot;) +
+  ylab(&amp;quot;Efficiency scores model 3&amp;quot;) +
+  theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/DEA_example_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;As we see, in general firms improved (a bit). Especially large or small firms will be efficient be default.&lt;/p&gt;
+&lt;p&gt;Please note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VRS is always beneficial to the DMU’s&lt;/li&gt;
+&lt;li&gt;The returns to scale choice may depend on:
+&lt;ul&gt;
+&lt;li&gt;underlying technology&lt;/li&gt;
+&lt;li&gt;possibility for firms to adjust their scale (by merging or splitting up)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>
