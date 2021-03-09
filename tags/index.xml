@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags | Academic</title>
+    <link>https://misjamikkers.github.io/tags/</link>
+      <atom:link href="https://misjamikkers.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018</copyright><lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://misjamikkers.github.io/img/misja.jpg</url>
+      <title>Tags</title>
+      <link>https://misjamikkers.github.io/tags/</link>
+    </image>
+    
+    <item>
+      <title>ate</title>
+      <link>https://misjamikkers.github.io/tags/ate/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/ate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bayesian statistics</title>
+      <link>https://misjamikkers.github.io/tags/bayesian-statistics/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/bayesian-statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brms</title>
+      <link>https://misjamikkers.github.io/tags/brms/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/brms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>causal effect</title>
+      <link>https://misjamikkers.github.io/tags/causal-effect/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/causal-effect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rstan</title>
+      <link>https://misjamikkers.github.io/tags/rstan/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/rstan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stan</title>
+      <link>https://misjamikkers.github.io/tags/stan/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/stan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>causaliteit machine learning dags</title>
+      <link>https://misjamikkers.github.io/tags/causaliteit-machine-learning-dags/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/causaliteit-machine-learning-dags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>benchmarking DEA</title>
+      <link>https://misjamikkers.github.io/tags/benchmarking-dea/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/benchmarking-dea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Source Themes</title>
+      <link>https://misjamikkers.github.io/tags/source-themes/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/source-themes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://misjamikkers.github.io/tags/deep-learning/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Demo</title>
+      <link>https://misjamikkers.github.io/tags/demo/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/tags/demo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

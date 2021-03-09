@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ate | Academic</title>
+    <link>https://misjamikkers.github.io/tags/ate/</link>
+      <atom:link href="https://misjamikkers.github.io/tags/ate/index.xml" rel="self" type="application/rss+xml" />
+    <description>ate</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018</copyright><lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://misjamikkers.github.io/img/misja.jpg</url>
+      <title>ate</title>
+      <link>https://misjamikkers.github.io/tags/ate/</link>
+    </image>
+    
+    <item>
+      <title>Het opzetten van beleidsexperimenten en het meten van het effect daarvan</title>
+      <link>https://misjamikkers.github.io/post/beleidsexperimenten/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://misjamikkers.github.io/post/beleidsexperimenten/</guid>
+      <description>
+&lt;script src=&#34;https://misjamikkers.github.io/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://misjamikkers.github.io/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+
+&lt;div id=&#34;inleiding&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Inleiding&lt;/h1&gt;
+&lt;p&gt;In onze praktijk in het zorgveld zien we steeds vaker dat allerlei partijen (GGZ-instellingen, organisaties in de wijkverpleging, ziekenhuizen, verzekeraars etc.) datagedreven beleid of interventies willen ontwerpen om de zorg te verbeteren.
+In dit blog willen we een werkwijze schetsen om het effect van bepaald beleid of een bepaalde interventie te kunnen schatten.&lt;/p&gt;
+&lt;p&gt;Deze werkwijze bevat 3 pijlers:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Het opbouwen van domeinkennis (kennis van een bepaalde regio, samenwerkingsverbanden, medische kennis etc.) door het samenwerken met experts in het veld, het verzamelen van relevante informatie, fact-checking etc.&lt;/li&gt;
+&lt;li&gt;Een causaal model en het uitwerken van de verdere veronderstellingen&lt;/li&gt;
+&lt;li&gt;Bayesiaanse statistiek om het effect (met onzekerheden) te kunnen inschatten.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;De eerste stap is het verzamelen van relevante informatie. De initatiefnemers van een beleidsexperiment (dat kunnen bijvoorbeeld artsen zijn of een GGZ-instelling) starten vaak vanuit impliciete aannames over trends (“er is in een enorme groei in X”), of de omvang van de doelgroep (“vrijwel alle patiënten ondergaan interventie Y”). In deze stap worden basale vragen beantwoord zoals: om hoeveel patiënten gaat het eigenlijk per maand? Hoeveel % van deze groep krijgt de interventie? Deze stap is heel belangrijk, maar in deze blog willen we het vooral over stap 2 en 3 hebben.&lt;/p&gt;
+&lt;p&gt;Om het effect van een bepaald beleid of een bepaalde interventie te kunnen schatten is een causaal model nodig. Een causaal model is model van de wereld dat buiten de data staat. Het is doorgaans niet mogelijk om causaliteit uit de data te halen. Aan causale conclusies liggen modellen en veronderstellingen ten grondslag. Om causale conclusies te kunnen trekken is domeinkennis heel erg belangrijk.
+Elke causale conclusie valt of staat met het causale model en verdere veronderstellingen. Het is daarom belangrijk dat het causale model en de verdere veronderstellingen transparant zijn.&lt;/p&gt;
+&lt;p&gt;Tegenwoordig gebruiken steeds meer wetenschappers Directed Acyclical Graphs (DAGs) om de relaties tussen oorzaken en gevolgen op een inzichtelijke manier vorm te geven. Het causale model bepaalt ook of en met welk model de effecten van een bepaald beleid weer te geven. Zie ons eerdere &lt;a href=&#34;https://misjamikkers.github.io/post/causaliteit-en-machine-learning/&#34;&gt;blog&lt;/a&gt; voor een meer uitgebreid overzicht van DAGs.&lt;/p&gt;
+&lt;p&gt;Wij denken dat het goed is het causale model met een aantal experts/kenners/ervaringsdeskundigen vast te stellen voordat een experiment start (in dat geval kan de DAG ook bepalen welke informatie verzamelt moet worden om een effect in te kunnen schatten) of voordat de data worden geanalyseerd (in het geval dat er een effect op basis van administratieve data moet worden bepaald).&lt;/p&gt;
+&lt;p&gt;Daarnaast moet er een zogeheten “identificatie-strategie” worden vastgesteld. Een identificatiestrategie heeft betrekking op de manier waarop de onderzoekers het causale effect op basis van de data willen vaststellen. Tenslotte zijn er veronderstellingen nodig om de schatting van het effect te kunnen uitvoeren.&lt;/p&gt;
+&lt;p&gt;Voor het bepalen van het effect (het doen van de schattingen) kunnen onderzoekers verschillende methoden toepassen. Het is mogelijk effecten te schatten op basis van (standaard) lineaire modellen of meer complexe (machine learning) modellen. Wij denken dat Bayesiaanse statistiek een goede methode is om effecten van beleid in kaart te brengen. Bayesiaanse statistiek heeft het voordeel dat de uitkomsten van de modellen in kansverdelingen worden gegeven. Dat betekent er uitspraken kunnen worden gedaan als:&lt;/p&gt;
+&lt;p&gt;Er is x% kans dat interventie y tenminste z-effect heeft.&lt;/p&gt;
+&lt;p&gt;In een eerder &lt;a href=&#34;https://gsverhoeven.github.io/post/posterior-distribution-average-treatment-effect/&#34;&gt;blog&lt;/a&gt; hebben we laten zien hoe een dergelijke kansverdeling van een bepaald effect kan worden berekend.&lt;/p&gt;
+&lt;p&gt;We laten in dit blog met een simpel voorbeeld zien, hoe het proces zoals we hierboven hebben omschreven, kunnen uitvoeren.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;causale-model&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Causale model&lt;/h1&gt;
+&lt;p&gt;Wij gaan er vanuit dat een DAG wordt ontwikkeld in samenwerking met experts of ervaringsdeskundigen op een bepaald gebied.&lt;/p&gt;
+&lt;p&gt;Voorbeelden van relevante vragen die wij in de praktijk in het zorgveld tegenkomen zijn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;zorgt schuldhulpverlening er voor dat burgers betere besluiten nemen over hun gezondheid (en dat hun gezondheidsstatus dus verbetert en/of er minder zorg nodig is)?&lt;/li&gt;
+&lt;li&gt;leidt het in dienst nemen door prakijkondersteuners bij de huisarts tot minder opnames in ziekenhuizen en/of GGZ-instellingen?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Een DAG laat alle relaties tussen oorzaak en gevolg zien. DAGs zijn modellen van de wereld op basis waarvan eventuele conclusies geloofwaardig of niet zijn. Wij denken dat het belangrijk is dat de DAG tot stand komt op basis van literatuur en interactie met mensen die in de praktijk werken. Vervolgens kunnen schattingen op basis van het causale model laten zien of de data consistent zijn met de DAG.&lt;/p&gt;
+&lt;p&gt;Conclusies kunnen zijn:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;De data zijn consistent met model (let op: dat wil niet perse zeggen dat het model waar is. Er kunnen immers meer modellen consistent zijn met de data)&lt;/li&gt;
+&lt;li&gt;De data zijn inconsistent met het model (bv er zijn correlaties in de data die niet passen bij het model)&lt;/li&gt;
+&lt;li&gt;Er zijn niet voldoende data om iets te kunnen zeggen over het model. Het ontbreken van bewijs, is niet hetzelfde als bewijs dat het model niet klopt.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Hieronder hebben we een voorbeeld van (een heel simpele) DAG. In deze DAG hebben we alle “bouwonderdelen” van een DAG weergegeven. Zie voor ons eerdere &lt;a href=&#34;https://misjamikkers.github.io/post/causaliteit-en-machine-learning/&#34;&gt;blog&lt;/a&gt; voor meer uitleg.&lt;/p&gt;
+&lt;p&gt;In dit geval doen we een &lt;strong&gt;interventie&lt;/strong&gt; die er voor zorgt dat de onderzoekspopulatie &lt;strong&gt;betere beslissingen&lt;/strong&gt; neemt. We observeren deze beslissingen niet in de data.
+Onze &lt;strong&gt;uitkomst&lt;/strong&gt; variabele hangt onder meer af van de &lt;strong&gt;leeftijd&lt;/strong&gt;. Hoe ouder de burgers in onze populatie, hoe slechter hun uitkomst. In onze opzet krijgen alleen burgers van 65 jaar en ouder in de populatie een interventie. Deze interventie moet er voor zorgen dat de uitkomst voor de burgers verbetert. &lt;strong&gt;Leeftijd&lt;/strong&gt; is een zogenaamde “gezamenlijke oorzaak” waarvoor gecorrigeerd moet worden in een eventuele schatting, omdat ze zowel invloed heeft op het wel of niet krijgen van de &lt;strong&gt;interventie&lt;/strong&gt; als op de &lt;strong&gt;uitkomst&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Tenslotte hebben we ook een &lt;strong&gt;kenmerk Y&lt;/strong&gt; dat een gezamenlijk gevolg is van de &lt;strong&gt;interventie&lt;/strong&gt; en de &lt;strong&gt;uitkomst&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In werkelijkheid zullen DAG’s veel complexer zijn. De uitdaging is om de DAG’s zo simpel te houden dat het de werkelijkheid goed beschrijft, maar niet complexer dan dat.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/Beleidsinterventie_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In dit blog spelen we vals. We simuleren data op basis van onze DAG, zodat we de “echte” uitkomsten kennen. We kunnen dan -in tegenstelling- tot de realiteit onze schattingen afzetten tegen de werkelijkheid.&lt;/p&gt;
+&lt;p&gt;Wanneer we een fout causaal model hebben (en daardoor de verkeerde schatting uitvoeren), dan krijgen we foutieve relaties. Als we bijvoorbeeld &lt;strong&gt;Kenmerk y&lt;/strong&gt; in onze schatting zouden opnemen, dan komt er uit de schatting dat onze interventie een negatieve invloed heeft op de uitkomst, in plaats van de werkelijke positieve invloed.&lt;/p&gt;
+&lt;p&gt;Het is daarom belangrijk te blijven beseffen dat voor een causale interpretatie het causale model bepaald of we iets kunnen leren en wat we dan leren. Het model moet de essentie van de werkelijkheid vatten, maar het kan niet de werkelijkheid zijn. Het blijft een model van de werkelijkheid, zoals een landkaart een model is van de fysische werkelijkheid.&lt;/p&gt;
+&lt;p&gt;Ondanks de waarschuwing en de moeilijkheden, moeten we toch proberen om zo goed mogelijk beleid en interventies te ontwikkelen.
+Onze methode kan helpen een geïnformeerde keuze voor het beleid of (beter!) beleidsexperimenten te maken. Het is daarna van belang ook te blijven monitoren het beleid de gewenste vruchten afwerpt.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;identificatiestrategie-en-verdere-veronderstellingen&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Identificatiestrategie en verdere veronderstellingen&lt;/h1&gt;
+&lt;p&gt;Voordat we naar de data gaan kijken, moeten we een strategie bedenken om het causale effect ook te kunnen schatten. Er zijn verschillende manieren om een causaal effect te kunnen bepalen.&lt;/p&gt;
+&lt;p&gt;Het zou bijvoorbeeld mogelijk zijn het beleidseffect te schatten op basis van een RCT (een gerandomiseerd onderzoek met een controlegroep), waarbij we op basis van het lot bepaalde burgers in onze populatie een interventie laten ondergaan. We vergelijken deze uitkomsten in deze groep met de uitkomsten in de groep met burgers die geen interventie hebben ondergaan.&lt;/p&gt;
+&lt;p&gt;Vaak zijn deze RCT’s niet mogelijk, niet wenselijk of ethisch niet verantwoord. We zullen het dan moeten doen met administratieve data. Dat doen wij ook in dit voorbeeld.&lt;/p&gt;
+&lt;p&gt;Het boek “Mastering Metrics” van Angrist en Pischke bevat een beschrijving van de belangrijkste statistische identificatiestrategieën.&lt;/p&gt;
+&lt;p&gt;In dit geval hebben we ons probleem zo opgezet, dat we een &lt;em&gt;Regression Discontinuity Design&lt;/em&gt; (RDD) kunnen gebruiken.&lt;/p&gt;
+&lt;p&gt;Onze interventie wordt alleen toegepast bij burgers die 65 jaar zijn of ouder. We hebben dus een scherp onderscheid op basis van leeftijd in de populatie tussen mensen die wel een interventie krijgen (ouder of gelijk aan 65 jaar) en mensen die dat niet krijgen (jonger dan 65 jaar). Voor deze identificatiestrategie (RDD) nemen we aan dat mensen die bijna 65 jaar zijn verder niet echt verschillen van mensen die net 65 jaar zijn. Het verschil in uitkomsten tussen deze groepen mensen moet dan -volgens dit model en gegeven deze veronderstellingen- wel een gevolg zijn van onze interventie.&lt;/p&gt;
+&lt;p&gt;Als we nog sterkere veronderstellingen maken, namelijk dat:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;het interventie-effect voor iedereen gelijk is&lt;/li&gt;
+&lt;li&gt;en het effect van leeftijd op de uitkomst lineair is,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;kunnen we zelfs de hele populatie meenemen in onze schatting.&lt;/p&gt;
+&lt;p&gt;Het belangrijkste punt dat volgt uit het bovenstaande is, dat het essentieel is om statistische kennis te combineren met domeinkennis. Het causale model en de verdere veronderstellingen worden gedreven door domeinkennis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;studieprotocol-preregistratie-en-simulatie&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Studieprotocol, preregistratie en simulatie&lt;/h1&gt;
+&lt;p&gt;We willen nog een belangrijk punt maken, voordat we naar de schattingen en de data gaan.&lt;/p&gt;
+&lt;p&gt;Voordat het effect kan worden geschat, moeten er dus aannames gemaakt worden over het causale model, en moeten er bij het schatten statistische keuzes gemaakt worden over de relaties tussen de variabelen. Zodra de data verzameld zijn en geanalyseerd worden, kunnen er onverwachte patronen gevonden worden.
+Een begrijpelijke reactie is dan om hier verklaringen voor te zoeken, die vooraf niet in beeld waren. Dit betekent in feite dat het causale model achteraf wordt aangepast.
+Ook kan het zijn dat de interventie niet het verwachte effect had op de beoogde uitkomst, maar dat er vervolgens naar andere uitkomsten is gekeken, of die misschien wel een effect laten zien. Tenslotte kan ook, bij uitblijven van effect, gekozen worden voor het aanpassen van het experiment, bijvoorbeeld door langer door te gaan met data verzamelen.&lt;/p&gt;
+&lt;p&gt;Het maken van dit soort analyses is op zich niet verkeerd, ALS het maar als zodanig gerapporteerd wordt. Alleen zo kunnen andere onderzoekers de bevindingen op waarde schatten. Want: hoe meer er gezocht wordt naar effecten en verbanden in data, hoe groter de kans dat de gevonden patronen op toeval berusten.&lt;/p&gt;
+&lt;p&gt;Het is daarom goed het causale model en additionele veronderstellingen vooraf op te schrijven in een &lt;em&gt;studieprotocol&lt;/em&gt; en &lt;strong&gt;vooraf&lt;/strong&gt; te publiceren. Dus voordat de analyses op echte data zijn uitgevoerd. Dit heet “preregistratie” van een studieprotocol en staat sterk in de aandacht als gevolg van de “reproduceerbaarheidscrisis” in de sociale wetenschappen. In een studieprotocol is het daarbij handig data te simuleren (zoals wij ook voor dit blog hebben gedaan) en de analyses op gesimuleerde data te doen. Zo kan bijvoorbeeld ook bepaald worden hoeveel data er nodig zijn om de verwachte effecten te kunnen detecteren (een zogeheten “Power analyse”).&lt;/p&gt;
+&lt;p&gt;Vervolgens kunnen de data worden verzameld en kan het model worden getoetst.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data&lt;/h1&gt;
+&lt;p&gt;We hebben de data op basis van het causale model gegenereerd. Dat wil zeggen dat de &lt;code&gt;leeftijd&lt;/code&gt; van invloed is op de Uitkomst en op de kans dat een individu een &lt;code&gt;Interventie&lt;/code&gt; krijgt. De &lt;code&gt;interventie&lt;/code&gt; heeft via de niet observeerbare variabele &lt;code&gt;Beslissing&lt;/code&gt; een invloed op de &lt;code&gt;Uitkomst&lt;/code&gt;. &lt;code&gt;Kenmerk_y&lt;/code&gt; wordt beïnvloed door zowel de &lt;code&gt;Uitkomst&lt;/code&gt; als de &lt;code&gt;Interventie&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Het effect van de interventie hebben we gesteld op 210. Dit zou dus ook bij benadering de uitkomst moeten zijn van de schattingen die we doen.
+Hieronder laten we een samenvatting zien van de data, zoals de onderzoeker deze data in de praktijk zou zien.&lt;/p&gt;
+&lt;table class=&#34; lightable-classic-2 table&#34; style=&#39;font-family: &#34;Arial Narrow&#34;, &#34;Source Sans Pro&#34;, sans-serif; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#39;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-4&#34;&gt;Table 1: &lt;/span&gt;Samenvatting van de data
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Variabele
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Minimum
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Maximum
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Mediaan
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Gemiddelde
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Standaard deviatie
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+id
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+500.50
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+500.50
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+288.82
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Interventie
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.00
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.50
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.50
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Kenmerk_y
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+21592
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+47748
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+36724.27
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+36607.46
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5474.05
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Leeftijd
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+57
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+75
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+65.03
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+65.05
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.98
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Uitkomst
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+266
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+599
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+455.38
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+454.48
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+66.80
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Op basis van ons causale model verwachten we dat leeftijd een (negatieve) invloed heeft op de uitkomst en dat de interventie een (positief) effect heeft op de uitkomst.
+Het is altijd een goed idee om de ruwe data in een grafiek te zetten en te bekijken of de veronderstellingen die gemaakt zijn, ook in de data te zien zijn.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/Beleidsinterventie_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In dit geval zien we inderdaad dat leeftijd en de uitkomst negatief met elkaar samenhangen en dat de interventie positief uitwerkt. De veronderstellingen dat het effect van leeftijd op lineair is en dat het interventie-effect constant is (dat is te zien door dat de afstanden tussen de rode en de blauwe lijn constant is) zijn consistent met de ruwe data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;de-schatting&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;De schatting&lt;/h1&gt;
+&lt;p&gt;We beginnen met het schatten van een model dat correct gespecificeerd is volgens de DAG. We doen de schatting via een Bayesiaanse model om de posterior predictive distribution van de covariate-adjusted average treatment effect te kunnen bepalen. Zie &lt;a href=&#34;https://gsverhoeven.github.io/post/posterior-distribution-average-treatment-effect/&#34;&gt;Blog Verhoeven &amp;amp; Mikkers&lt;/a&gt; voor een uitleg. We schatten ons Bayesiaanse model met het &lt;code&gt;brms&lt;/code&gt; package met de default priors.&lt;/p&gt;
+&lt;p&gt;We kunnen eerst bekijken hoe goed ons model voorspelt.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/Beleidsinterventie_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In bovenstaande grafiek staan de geschatte uitkomsten van het model op de x-as en de werkelijke uitkomsten op de y-as. Als de geschatte uitkomst gelijk is aan de werkelijke uitkomst, dan liggen de punten op de blauwe lijn. Volgens ons model er 95% kans dat de geschatte uitkomst in het grijze gebied valt.&lt;/p&gt;
+&lt;p&gt;We kunnen dus concluderen dat ons model goed voorspelt. Let op: ook verkeerde modellen kunnen goed (en soms zelfs beter!) voorspellen dan een correct model. Dat ons model goed voorspelt zegt dan ook verder niks over het causale effect.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wat-zijn-de-uitkomsten&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Wat zijn de uitkomsten?&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/Beleidsinterventie_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Het geschatte gemiddelde interventie effect is 210, wat redelijk dichtbij het “echte” (en normaal gesproken onbekende) interventie effect ligt van 210. Uit de vorm van de kansverdeling blijkt wel dat het model veel onzekerder is over de waarde van het interventie effect dan de waarde van de parameter leeftijd.&lt;/p&gt;
+&lt;p&gt;Voor elk persoon simuleren we zijn counterfactuals; we voorspellen voor elk persoon de &lt;span class=&#34;math inline&#34;&gt;\(uitkomst\)&lt;/span&gt; met en zonder &lt;span class=&#34;math inline&#34;&gt;\(interventie\)&lt;/span&gt; en berekenen het &lt;span class=&#34;math inline&#34;&gt;\(interventie\)&lt;/span&gt;-effect. Dit doen we voor alle gesamplede modellen, om de onzekerheid in de coeficienten mee te nemen.&lt;/p&gt;
+&lt;p&gt;We kunnen dat ook over alle observaties sommeren. We krijgen dan het Totale Interventie Effect. Dat wil zeggen het verschil in Uitkomsten als iedereen de interventie zou ondergaan en de Uitkomsten als niemand de interventie zou ondergaan. Het werkelijke totale interventie effect is in onderstaande grafiek met de zwarte lijn aangegeven.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/Beleidsinterventie_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We kunnen op basis van de bovenstaande kansverdeling ook uitspraken doen over de kansen op een bepaald effect.&lt;/p&gt;
+&lt;p&gt;De kans dat het Totale Interventie Effect tenminste 210000 is, is 52.23%. En de kans dat het Totale Interventie Effect tussen de 205000 en 215000 ligt, is 98.47%.&lt;/p&gt;
+&lt;p&gt;De conclusie is dat met het juiste causale model en Bayesiaanse statistiek samen, we een inschatting kunnen maken van het effect van een bepaalde interventie of beleid, rekening houdende met de onzekerheid daarover. Let op: wanneer het causale model niet klopt, kunnen de effecten sterk worden overschat of onderschat. Het is zelfs mogelijk dat er een tegengesteld effect wordt geschat!&lt;/p&gt;
+&lt;p&gt;In dit geval leidt het ook opnemen &lt;strong&gt;Kenmerk Y&lt;/strong&gt; in de schatting inderdaad tot een negatief interventie effect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://misjamikkers.github.io/post/Beleidsinterventie_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;De conclusie is dan ook dat een goed causaal model in combinatie met de juiste identificatiestrategie kan leiden tot een goede inschatting van het effect van interventies.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
