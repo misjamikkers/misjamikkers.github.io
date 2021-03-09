@@ -18,36 +18,6 @@
   </url>
   
   <url>
-    <loc>https://misjamikkers.github.io/post/dea-example-students/</loc>
-    <lastmod>2019-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://misjamikkers.github.io/tags/benchmarking-dea/</loc>
-    <lastmod>2019-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://misjamikkers.github.io/categories/</loc>
-    <lastmod>2019-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://misjamikkers.github.io/post/</loc>
-    <lastmod>2019-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://misjamikkers.github.io/categories/r/</loc>
-    <lastmod>2019-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://misjamikkers.github.io/tags/</loc>
-    <lastmod>2019-08-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://misjamikkers.github.io/authors/admin/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
@@ -79,6 +49,11 @@
   
   <url>
     <loc>https://misjamikkers.github.io/tags/source-themes/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://misjamikkers.github.io/tags/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -143,7 +118,15 @@
   </url>
   
   <url>
+    <loc>https://misjamikkers.github.io/categories/</loc>
+  </url>
+  
+  <url>
     <loc>https://misjamikkers.github.io/courses/</loc>
+  </url>
+  
+  <url>
+    <loc>https://misjamikkers.github.io/post/</loc>
   </url>
   
 </urlset>
