@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Misja Mikkers">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="In this post, we&#39;ll explore a DEA benchmark with the R package Benchmarking created by Peter Bogetoft and Lars Otto">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://misjamikkers.github.io/post/dea-example-students/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://misjamikkers.github.io/post/dea-example-students/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="https://misjamikkers.github.io/post/dea-example-students/">
+  <meta property="og:title" content="A benchmarking example in R | Academic">
+  <meta property="og:description" content="In this post, we&#39;ll explore a DEA benchmark with the R package Benchmarking created by Peter Bogetoft and Lars Otto"><meta property="og:image" content="https://misjamikkers.github.io/img/headers/court.jpeg">
+  <meta property="twitter:image" content="https://misjamikkers.github.io/img/headers/court.jpeg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-08-21T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-08-21T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://misjamikkers.github.io/post/dea-example-students/"
+  },
+  "headline": "A benchmarking example in R",
+  
+  "datePublished": "2019-08-21T00:00:00Z",
+  "dateModified": "2019-08-21T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Misja Mikkers"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academic",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://misjamikkers.github.io/img/icon-512.png"
+    }
+  },
+  "description": "In this post, we'll explore a DEA benchmark with the R package Benchmarking created by Peter Bogetoft and Lars Otto"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>A benchmarking example in R | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span></span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+<div class="article-header">
+  
+  
+  <img src="/img/headers/court.jpeg" class="article-banner" alt="">
+  
+
+  
+</div>
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>A benchmarking example in R</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Aug 21, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>In this post we will give you an example of a DEA benchmark performed in R. We will do this with simulated data.</p>
+<p>In this case study we consider 100 courts. Courts handle ‘disputes’, which result in cases or settlements. Hence, settlements and cases are (perfect) substitutes. On the input side, courts incur costs. We consider several DEA models for benchmarking courts. The aim of this example is to learn how to apply DEA and to demonstrate that DEA is capable to reveal inefficiency. Therefore, we will first simulate our dataset of 100 courts, based on a certain assumption on inefficiency of each court (we will therefore know the’true efficiency’). And then we will use DEA to determine efficiency by means of DEA. By comparing DEA results to the assumed efficiency, we will establish whether DEA is capable to reveal true efficiency.</p>
+</div>
+<div id="packages" class="section level1">
+<h1>Packages</h1>
+<pre class="r"><code>library(tidyverse) # for manipulating data and plots
+library(Benchmarking) # for DEA
+library(PerformanceAnalytics) # for correlation plots
+library(knitr) # for tables</code></pre>
+</div>
+<div id="simulation-of-data" class="section level1">
+<h1>Simulation of data</h1>
+<p>We will first simulate some simple data of 100 Courts. The courts produce Solutions to disputes (“production”), which are “Cases” and “Settlements”</p>
+<p>ID: just an identification number that we will not use: Total_Eff_Cost : Is the “real efficient total cost”, not observed in practice Efficiency: This is the “real efficiency score”, not observed in practice. Because we want to have some efficient firms for this examples we make sure that firms with id’s 1, 50 and 100 become efficient. Total cost: The total cost we observe and can use in our benchmark as input Cases: The number of verdicts written by each court Settlements: Cases that did not come to a verdict (e.g. plea guilty or compromise) Production: The total of cases and settlements</p>
+<p>The data is simulated so that:</p>
+<ul>
+<li>all inefficiency leads to higher cost</li>
+<li>production is a (lineair) function of total efficient cost</li>
+<li>which means we have chosen for a CRS technology (see discussion later)</li>
+<li>settlements and cases are subsitutes</li>
+</ul>
+<pre class="r"><code>set.seed(123)
+id &lt;- 1:100 
+d1 &lt;- as.data.frame(id) %&gt;%
+  mutate(Total_Eff_Cost = round(runif(100, 100, 500),0)) %&gt;%
+  mutate(Efficiency_1 = round(runif(100, 0.6, 1 ),2))  %&gt;%
+  mutate(Efficiency = ifelse(id == 1 | id ==50 | id ==100, 1, Efficiency_1)) %&gt;%
+  mutate(TC = round(Total_Eff_Cost * (1/Efficiency), 0)) %&gt;%
+  mutate(Production = round(15 * Total_Eff_Cost,0)) %&gt;%
+  mutate(Share_cases = round(runif(100, 0.4, 0.7),2)) %&gt;%
+  mutate(Cases = round(Share_cases * Production, 0)) %&gt;%
+  mutate(Settlements = round((1-Share_cases) * Production, 0))</code></pre>
+<p>We can inspect the observable data:</p>
+<pre class="r"><code>d_CC &lt;- d1 %&gt;%
+  select(TC, Cases, Settlements)
+
+suppressWarnings(chart.Correlation(d_CC))</code></pre>
+<p><img src="/post/DEA_example_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="model-1-with-1-input-tc-and-1-output-cases" class="section level1">
+<h1>Model 1 with 1 input (TC) and 1 output (Cases)</h1>
+<p>For this model we chose to run a CRS model with 1 input: TC (Total Cost) and 1 output (Cases).</p>
+<p>Since Settlements and Cases are subsitutes, firms with relatively more Settlements should score worse.</p>
+<div id="select-our-inputs-and-outputs" class="section level2">
+<h2>Select our inputs and outputs</h2>
+<p>The <code>Benchmarking</code> package needs inputs and outputs to be matrices. As long as we want 1 input and 1 ouput, we just need to select the relevant variables.</p>
+<pre class="r"><code>mx &lt;- d1 %&gt;%
+  select(TC)
+my &lt;- d1 %&gt;%
+  select(Cases)</code></pre>
+</div>
+<div id="running-the-model" class="section level2">
+<h2>Running the model</h2>
+<p>Now we can run the DEA model:</p>
+<p>We need to chose the inputs and the outputs (as we have done above), the orientation (since we are interested in input minimization we chose “in”) and returns to scale (CRS)</p>
+<pre class="r"><code>model_1 &lt;- dea(mx, my, ORIENTATION = &quot;in&quot;, RTS= &quot;crs&quot;)</code></pre>
+</div>
+<div id="looking-at-the-output" class="section level2">
+<h2>Looking at the output</h2>
+<p>The package <code>Benchmarking</code> produces a list with some information.</p>
+<p>Most interesting information are the scores and the peers.</p>
+<pre class="r"><code>efficiency_scores &lt;- model_1$eff
+
+d_eff &lt;- as.data.frame(efficiency_scores) %&gt;%
+  mutate(Peers = peers(model_1))
+
+kable(summary(d_eff))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">efficiency_scores</th>
+<th align="center">Peers.peer1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td align="left">Min. :0.4190</td>
+<td align="center">Min. :100</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="left">1st Qu.:0.5835</td>
+<td align="center">1st Qu.:100</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="left">Median :0.6812</td>
+<td align="center">Median :100</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="left">Mean :0.6896</td>
+<td align="center">Mean :100</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="left">3rd Qu.:0.7901</td>
+<td align="center">3rd Qu.:100</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="left">Max. :1.0000</td>
+<td align="center">Max. :100</td>
+</tr>
+</tbody>
+</table>
+<p>As we can see, DMU with id 100 is peer for all firms.</p>
+</div>
+<div id="evaluation-of-the-model" class="section level2">
+<h2>Evaluation of the model</h2>
+<p>In reality we cannot evulate the model, but since we work with simulated data we can see how well our model performs by comparing the “real efficiency scores” with the estimated scores from the model.</p>
+<p>First, we will add the efficiency scores to our initial dataset</p>
+<pre class="r"><code>d1 &lt;- d1 %&gt;%
+  mutate(Model_1 = model_1$eff)</code></pre>
+<p>Now we can plot the modelled inefficiency versus the real inefficiency</p>
+<pre class="r"><code>ggplot(data = d1, aes(x= Efficiency, y=Model_1)) + 
+  geom_point(color = &quot;blue&quot;) + 
+  geom_abline(intercept = 0, slope = 1, color = &quot;red&quot;) + 
+  xlim(0.4,1) +
+  ylim(0.4,1) +
+  xlab(&quot;True efficiency&quot;) +
+  ylab(&quot;Efficiency scores model 1&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/DEA_example_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>We can conclude that our model does not perform very good:</p>
+<ol style="list-style-type: decimal">
+<li>most efficiency scores are underestimated</li>
+<li>a few are overstated</li>
+</ol>
+<p>The reason is that we only took 1 output, while in our simulated dataset Courts produced 2 outputs.</p>
+</div>
+</div>
+<div id="full-model-1-input-2-outputs-crs" class="section level1">
+<h1>Full model (1 input, 2 outputs) CRS</h1>
+<div id="select-our-inputs-and-outputs-1" class="section level2">
+<h2>Select our inputs and outputs</h2>
+<p>We will run a model with 1 input (TC) and 2 outputs (Cases and Settlements). First we have to select the right variables as input and outputs. Please note: since we have 2 chosen 2 outputs, we should explicitly transform the dataframe into a matrix.</p>
+<pre class="r"><code>mx_1 &lt;- d1 %&gt;%
+  select(TC)
+
+my_1a &lt;- d1 %&gt;%
+  select(Cases, Settlements)
+
+my_1 &lt;- as.matrix(my_1a)</code></pre>
+</div>
+<div id="running-the-model-1" class="section level2">
+<h2>Running the model</h2>
+<p>The only change compared to the first model is the difference in outputs.</p>
+<pre class="r"><code>model_CRS &lt;- dea(mx_1, my_1, ORIENTATION = &quot;in&quot;, RTS= &quot;crs&quot;)</code></pre>
+</div>
+<div id="looking-at-the-output-1" class="section level2">
+<h2>Looking at the output</h2>
+<p>Again we can extract the efficiency scores and peers</p>
+<pre class="r"><code>efficiency_scores_CRS &lt;- model_CRS$eff
+
+Peers &lt;-as.data.frame(peers(model_CRS))
+
+id &lt;- 1: 100
+d_CRS &lt;- as.data.frame(id) %&gt;%
+  mutate(efficiency_scores_CRS = efficiency_scores_CRS)
+
+d_CRS_1 &lt;- cbind(d_CRS, Peers)
+
+kable(summary(d_CRS_1))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">id</th>
+<th align="left">efficiency_scores_CRS</th>
+<th align="center">peer1</th>
+<th align="center">peer2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td align="center">Min. : 1.00</td>
+<td align="left">Min. :0.6016</td>
+<td align="center">Min. : 1.00</td>
+<td align="center">Min. : 93.00</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">1st Qu.: 25.75</td>
+<td align="left">1st Qu.:0.7206</td>
+<td align="center">1st Qu.: 1.00</td>
+<td align="center">1st Qu.:100.00</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">Median : 50.50</td>
+<td align="left">Median :0.8093</td>
+<td align="center">Median : 1.00</td>
+<td align="center">Median :100.00</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">Mean : 50.50</td>
+<td align="left">Mean :0.8189</td>
+<td align="center">Mean : 30.07</td>
+<td align="center">Mean : 98.28</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">3rd Qu.: 75.25</td>
+<td align="left">3rd Qu.:0.9068</td>
+<td align="center">3rd Qu.: 93.00</td>
+<td align="center">3rd Qu.:100.00</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">Max. :100.00</td>
+<td align="left">Max. :1.0000</td>
+<td align="center">Max. :100.00</td>
+<td align="center">Max. :100.00</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">NA</td>
+<td align="left">NA</td>
+<td align="center">NA</td>
+<td align="center">NA’s :31</td>
+</tr>
+</tbody>
+</table>
+<p>We can that the efficiency scores -in general- have improved. The average score is up from around 69% to nearly 82%.</p>
+<pre class="r"><code>id &lt;- 1:100
+Diff &lt;- as.data.frame(id) %&gt;%
+  mutate(Difference = round(d_CRS_1$efficiency_scores_CRS - d_eff$efficiency_scores , 2))
+
+ggplot(data = Diff, aes(x = reorder(id, Difference), y = Difference)) +
+  geom_bar(stat = &quot;identity&quot;, color = &quot;blue&quot;, fill = &quot;lightblue&quot;) + 
+  theme_minimal() +
+  xlab(&quot;ID&quot;) +
+   theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 5))</code></pre>
+<p><img src="/post/DEA_example_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>We can also have a closer look at the peers:</p>
+<pre class="r"><code>d_peers_CRS &lt;- d_CRS_1%&gt;%
+  filter(efficiency_scores_CRS == 1)
+
+kable(d_peers_CRS)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">id</th>
+<th align="right">efficiency_scores_CRS</th>
+<th align="right">peer1</th>
+<th align="right">peer2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">50</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">100</td>
+</tr>
+<tr class="odd">
+<td align="right">93</td>
+<td align="right">1</td>
+<td align="right">93</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">100</td>
+<td align="right">1</td>
+<td align="right">100</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+<p>We now see more peers. In the dataframe DMU’s with id’s 1, 100 and 93 are peer. DMU with ID 50 (has also score 1, but is not a peer)</p>
+</div>
+<div id="evaluation-of-the-model-1" class="section level2">
+<h2>Evaluation of the model</h2>
+<p>In reality we cannot evulate the model, but since we work with simulated data we can see how well our model performs by comparing the “real efficiency scores” with the estimated scores from the model.</p>
+<p>First, we will add the efficiency scores to our initial dataset</p>
+<pre class="r"><code>d1 &lt;- d1 %&gt;%
+  mutate(Model_CRS = model_CRS$eff)</code></pre>
+<p>Now we can plot the modelled inefficiency versus the real inefficiency</p>
+<pre class="r"><code>ggplot(data = d1, aes(x= Efficiency, y=Model_CRS)) + 
+  geom_point(color = &quot;blue&quot;) + 
+  geom_abline(intercept = 0, slope = 1, color = &quot;red&quot;) + 
+  xlim(0.5,1) +
+  ylim(0.5,1) +
+  xlab(&quot;True efficiency&quot;) +
+  ylab(&quot;Efficiency scores model 2&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/DEA_example_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>We can now conclude that the model performs reasonbly well.</p>
+</div>
+</div>
+<div id="model-2-vrs" class="section level1">
+<h1>Model 2 VRS</h1>
+<p>We will now estimate the same model with VRS.</p>
+<div id="running-the-model-2" class="section level2">
+<h2>Running the model</h2>
+<p>We only have to change the RTS (Returns to scale option) into VRS.</p>
+<pre class="r"><code>model_VRS &lt;- dea(mx_1, my_1, ORIENTATION = &quot;in&quot;, RTS= &quot;vrs&quot;)</code></pre>
+<p>Again we can extract the efficiency scores and peers</p>
+<pre class="r"><code>efficiency_scores_VRS &lt;- model_VRS$eff
+
+Peers &lt;-as.data.frame(peers(model_VRS))
+
+id &lt;- 1: 100
+d_VRS &lt;- as.data.frame(id) %&gt;%
+  mutate(efficiency_scores_VRS = efficiency_scores_VRS)
+
+d_VRS_1 &lt;- cbind(d_VRS, Peers)
+
+kable(summary(d_VRS_1))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">id</th>
+<th align="left">efficiency_scores_VRS</th>
+<th align="center">peer1</th>
+<th align="center">peer2</th>
+<th align="center">peer3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td align="center">Min. : 1.00</td>
+<td align="left">Min. :0.6047</td>
+<td align="center">Min. : 1.00</td>
+<td align="center">Min. : 18.00</td>
+<td align="center">Min. : 24.00</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">1st Qu.: 25.75</td>
+<td align="left">1st Qu.:0.7433</td>
+<td align="center">1st Qu.: 6.00</td>
+<td align="center">1st Qu.: 20.00</td>
+<td align="center">1st Qu.: 93.00</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">Median : 50.50</td>
+<td align="left">Median :0.8491</td>
+<td align="center">Median : 11.00</td>
+<td align="center">Median : 50.00</td>
+<td align="center">Median : 93.00</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">Mean : 50.50</td>
+<td align="left">Mean :0.8413</td>
+<td align="center">Mean : 22.33</td>
+<td align="center">Mean : 57.78</td>
+<td align="center">Mean : 92.91</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">3rd Qu.: 75.25</td>
+<td align="left">3rd Qu.:0.9523</td>
+<td align="center">3rd Qu.: 26.00</td>
+<td align="center">3rd Qu.: 89.00</td>
+<td align="center">3rd Qu.:100.00</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">Max. :100.00</td>
+<td align="left">Max. :1.0000</td>
+<td align="center">Max. :100.00</td>
+<td align="center">Max. :100.00</td>
+<td align="center">Max. :100.00</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">NA</td>
+<td align="left">NA</td>
+<td align="center">NA</td>
+<td align="center">NA’s :13</td>
+<td align="center">NA’s :34</td>
+</tr>
+</tbody>
+</table>
+<p>The score is slightly higher than under CRS (from approx 82% to 84%)</p>
+<p>We can also have a closer look at the peers:</p>
+<pre class="r"><code>d_peers_VRS &lt;- d_VRS_1%&gt;%
+  filter(efficiency_scores_VRS == 1)
+
+kable(d_peers_VRS)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">id</th>
+<th align="right">efficiency_scores_VRS</th>
+<th align="right">peer1</th>
+<th align="right">peer2</th>
+<th align="right">peer3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">1</td>
+<td align="right">6</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="right">1</td>
+<td align="right">11</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">18</td>
+<td align="right">1</td>
+<td align="right">18</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">20</td>
+<td align="right">1</td>
+<td align="right">20</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">24</td>
+<td align="right">1</td>
+<td align="right">24</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">26</td>
+<td align="right">1</td>
+<td align="right">26</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">50</td>
+<td align="right">1</td>
+<td align="right">50</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">74</td>
+<td align="right">1</td>
+<td align="right">74</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">87</td>
+<td align="right">1</td>
+<td align="right">87</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">89</td>
+<td align="right">1</td>
+<td align="right">89</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">93</td>
+<td align="right">1</td>
+<td align="right">93</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">100</td>
+<td align="right">1</td>
+<td align="right">100</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+<p>We see now much more firms with score 1, being their own peers.</p>
+</div>
+<div id="evaluation-of-the-model-2" class="section level2">
+<h2>Evaluation of the model</h2>
+<p>We can add the efficiency scores to our initial model</p>
+<pre class="r"><code>d1 &lt;- d1 %&gt;%
+  mutate(Model_VRS = model_VRS$eff)</code></pre>
+<p>Now we can plot the modelled inefficiency versus the real inefficiency</p>
+<pre class="r"><code>ggplot(data = d1, aes(x= Efficiency, y=Model_VRS)) + 
+  geom_point(color = &quot;blue&quot;) + 
+  geom_abline(intercept = 0, slope = 1, color = &quot;red&quot;) + 
+  xlim(0.4,1) +
+  ylim(0.4,1) +
+  xlab(&quot;True efficiency&quot;) +
+  ylab(&quot;Efficiency scores model 3&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/DEA_example_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>As we see, in general firms improved (a bit). Especially large or small firms will be efficient be default.</p>
+<p>Please note:</p>
+<ul>
+<li>VRS is always beneficial to the DMU’s</li>
+<li>The returns to scale choice may depend on:
+<ul>
+<li>underlying technology</li>
+<li>possibility for firms to adjust their scale (by merging or splitting up)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/benchmarking-dea/">benchmarking DEA</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://misjamikkers.github.io/post/dea-example-students/&amp;text=A%20benchmarking%20example%20in%20R" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://misjamikkers.github.io/post/dea-example-students/&amp;t=A%20benchmarking%20example%20in%20R" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=A%20benchmarking%20example%20in%20R&amp;body=https://misjamikkers.github.io/post/dea-example-students/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://misjamikkers.github.io/post/dea-example-students/&amp;title=A%20benchmarking%20example%20in%20R" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=A%20benchmarking%20example%20in%20R%20https://misjamikkers.github.io/post/dea-example-students/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://misjamikkers.github.io/post/dea-example-students/&amp;title=A%20benchmarking%20example%20in%20R" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://misjamikkers.github.io/">Misja Mikkers</a></h5>
+      <h6 class="card-subtitle">chief economist and professor organization and financing of the health care sector</h6>
+      <p class="card-text">My research interests Causal Inference, Bayesian Statistics, Industrial organization and competition policy, Regulation and Data science</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/ICIRSPE" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=qhsTT0wAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/misjamikkers" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js" integrity="sha256-vOIuDSYDirTfyr+S2MjFnhOz6Rgiz4ODFAHATG0rFxw=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
